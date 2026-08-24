@@ -1,0 +1,67 @@
+/* ============================================================
+   Cuddle Avenue — Concept 2, v2 (brand palette)
+
+   Loaded AFTER css/concept-2.css. It overrides colour tokens only —
+   not one rule of layout, type or spacing. Every value below is sampled
+   from the school's own logo artwork in Cuddle Avenue Assets/Cuddle Avenue Logo,
+   or is a darkened form of one of those samples where contrast demanded it.
+
+   Sampled straight from the logo:
+     #34434A  the circular logo's ground
+     #F6D9B9  the tan bear
+     #D3E8ED  the ice-blue bear
+     #FAAAB3  the pink hearts       (CA circle 1)
+     #86CACB  the teal hearts       (CA circle 2)
+     #FFE3BF  the peach hearts      (CA circle 3)
+
+   The brand is a pastel family with one dark slate, so no sampled colour can
+   carry white button text on its own. The primary accent is therefore the teal
+   heart taken down in lightness until white type on it clears WCAG AA; the
+   pastels do the decorative work the lime did in v1.
+   ============================================================ */
+
+:root {
+  /* ---------- dark surfaces ---------- */
+  --c2-bar:        #34434A;  /* announcement bar + enrol card = the logo's ground */
+  --c2-forest:     #2A373E;  /* display type: the same slate, deepened */
+
+  /* ---------- primary accent: the teal heart, deepened ---------- */
+  --c2-green:      #2E7E7F;  /* buttons, active tab, ribbons — white type clears AA */
+  --c2-green-dk:   #276C6D;  /* hover, back ribbon */
+  --c2-green-ink:  #1F6B6C;  /* text-size links, which need more contrast than a fill */
+
+  /* ---------- decorative accents: the pink and tan bears/hearts ---------- */
+  --c2-lime:       #FAAAB3;  /* swooshes, eyebrow dashes, stars, tag dots, icon circles */
+  --c2-accent-2:   #F6D9B9;  /* the lower hero swoosh */
+
+  /* ---------- tints, from the ice-blue bear ---------- */
+  --c2-lime-pale:  #DCEBEF;  /* icon tiles, avatars, image placeholders */
+  --c2-panel:      #EAF3F6;  /* curriculum panel */
+  --c2-well:       #F2F6F7;  /* tab well + quote card */
+
+  /* ---------- text and rules ---------- */
+  --c2-muted:      #606F77;  /* body copy: slate-derived, and dark enough to
+                                clear AA on the tinted panel and well too */
+  --c2-hair:       #E3EAEC;  /* dividers, outline buttons */
+
+  /* ---------- shadows and photo scrims, re-cast in the slate family ---------- */
+  --c2-shadow-rgb: 42 55 62;
+  --c2-scrim-pill: 26 38 44;
+  --c2-scrim-band: 26 46 54;
+  --c2-scrim-deep: 20 34 40;
+  --c2-scrim-edge: 18 32 38;
+  --c2-scrim-cap:  16 28 33;
+}
+
+/* The photograph under the video band was warmed to suit a green scrim; a slate
+   scrim wants it left alone. */
+.c2-cta__media img { filter: saturate(1) contrast(1.02); }
+
+/* A slate scrim tints a bright photograph far less than the green one did, so
+   the band needs more of it to keep the white headline and the pink duration
+   text legible. Colour/opacity only — the gradient geometry is unchanged. */
+.c2-cta__card::after {
+  background:
+    linear-gradient(180deg, rgb(var(--c2-scrim-band) / .52) 0%, rgb(var(--c2-scrim-band) / .30) 42%, rgb(var(--c2-scrim-deep) / .88) 100%),
+    linear-gradient(250deg, rgb(var(--c2-scrim-edge) / .66) 0%, rgb(var(--c2-scrim-edge) / 0) 46%);
+}

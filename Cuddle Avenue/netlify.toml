@@ -1,0 +1,23 @@
+# Cuddle Avenue — website concepts (client review deploy)
+#
+# There is no framework and no bundler; the build step exists purely to
+# assemble an allow-listed dist/ so that client-confidential material in the
+# repo cannot be published. See netlify-build.sh.
+
+[build]
+  command = "bash ./netlify-build.sh"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Long cache for fingerprint-free but rarely-changing static assets.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
