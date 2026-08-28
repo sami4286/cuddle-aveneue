@@ -1,0 +1,176 @@
+<!--@var TITLE: Contact Cuddle Avenue Academy &mdash; Brooklyn, NY-->
+<!--@var DESC: Contact Cuddle Avenue Academy in Brooklyn: phone, email, both Gowanus locations with directions, opening hours 7:30am to 6:00pm, and a form that reaches us directly.-->
+<!--@var OGTITLE: Contact Cuddle Avenue Academy-->
+<!--@var OGDESC: Phone, email, both Brooklyn locations and a form that reaches a person.-->
+<!--@include head-->
+<!--@include announce-->
+<!--@include header-->
+
+<main id="main">
+
+  <section class="pg-head">
+    <div class="c2-shell pg-head__grid">
+
+      <div class="pg-head__body">
+        <nav class="pg-crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="{{ROOT}}index.html">Home</a></li>
+            <li><span aria-current="page">Contact us</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="pg-title">Contact<br class="c2-lb">
+          Cuddle Avenue Academy</h1>
+
+        <p class="pg-head__lead">A real person answers the phone during the day, and email is read
+          every weekday. If you are asking about a place for your child, the fastest route is
+          usually a tour &mdash; you will learn more in half an hour than in a week of emails.</p>
+
+        <div class="pg-head__actions">
+          <a class="c2-btn c2-btn--green" href="tel:+19179605618">Call (917) 960-5618</a>
+          <a class="c2-btn c2-btn--outline" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+        </div>
+      </div>
+
+      <figure class="pg-head__media">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/loc-exterior.webp">
+          <img src="{{ROOT}}assets/img/loc-exterior.jpg" width="1700" height="1020" fetchpriority="high" decoding="async"
+               alt="The Cuddle Avenue Academy storefront on a Brooklyn block, windows frosted with the two-bear logo above the word academy.">
+        </picture>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ THE DETAILS ════════════════════ -->
+  <section class="pg-sec--tight" aria-label="Contact details">
+    <div class="c2-shell">
+      <dl class="pg-facts">
+        <div>
+          <dt>Phone</dt>
+          <dd><a href="tel:+19179605618">(917) 960-5618</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:customerservice@cuddleavenue.org">customerservice@cuddleavenue.org</a></dd>
+        </div>
+        <div>
+          <dt>Open</dt>
+          <dd>Monday &ndash; Friday, 7:30am &ndash; 6:00pm</dd>
+        </div>
+        <div>
+          <dt>Tours</dt>
+          <dd>Weekday mornings, by appointment</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ════════════════════ THE FORM ════════════════════
+       ⚠️ Posts through Netlify Forms. Before launch: enable Forms for the
+       site and set a notification address, or these messages arrive
+       nowhere. Same component as the tour form, different fields. -->
+  <section class="pg-sec" id="message" aria-labelledby="msg-title">
+    <div class="c2-shell pg-split">
+
+      <div class="pg-prose">
+        <p class="c2-eyebrow">Send a message</p>
+        <h2 id="msg-title">Ask us anything</h2>
+        <p>Availability in a particular room, tuition, a sibling discount, whether we can take a
+          child with a specific allergy or medical need &mdash; ask directly. We answer honestly,
+          including when the answer is that we have no space.</p>
+
+        <div class="pg-note">
+          <p><strong>Already with us?</strong> For anything about your own child&rsquo;s day
+            &mdash; illness, absence, a late pickup &mdash; message us on Brightwheel or call the
+            building. It reaches the room faster than a form.</p>
+        </div>
+      </div>
+
+      <form class="pg-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="pg-form__hp">
+          <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="pg-form__row">
+          <label for="c-name">Your name</label>
+          <input id="c-name" name="parent-name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="pg-form__row">
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="c-about">What is this about</label>
+          <select id="c-about" name="topic">
+            <option>A place for my child</option>
+            <option>Tuition and financial assistance</option>
+            <option>NYC 3-K for All</option>
+            <option>Summer camp</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" name="message" rows="5" required></textarea>
+        </div>
+
+        <button class="c2-btn c2-btn--green pg-form__submit" type="submit">Send message</button>
+        <p class="pg-form__note">We reply by email, usually within one working day.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ LOCATIONS ════════════════════
+       The homepage's location tabs, from the same partial: one photograph
+       per building with its address, programs, hours and directions. -->
+  <!--@include locations-->
+
+  <section class="c2-join pg-sec--last" aria-labelledby="contact-cta">
+    <div class="c2-shell">
+      <div class="c2-join__card">
+
+        <svg class="c2-join__arcs" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2">
+            <circle cx="1010" cy="210" r="120"/><circle cx="1010" cy="210" r="190"/><circle cx="1010" cy="210" r="264"/>
+          </g>
+        </svg>
+
+        <div class="c2-join__left">
+          <p class="c2-join__eyebrow">Come and see</p>
+          <h2 class="c2-join__title" id="contact-cta">The door is open<br class="c2-lb">
+            on weekday mornings</h2>
+        </div>
+
+        <div class="c2-join__right">
+          <p class="c2-join__lead">Book a time and we will show you the room your child would
+            actually be in, with the children who are actually in it.</p>
+          <div class="ca-join__actions">
+            <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}programs.html">Explore our programs</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--@include footer-->
+<!--@include scripts-->
+
+</body>
+</html>

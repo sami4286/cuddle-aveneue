@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+
+<!-- Review deploy: kept out of the index until the client signs off. To go
+     live, delete this tag AND the X-Robots-Tag line in /_headers. A canonical
+     link belongs here too, once the production domain is confirmed. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta name="theme-color" content="#34434A">
+<link rel="icon" href="{{ROOT}}assets/logo/ca-circle.png" type="image/png" sizes="192x192">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{OGTITLE}}">
+<meta property="og:description" content="{{OGDESC}}">
+<meta property="og:image" content="{{ROOT}}assets/img/og-cuddle-avenue.jpg">
+
+<link rel="preload" href="{{ROOT}}assets/fonts/nunito-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ROOT}}css/concept-2.css">
+<!-- colour tokens only, loaded after the base sheet. No layout overrides. -->
+<link rel="stylesheet" href="{{ROOT}}css/concept-2-v2.css">
+<!-- the sections the client brief adds, homepage and subpages alike -->
+<link rel="stylesheet" href="{{ROOT}}css/home.css">
+<link rel="stylesheet" href="{{ROOT}}css/page.css">
+</head>
+
+<body>
+<a class="c2-skip" href="#main">Skip to content</a>

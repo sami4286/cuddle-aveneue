@@ -1,0 +1,9 @@
+# The build scripts run on Linux at deploy time — CRLF in a shebang or a
+# quoted string breaks bash. Force LF for everything textual, whatever the
+# checkout platform does locally.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.mp4 binary
+*.woff2 binary

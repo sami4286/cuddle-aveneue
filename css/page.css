@@ -1,0 +1,414 @@
+/* ============================================================
+   Cuddle Avenue — subpage patterns
+
+   Loaded last, on every page. The homepage's sections are the design
+   system; this sheet adds only what a subpage needs and the homepage
+   never did:
+
+     .pg-head    the page header band — crumbs, h1, lead, actions
+     .pg-crumbs  breadcrumb trail
+     .pg-prose   a readable column of running copy
+     .pg-split   copy beside a photograph, alternating
+     .pg-facts   the answer-at-a-glance panel (ages, hours, ratio)
+     .pg-cards   a hub page's grid of links to its subpages
+     .pg-day     a typical day, as a timeline
+     .pg-note    an aside that is not a warning
+     .pg-anchors the in-page jump list on the long program pages
+
+   Everything else — buttons, tabs, carousels, the slate safety band, the
+   warm meals panel, quote cards, the dark closing card — is reused from
+   concept-2.css and home.css exactly as the homepage uses it. A visitor
+   should not be able to tell which page a component was designed for.
+   ============================================================ */
+
+/* ═══════════════════════ page header ═══════════════════════ */
+.pg-head {
+  padding-top: clamp(1.75rem, 3.4vw, 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+  background: var(--c2-well);
+  border-bottom: 1px solid var(--c2-hair);
+}
+
+.pg-head__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: clamp(1.75rem, 4vw, 4rem);
+  align-items: center;
+}
+.pg-head--plain .pg-head__grid { grid-template-columns: 1fr; }
+
+.pg-head__body { display: grid; justify-items: start; gap: clamp(.9rem, 1.8vw, 1.35rem); }
+
+.pg-title {
+  font-size: clamp(2.1rem, 4.6vw, 3.75rem);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+  color: var(--c2-forest);
+  text-wrap: balance;
+}
+.pg-head__lead {
+  max-width: 54ch;
+  font-size: clamp(1.02rem, 1.3vw, 1.1875rem);
+}
+.pg-head__actions {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  margin-top: clamp(.4rem, 1vw, .75rem);
+}
+
+.pg-head__media {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--c2-r-card);
+  overflow: hidden;
+  background: var(--c2-lime-pale);
+  box-shadow: 0 22px 60px rgb(var(--c2-shadow-rgb) / .13);
+}
+.pg-head__media img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 900px) {
+  .pg-head__grid  { grid-template-columns: 1fr; }
+  .pg-head__media { aspect-ratio: 16 / 9; }
+}
+
+/* ═══════════════════════ breadcrumbs ═══════════════════════ */
+.pg-crumbs { font-size: var(--c2-fs-sm); }
+.pg-crumbs ol {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
+}
+.pg-crumbs li { display: flex; align-items: center; gap: .5rem; color: var(--c2-muted); }
+.pg-crumbs li + li::before {
+  content: ""; flex: none;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--c2-lime);
+}
+.pg-crumbs a { color: var(--c2-green-ink); font-weight: 700; }
+.pg-crumbs a:hover { text-decoration: underline; }
+.pg-crumbs [aria-current] { font-weight: 700; color: var(--c2-forest); }
+
+/* ═══════════════════════ in-page jump list ═══════════════════════
+   The brief wants a program page to work like its own small site, which
+   makes it long. This is the contents page for it. */
+.pg-anchors {
+  list-style: none; margin: clamp(1.25rem, 2.4vw, 1.75rem) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: .5rem;
+}
+.pg-anchors a {
+  display: inline-block;
+  padding: .55rem 1rem;
+  border-radius: var(--c2-r-pill);
+  background: var(--c2-white);
+  border: 1px solid var(--c2-hair);
+  font-size: var(--c2-fs-sm); font-weight: 700;
+  color: var(--c2-forest);
+  transition: border-color .2s var(--c2-ease), box-shadow .24s var(--c2-ease),
+              transform .2s var(--c2-ease);
+}
+@media (hover: hover) {
+  .pg-anchors a:hover {
+    border-color: var(--c2-forest);
+    box-shadow: 0 6px 18px rgb(var(--c2-shadow-rgb) / .12);
+    transform: translateY(var(--c2-lift));
+  }
+}
+
+/* ═══════════════════════ prose ═══════════════════════ */
+.pg-prose { max-width: 68ch; }
+.pg-prose > * + * { margin-top: clamp(.9rem, 1.6vw, 1.2rem); }
+
+.pg-prose h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.1;
+  margin-top: clamp(2rem, 3.4vw, 3rem);
+}
+.pg-prose h3 {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  margin-top: clamp(1.5rem, 2.6vw, 2rem);
+}
+.pg-prose h2:first-child,
+.pg-prose h3:first-child { margin-top: 0; }
+
+.pg-prose ul, .pg-prose ol { margin-left: 0; padding-left: 1.15rem; }
+.pg-prose li + li { margin-top: .4rem; }
+.pg-prose li::marker { color: var(--c2-lime); }
+.pg-prose strong { color: var(--c2-forest); }
+.pg-prose a:not(.c2-btn) {
+  color: var(--c2-green-ink); font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s var(--c2-ease);
+}
+.pg-prose a:not(.c2-btn):hover { border-bottom-color: currentColor; }
+
+/* A checked list, for "what your child will learn" style content.
+   Deliberately NOT display:flex — a bare text node beside a <strong>
+   becomes its own anonymous flex item, which sets the bold lead-in as a
+   column of its own and wraps it mid-word. Absolute marker, normal flow. */
+.pg-ticks { list-style: none; padding: 0; }
+.pg-ticks li {
+  position: relative;
+  padding: .55rem 0 .55rem 1.95rem;
+  border-top: 1px solid var(--c2-hair);
+}
+.pg-ticks li::before {
+  content: ""; position: absolute;
+  left: 0; top: .78rem;
+  width: 1.15rem; height: 1.15rem;
+  border-radius: 50%;
+  background: var(--c2-lime-pale);
+  box-shadow: inset 0 0 0 2px var(--c2-green-ink);
+}
+
+/* two or three columns of short items, where prose would be a wall */
+.pg-cols {
+  columns: 2;
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+}
+/* a block stays whole; a list is allowed to flow across the columns, but
+   never mid-item. (break-inside on the <ul> itself keeps the whole list in
+   column one, which is the opposite of the point.) */
+.pg-cols > div { break-inside: avoid; }
+.pg-cols li    { break-inside: avoid; }
+@media (max-width: 700px) { .pg-cols { columns: 1; } }
+
+/* ═══════════════════════ copy beside a photograph ═══════════════════════ */
+.pg-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.pg-split__media {
+  margin: 0;
+  aspect-ratio: 5 / 4;
+  border-radius: var(--c2-r-card);
+  overflow: hidden;
+  background: var(--c2-lime-pale);
+  box-shadow: 0 22px 60px rgb(var(--c2-shadow-rgb) / .13);
+}
+.pg-split__media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* alternate sides down a page without touching the markup order */
+.pg-split--flip .pg-split__media { order: -1; }
+
+@media (max-width: 860px) {
+  .pg-split { grid-template-columns: 1fr; }
+  .pg-split__media { aspect-ratio: 16 / 10; order: -1; }
+}
+
+/* ═══════════════════════ answer-at-a-glance ═══════════════════════ */
+.pg-facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding: clamp(1.25rem, 2.6vw, 2rem) clamp(1.4rem, 2.8vw, 2.25rem);
+  background: var(--c2-panel);
+  border-radius: var(--c2-r-card);
+}
+.pg-facts div { display: grid; gap: .3rem; align-content: start; }
+.pg-facts dt {
+  font-size: .75rem; font-weight: 800;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--c2-muted);
+}
+.pg-facts dd {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem); font-weight: 700;
+  line-height: 1.25;
+  color: var(--c2-forest);
+  /* an email address is one unbreakable word and will push a phone layout
+     sideways if it is allowed to */
+  overflow-wrap: anywhere;
+}
+.pg-facts a { color: var(--c2-green-ink); }
+.pg-facts a:hover { text-decoration: underline; }
+
+/* ═══════════════════════ hub cards ═══════════════════════
+   An About or Admissions page is mostly a set of doors. */
+.pg-cards {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: clamp(1.25rem, 2.4vw, 2rem);
+}
+
+.pg-card {
+  display: flex; flex-direction: column;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem);
+  background: var(--c2-white);
+  border: 1px solid var(--c2-hair);
+  border-radius: var(--c2-r-card);
+  box-shadow: 0 12px 34px rgb(var(--c2-shadow-rgb) / .06);
+  transition: transform .26s var(--c2-ease), box-shadow .3s var(--c2-ease),
+              border-color .26s var(--c2-ease);
+}
+.pg-card__icon {
+  display: grid; place-items: center;
+  width: 3rem; height: 3rem; margin-bottom: 1.1rem;
+  border-radius: 16px;
+  background: var(--c2-lime-pale);
+  color: var(--c2-green-ink);
+}
+.pg-card__icon svg { width: 1.5rem; height: 1.5rem; }
+.pg-card__title { font-size: 1.25rem; margin-bottom: .5rem; }
+.pg-card__body { margin-bottom: 1.2rem; }
+.pg-card__link {
+  margin-top: auto; align-self: start;
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-weight: 800; font-size: var(--c2-fs-ui);
+  color: var(--c2-green-ink);
+  border-bottom: 2px solid transparent;
+  transition: border-color .18s var(--c2-ease), gap .18s var(--c2-ease);
+}
+.pg-card__link svg { width: 1em; height: 1em; flex: none; }
+
+@media (hover: hover) {
+  .pg-card:hover {
+    transform: translateY(var(--c2-lift));
+    box-shadow: 0 20px 48px rgb(var(--c2-shadow-rgb) / .12);
+    border-color: transparent;
+  }
+  .pg-card:hover .pg-card__link { border-bottom-color: currentColor; gap: .7rem; }
+}
+
+/* ═══════════════════════ a typical day ═══════════════════════ */
+.pg-day {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 0;
+}
+.pg-day li {
+  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(.9rem, 1.6vw, 1.15rem) 0;
+  border-top: 1px solid var(--c2-hair);
+}
+.pg-day li:last-child { border-bottom: 1px solid var(--c2-hair); }
+.pg-day__time {
+  font-weight: 800; font-size: var(--c2-fs-sm);
+  letter-spacing: .02em;
+  color: var(--c2-green-ink);
+  padding-top: .15em;
+}
+.pg-day__what { color: var(--c2-forest); font-weight: 600; }
+.pg-day__what span { display: block; font-weight: 400; color: var(--c2-muted); }
+
+@media (max-width: 560px) {
+  .pg-day li { grid-template-columns: 1fr; gap: .2rem; }
+}
+
+/* ═══════════════════════ aside ═══════════════════════ */
+.pg-note {
+  padding: clamp(1.1rem, 2.2vw, 1.6rem) clamp(1.25rem, 2.4vw, 1.85rem);
+  background: var(--c2-well);
+  border-left: 4px solid var(--c2-lime);
+  border-radius: 0 var(--c2-r-card) var(--c2-r-card) 0;
+}
+.pg-note > * + * { margin-top: .6rem; }
+.pg-note strong { color: var(--c2-forest); }
+
+/* section rhythm on pages that stack many blocks */
+.pg-sec  { padding-top: var(--c2-sec-y); }
+.pg-sec--tight { padding-top: clamp(2rem, 4vw, 3.25rem); }
+.pg-sec--last  { padding-bottom: var(--c2-sec-y); }
+
+.pg-sec__head {
+  display: grid; justify-items: start; gap: clamp(.8rem, 1.5vw, 1.15rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 60ch;
+}
+
+/* ═══════════════════════ forms ═══════════════════════
+   One form style for the whole site: the tour request, the enrollment
+   inquiry and the contact form are the same object with different fields.
+   Posted through Netlify Forms, so there is no backend to style around. */
+.pg-form {
+  display: grid; gap: clamp(.9rem, 1.6vw, 1.15rem);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--c2-white);
+  border: 1px solid var(--c2-hair);
+  border-radius: var(--c2-r-card);
+  box-shadow: 0 18px 48px rgb(var(--c2-shadow-rgb) / .08);
+}
+
+/* the honeypot: a field a person never sees and a bot fills in */
+.pg-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.pg-form__row { display: grid; gap: .4rem; }
+.pg-form__grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.9rem, 1.6vw, 1.15rem);
+}
+@media (max-width: 560px) { .pg-form__grid { grid-template-columns: 1fr; } }
+
+.pg-form label {
+  font-size: var(--c2-fs-sm); font-weight: 700;
+  color: var(--c2-forest);
+}
+.pg-form input,
+.pg-form select,
+.pg-form textarea {
+  font: inherit;
+  color: var(--c2-forest);
+  width: 100%;
+  padding: .8rem 1rem;
+  background: var(--c2-well);
+  border: 1.5px solid var(--c2-hair);
+  border-radius: 14px;
+  transition: border-color .2s var(--c2-ease), background-color .2s var(--c2-ease),
+              box-shadow .24s var(--c2-ease);
+}
+.pg-form textarea { resize: vertical; min-height: 5.5rem; }
+.pg-form input::placeholder,
+.pg-form textarea::placeholder { color: var(--c2-muted); opacity: .75; }
+
+.pg-form input:hover,
+.pg-form select:hover,
+.pg-form textarea:hover { border-color: var(--c2-muted); }
+.pg-form input:focus,
+.pg-form select:focus,
+.pg-form textarea:focus {
+  outline: none;
+  background: var(--c2-white);
+  border-color: var(--c2-green);
+  box-shadow: 0 0 0 4px rgb(46 126 127 / .14);
+}
+
+.pg-form__submit { justify-self: start; margin-top: .4rem; }
+.pg-form__note { font-size: var(--c2-fs-sm); }
+
+/* ═══════════════════════ virtual tours ═══════════════════════ */
+.pg-tours {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1.25rem, 2.4vw, 2rem);
+}
+.pg-tour { display: flex; flex-direction: column; }
+
+.pg-tour__video,
+.pg-tour__empty {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--c2-r-card);
+  background: var(--c2-lime-pale);
+  box-shadow: 0 14px 38px rgb(var(--c2-shadow-rgb) / .10);
+}
+.pg-tour__video { object-fit: cover; display: block; }
+
+.pg-tour__empty {
+  display: grid; place-items: center;
+  color: var(--c2-green-ink); font-weight: 700; font-size: var(--c2-fs-ui);
+  box-shadow: none;
+  background:
+    repeating-linear-gradient(-45deg,
+      transparent 0 14px,
+      rgb(var(--c2-shadow-rgb) / .05) 14px 28px),
+    var(--c2-lime-pale);
+}
+
+.pg-tour__body { padding-top: clamp(.9rem, 1.6vw, 1.15rem); display: grid; gap: .45rem; }
+.pg-tour__title { font-size: 1.15rem; }
+.pg-tour__body a {
+  color: var(--c2-green-ink); font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s var(--c2-ease);
+}
+.pg-tour__body a:hover { border-bottom-color: currentColor; }

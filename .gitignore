@@ -1,0 +1,18 @@
+# Client-confidential source material — must never reach the public repo
+# or a published URL. See netlify-build.sh for the publish allow-list.
+*.docx
+Cuddle Avenue Assets/
+assets/img/_source/
+dist/
+
+# Camera originals dropped in for processing — 775 MB of HEIC/JPG/MOV that
+# no browser can serve as-is. Only the optimised derivatives belong in the
+# repo (assets/img/, assets/video/), never these.
+assets/Pictures & Video_s/
+assets/Programs/
+assets/Menu Pictures/
+
+# Licensed stock originals (45 MB of full-resolution Adobe Stock). The
+# cropped derivatives in assets/img/stock-*.jpg|webp are what ships; the
+# licence IDs are recorded in BRIEF-COMPLIANCE.md.
+assets/AdobeStock_*.jpeg

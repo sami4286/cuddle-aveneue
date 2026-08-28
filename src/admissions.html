@@ -1,0 +1,281 @@
+<!--@var TITLE: Admissions &amp; Enrollment | Cuddle Avenue Academy, Brooklyn-->
+<!--@var DESC: How to enroll at Cuddle Avenue Academy in Brooklyn: the six steps from first tour to first day, an enrollment inquiry form, and what free NYC 3-K for All means for your fees.-->
+<!--@var OGTITLE: Admissions at Cuddle Avenue Academy-->
+<!--@var OGDESC: Six steps from first tour to first day, and nothing that commits you before you are ready.-->
+<!--@include head-->
+<!--@include announce-->
+<!--@include header-->
+
+<main id="main">
+
+  <!-- ════════════════════ PAGE HEAD ════════════════════
+       The brief's 4A Enrollment lives on this page as a section rather
+       than a separate URL: it is a navigational topic with no search
+       demand behind it. Tuition and Schedule a Tour stay separate pages —
+       both are money pages in research/keyword-strategy.md.
+       ============================================================ -->
+  <section class="pg-head">
+    <div class="c2-shell pg-head__grid">
+
+      <div class="pg-head__body">
+        <nav class="pg-crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="{{ROOT}}index.html">Home</a></li>
+            <li><span aria-current="page">Admissions</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="pg-title">Join the<br class="c2-lb">
+          Cuddle Avenue family</h1>
+
+        <p class="pg-head__lead">Six steps from a first look to a first morning, at whatever pace
+          suits you. Nothing before step four commits you to anything &mdash; and we would rather
+          you toured three schools than enrolled in the wrong one.</p>
+
+        <div class="pg-head__actions">
+          <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+          <a class="c2-btn c2-btn--outline" href="#inquire">Start an enrollment inquiry</a>
+        </div>
+
+        <ul class="pg-anchors">
+          <li><a href="#steps">The six steps</a></li>
+          <li><a href="#inquire">Enrollment inquiry</a></li>
+          <li><a href="#threek">Free NYC 3-K</a></li>
+          <li><a href="{{ROOT}}admissions/tuition-financial-assistance.html">Tuition &amp; assistance</a></li>
+        </ul>
+      </div>
+
+      <figure class="pg-head__media">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/loc-exterior.webp">
+          <img src="{{ROOT}}assets/img/loc-exterior.jpg" width="1700" height="1020" fetchpriority="high" decoding="async"
+               alt="The Cuddle Avenue Academy storefront on a Brooklyn block, windows frosted with the two-bear logo.">
+        </picture>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ THE SIX STEPS ════════════════════ -->
+  <section class="pg-sec" id="steps" aria-labelledby="steps-title">
+    <div class="c2-shell">
+      <div class="pg-sec__head">
+        <p class="c2-eyebrow">How it works</p>
+        <h2 class="c2-h2" id="steps-title">From first look to first day</h2>
+      </div>
+
+      <ul class="pg-day">
+        <li>
+          <span class="pg-day__time">Step 1</span>
+          <span class="pg-day__what">Explore the programs
+            <span>Find the room that matches your child&rsquo;s age &mdash;
+              <a href="{{ROOT}}programs.html">all five are here</a>, with ages, hours and what a
+              day holds.</span></span>
+        </li>
+        <li>
+          <span class="pg-day__time">Step 2</span>
+          <span class="pg-day__what">Schedule a tour
+            <span>About thirty minutes on a weekday morning, while the classrooms are running.
+              <a href="{{ROOT}}admissions/schedule-a-tour.html">Book a time</a>.</span></span>
+        </li>
+        <li>
+          <span class="pg-day__time">Step 3</span>
+          <span class="pg-day__what">Discuss availability
+            <span>We tell you honestly what we have in that room and when &mdash; including when
+              the honest answer is a waitlist.</span></span>
+        </li>
+        <li>
+          <span class="pg-day__time">Step 4</span>
+          <span class="pg-day__what">Complete registration
+            <span>The registration paperwork and the deposit that holds your child&rsquo;s
+              place.</span></span>
+        </li>
+        <li>
+          <span class="pg-day__time">Step 5</span>
+          <span class="pg-day__what">Submit the required documentation
+            <span>Health forms, immunisation records and the authorized pickup list. We tell you
+              exactly what is needed and by when.</span></span>
+        </li>
+        <li>
+          <span class="pg-day__time">Step 6</span>
+          <span class="pg-day__what">Prepare for the first day
+            <span>What to pack, how settling in will go, and how the first week is paced so it is
+              gentle on everyone.</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ════════════════════ ENROLLMENT INQUIRY ════════════════════
+       ⚠️ Posts through Netlify Forms — see admissions/schedule-a-tour.html
+       for the two launch prerequisites. The fields are the brief's own
+       list for the enrollment inquiry form. -->
+  <section class="pg-sec" id="inquire" aria-labelledby="inq-title">
+    <div class="c2-shell pg-split">
+
+      <div class="pg-prose">
+        <p class="c2-eyebrow">Enrollment inquiry</p>
+        <h2 id="inq-title">Ask about a place</h2>
+        <p>Send this and we will come back with what we actually have for your child&rsquo;s age
+          and start date &mdash; usually the same day. It is an inquiry, not an application, and
+          it commits you to nothing.</p>
+        <p>If you have not visited yet, a tour first is almost always the better order.
+          <a href="{{ROOT}}admissions/schedule-a-tour.html">Book one here</a>.</p>
+
+        <div class="pg-note">
+          <p><strong>Turning three this year?</strong> The NYC 3-K school day is free. Ask about
+            it in the message below and we will explain how it works alongside our extended-day
+            hours.</p>
+        </div>
+      </div>
+
+      <form class="pg-form" name="enrollment-inquiry" method="POST" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="enrollment-inquiry">
+        <p class="pg-form__hp">
+          <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="pg-form__row">
+          <label for="e-parent">Parent name</label>
+          <input id="e-parent" name="parent-name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="e-email">Email</label>
+            <input id="e-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="pg-form__row">
+            <label for="e-phone">Phone</label>
+            <input id="e-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="e-child">Child&rsquo;s name</label>
+            <input id="e-child" name="child-name" type="text">
+          </div>
+          <div class="pg-form__row">
+            <label for="e-dob">Child&rsquo;s date of birth</label>
+            <input id="e-dob" name="child-dob" type="text" placeholder="e.g. March 2025">
+          </div>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="e-program">Program</label>
+            <select id="e-program" name="program">
+              <option value="">Not sure yet &mdash; help me choose</option>
+              <option>Infant care</option>
+              <option>Toddler care</option>
+              <option>2K</option>
+              <option>NYC 3-K for All</option>
+              <option>Summer camp</option>
+            </select>
+          </div>
+          <div class="pg-form__row">
+            <label for="e-location">Preferred location</label>
+            <select id="e-location" name="location">
+              <option value="">Either &mdash; whichever has space</option>
+              <option>69 16th Street</option>
+              <option>591 3rd Avenue</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="e-start">Desired start date</label>
+            <input id="e-start" name="start-date" type="text" placeholder="e.g. September 2026">
+          </div>
+          <div class="pg-form__row">
+            <label for="e-schedule">Schedule needed</label>
+            <select id="e-schedule" name="schedule">
+              <option>Full day, five days</option>
+              <option>Full day, part week</option>
+              <option>School day only</option>
+              <option>Extended day, 7:30am&ndash;6:00pm</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="e-msg">Anything we should know</label>
+          <textarea id="e-msg" name="message" rows="4" placeholder="Allergies, a sibling already with us, questions about tuition or 3-K&hellip;"></textarea>
+        </div>
+
+        <button class="c2-btn c2-btn--green pg-form__submit" type="submit">Start my enrollment inquiry</button>
+        <p class="pg-form__note">We reply by email, usually the same day, with what is actually
+          available.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ FREE 3-K ════════════════════ -->
+  <section class="pg-sec" id="threek" aria-labelledby="threek-title">
+    <div class="c2-shell pg-split pg-split--flip">
+
+      <figure class="pg-split__media">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/review-craft.webp">
+          <img src="{{ROOT}}assets/img/review-craft.jpg" width="800" height="800" loading="lazy" decoding="async"
+               alt="Three preschoolers around a table assembling paper figures together.">
+        </picture>
+      </figure>
+
+      <div class="pg-prose">
+        <p class="c2-eyebrow">Worth knowing first</p>
+        <h2 id="threek-title">NYC 3-K for All is free</h2>
+        <p>If your child turns three in the calendar year, the school day is <strong>free</strong>,
+          funded by New York City &mdash; 8:40am to 3:00pm, five days a week, in our own classroom
+          with our own teachers.</p>
+        <p>Before and after care extends that to <strong>7:30am&ndash;6:00pm</strong> for an
+          additional out-of-pocket fee, so a free school day and a working day can be the same
+          thing.</p>
+        <p><a href="{{ROOT}}programs/nyc-3k.html">Explore NYC 3-K</a> &middot;
+          <a href="{{ROOT}}admissions/tuition-financial-assistance.html">Tuition &amp; financial
+          assistance</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="c2-join pg-sec--last" aria-labelledby="adm-cta">
+    <div class="c2-shell">
+      <div class="c2-join__card">
+
+        <svg class="c2-join__arcs" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2">
+            <circle cx="1010" cy="210" r="120"/><circle cx="1010" cy="210" r="190"/><circle cx="1010" cy="210" r="264"/>
+          </g>
+        </svg>
+
+        <div class="c2-join__left">
+          <p class="c2-join__eyebrow">Start here</p>
+          <h2 class="c2-join__title" id="adm-cta">Step two is<br class="c2-lb">
+            the important one</h2>
+        </div>
+
+        <div class="c2-join__right">
+          <p class="c2-join__lead">Everything else on this page is paperwork. Come and stand in
+            the room first &mdash; the rest follows easily if it feels right.</p>
+          <div class="ca-join__actions">
+            <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}admissions/tuition-financial-assistance.html">Ask about tuition</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--@include footer-->
+<!--@include scripts-->
+
+</body>
+</html>

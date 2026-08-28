@@ -1,0 +1,262 @@
+<!--@var TITLE: Schedule a Tour &mdash; See the Classrooms | Cuddle Avenue Academy-->
+<!--@var DESC: Book a 30-minute in-person tour of Cuddle Avenue Academy in Brooklyn. Weekday mornings while the classrooms are running. See the rooms, meet the team, ask about tuition and enrollment.-->
+<!--@var OGTITLE: Schedule a Tour of Cuddle Avenue Academy-->
+<!--@var OGDESC: Thirty minutes, on a weekday morning, while the classrooms are actually running.-->
+<!--@include head-->
+<!--@include announce-->
+<!--@include header-->
+
+<main id="main">
+
+  <!-- ════════════════════ PAGE HEAD ════════════════════ -->
+  <section class="pg-head">
+    <div class="c2-shell pg-head__grid">
+
+      <div class="pg-head__body">
+        <nav class="pg-crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="{{ROOT}}index.html">Home</a></li>
+            <li><a href="{{ROOT}}admissions.html">Admissions</a></li>
+            <li><span aria-current="page">Schedule a tour</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="pg-title">Come see<br class="c2-lb">
+          Cuddle Avenue Academy</h1>
+
+        <p class="pg-head__lead">About thirty minutes, on a weekday morning, while a work cycle is
+          under way &mdash; so you see the classroom as it actually is rather than tidied for
+          visitors. Children are welcome, and usually tell you more than we can.</p>
+
+        <div class="pg-head__actions">
+          <a class="c2-btn c2-btn--green" href="#book">Book a tour</a>
+          <a class="c2-btn c2-btn--outline" href="#virtual">Explore virtually first</a>
+        </div>
+      </div>
+
+      <figure class="pg-head__media">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/loc-interior.webp">
+          <img src="{{ROOT}}assets/img/loc-interior.jpg" width="1700" height="1020" fetchpriority="high" decoding="async"
+               alt="A Cuddle Avenue classroom looking towards tall windows, with low material shelves, small tables and chairs.">
+        </picture>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ WHAT HAPPENS ON A TOUR ════════════════════
+       The brief's own list of what a family can do on a visit. -->
+  <section class="pg-sec" id="what" aria-labelledby="what-title">
+    <div class="c2-shell">
+      <div class="pg-sec__head">
+        <p class="c2-eyebrow">On the day</p>
+        <h2 class="c2-h2" id="what-title">What half an hour gets you</h2>
+        <p>No script and no sales pitch. You will be walked through the rooms by someone who works
+          in them, and asked as many questions as you ask.</p>
+      </div>
+
+      <div class="pg-prose pg-cols" style="max-width: none">
+        <ul class="pg-ticks">
+          <li>Walk the <strong>classrooms</strong>, including the one your child would be in</li>
+          <li>Hear how the <strong>program</strong> for your child&rsquo;s age actually runs</li>
+          <li>See the <strong>curriculum</strong> materials on the shelves, not in a brochure</li>
+          <li>Look at <strong>meals</strong> &mdash; the kitchen, the menu, how allergies are handled</li>
+          <li>See the <strong>safety features</strong>: check-in, exits, sleep room, cleaning</li>
+          <li><strong>Meet the team members</strong> who are free at that moment</li>
+          <li>Talk through <strong>your child&rsquo;s needs</strong> &mdash; feeding, naps, potty
+            learning, separation, anything that worries you</li>
+          <li>Ask about <strong>availability</strong> in the room you need</li>
+          <li>Ask <strong>tuition</strong> questions and what assistance may apply</li>
+          <li>Find out exactly how <strong>enrollment</strong> works from here</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ THE BOOKING FORM ════════════════════
+       ⚠️ OPEN ITEM — THE BOOKING SYSTEM
+       The brief says this button should reach "the actual tour booking
+       system". No such system was supplied, so this is a real form rather
+       than a link to nothing: it posts through Netlify Forms, which needs
+       no backend but does need two things before launch —
+
+         1. Forms enabled for the site in the Netlify dashboard
+         2. A notification email set, or nobody is told a tour was requested
+
+       Swap the whole block for an embed if the school already uses a
+       booking tool. -->
+  <section class="pg-sec" id="book" aria-labelledby="book-title">
+    <div class="c2-shell pg-split">
+
+      <div class="pg-prose">
+        <p class="c2-eyebrow">Book</p>
+        <h2 id="book-title">Ask for a morning that suits you</h2>
+        <p>Tell us who is coming and roughly when works. We answer with a time, usually the same
+          day. Nothing here is a commitment &mdash; families tour more than one school, and we
+          would rather you chose the right one.</p>
+
+        <p>Prefer to speak to someone? Call <a href="tel:+19179605618">(917) 960-5618</a> or email
+          <a href="mailto:customerservice@cuddleavenue.org?subject=Tour%20request">customerservice@cuddleavenue.org</a>.</p>
+
+        <div class="pg-note">
+          <p><strong>Tours run on weekday mornings</strong>, while the classrooms are working. If
+            mornings are impossible for you, say so in the form &mdash; we will find something.</p>
+        </div>
+      </div>
+
+      <form class="pg-form" name="tour-request" method="POST" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="tour-request">
+        <p class="pg-form__hp">
+          <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="pg-form__row">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="parent-name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="pg-form__row">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="pg-form__grid">
+          <div class="pg-form__row">
+            <label for="f-child">Child&rsquo;s age</label>
+            <input id="f-child" name="child-age" type="text" placeholder="e.g. 14 months">
+          </div>
+          <div class="pg-form__row">
+            <label for="f-start">Ideal start</label>
+            <input id="f-start" name="start-date" type="text" placeholder="e.g. September">
+          </div>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="f-program">Program</label>
+          <select id="f-program" name="program">
+            <option value="">Not sure yet &mdash; help me choose</option>
+            <option>Infant care</option>
+            <option>Toddler care</option>
+            <option>2K</option>
+            <option>NYC 3-K for All</option>
+            <option>Summer camp</option>
+          </select>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="f-location">Preferred location</label>
+          <select id="f-location" name="location">
+            <option value="">Either &mdash; whichever has space</option>
+            <option>69 16th Street</option>
+            <option>591 3rd Avenue</option>
+          </select>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="f-when">Mornings that work for you</label>
+          <textarea id="f-when" name="availability" rows="3" placeholder="Any weekday after 9:30, or Tuesdays and Thursdays&hellip;"></textarea>
+        </div>
+
+        <div class="pg-form__row">
+          <label for="f-msg">Anything we should know</label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Allergies, a sibling already with us, questions you want answered on the day&hellip;"></textarea>
+        </div>
+
+        <button class="c2-btn c2-btn--green pg-form__submit" type="submit">Request a tour</button>
+        <p class="pg-form__note">We reply by email, usually the same day. We do not add you to a
+          mailing list.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════ EXPLORE VIRTUALLY ════════════════════
+       The brief asks for all three location tours here. Two exist. -->
+  <section class="pg-sec" id="virtual" aria-labelledby="virtual-title">
+    <div class="c2-shell">
+      <div class="pg-sec__head">
+        <p class="c2-eyebrow">Explore virtually</p>
+        <h2 class="c2-h2" id="virtual-title">Or walk through it now</h2>
+        <p>Filmed in our own rooms, with nothing staged. Sound on if you want the full effect.</p>
+      </div>
+
+      <ul class="pg-tours">
+        <li class="pg-tour">
+          <video class="pg-tour__video" controls preload="none"
+                 poster="{{ROOT}}assets/img/tour-center-poster.jpg"
+                 src="{{ROOT}}assets/video/center-tour.mp4"></video>
+          <div class="pg-tour__body">
+            <h3 class="pg-tour__title">The main center tour</h3>
+            <p>Entrance, classrooms, the playroom and the kitchen. 47 seconds.</p>
+            <p class="ca-tbc">Which of our two buildings this was filmed in is being confirmed.</p>
+          </div>
+        </li>
+
+        <li class="pg-tour">
+          <video class="pg-tour__video" controls preload="none"
+                 poster="{{ROOT}}assets/img/tour-infant-poster.jpg"
+                 src="{{ROOT}}assets/video/tour-infant-toddler.mp4"></video>
+          <div class="pg-tour__body">
+            <h3 class="pg-tour__title">Infant &amp; toddler rooms</h3>
+            <p>The youngest rooms: cots, soft play, the low tables and the climbing structure.
+              1 minute 9.</p>
+            <p><a href="{{ROOT}}programs/infant-care.html">See the infant program</a></p>
+          </div>
+        </li>
+
+        <li class="pg-tour pg-tour--todo">
+          <div class="pg-tour__empty" aria-hidden="true"><span>Third tour to come</span></div>
+          <div class="pg-tour__body">
+            <h3 class="pg-tour__title">2K, 3-K and summer camp</h3>
+            <p class="ca-tbc">No tour film exists for these rooms yet. Book a visit and you will
+              see them in person instead.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ════════════════════ AFTER THE TOUR ════════════════════ -->
+  <section class="c2-join pg-sec--last" aria-labelledby="after-title">
+    <div class="c2-shell">
+      <div class="c2-join__card">
+
+        <svg class="c2-join__arcs" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2">
+            <circle cx="1010" cy="210" r="120"/><circle cx="1010" cy="210" r="190"/><circle cx="1010" cy="210" r="264"/>
+          </g>
+        </svg>
+
+        <div class="c2-join__left">
+          <p class="c2-join__eyebrow">After the visit</p>
+          <h2 class="c2-join__title" id="after-title">No pressure<br class="c2-lb">
+            to decide on the day</h2>
+        </div>
+
+        <div class="c2-join__right">
+          <p class="c2-join__lead">If it feels right, enrollment is a form, a deposit and a start
+            date. If it does not, we will happily point you towards somewhere that fits better.</p>
+          <div class="ca-join__actions">
+            <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions.html#inquire">How enrollment works</a>
+            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}admissions/tuition-financial-assistance.html">Tuition &amp; assistance</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--@include footer-->
+<!--@include scripts-->
+
+</body>
+</html>

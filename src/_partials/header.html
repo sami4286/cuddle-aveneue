@@ -1,0 +1,46 @@
+<!-- ════════════════════ HEADER ════════════════════
+     Brief: every page carries HOME · ABOUT US · PROGRAMS · ADMISSIONS ·
+     FOR FAMILIES · CONTACT US, plus a prominent SCHEDULE A TOUR button.
+
+     aria-current is not written here — one header serves every page, so
+     js/concept-2.js marks the current section from the URL instead.
+     ============================================================ -->
+<header class="c2-header">
+  <div class="c2-shell c2-header__inner">
+
+    <a class="c2-brand" href="{{ROOT}}index.html" aria-label="Cuddle Avenue Academy &mdash; home">
+      <img class="c2-brand__mark" src="{{ROOT}}assets/logo/ca-bears.png" width="382" height="320" alt="" decoding="async">
+      <span class="c2-brand__word">Cuddle Avenue</span>
+    </a>
+
+    <nav class="c2-nav" aria-label="Primary">
+      <a href="{{ROOT}}index.html">Home</a>
+      <a href="{{ROOT}}about.html">About us</a>
+      <a href="{{ROOT}}programs.html">Programs</a>
+      <a href="{{ROOT}}admissions.html">Admissions</a>
+      <a href="{{ROOT}}for-families.html">For families</a>
+      <a href="{{ROOT}}contact.html">Contact us</a>
+    </nav>
+
+    <div class="c2-header__cta">
+      <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+    </div>
+
+    <details class="c2-menu">
+      <summary aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        Menu
+      </summary>
+      <div class="c2-menu__panel">
+        <a href="{{ROOT}}index.html">Home</a>
+        <a href="{{ROOT}}about.html">About us</a>
+        <a href="{{ROOT}}programs.html">Programs</a>
+        <a href="{{ROOT}}admissions.html">Admissions</a>
+        <a href="{{ROOT}}for-families.html">For families</a>
+        <a href="{{ROOT}}contact.html">Contact us</a>
+        <a href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+      </div>
+    </details>
+
+  </div>
+</header>

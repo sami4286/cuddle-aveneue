@@ -1,0 +1,67 @@
+<!-- ════════════════════ STRUCTURED DATA ════════════════════
+     The brief's SUPPORT GOOGLE & AI DISCOVERY goal. Only the two
+     confirmed addresses are listed — the third location is deliberately
+     absent until its details arrive, so the markup stays truthful.
+     ========================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Cuddle Avenue Academy",
+  "description": "Nurturing, Montessori-inspired early childhood education in Brooklyn, from infancy through preschool. Infant care, toddler care, 2K, free NYC 3-K for All and summer camp.",
+  "telephone": "+1-917-960-5618",
+  "email": "customerservice@cuddleavenue.org",
+  "image": "{{ROOT}}assets/img/og-cuddle-avenue.jpg",
+  "sameAs": [
+    "https://www.facebook.com/cuddleavenueacademy",
+    "https://www.instagram.com/cuddle_avenue_academy/",
+    "https://www.tiktok.com/@cuddle_avenue_academy"
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "07:30",
+    "closes": "18:00"
+  }],
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Cuddle Avenue Academy — 69 16th Street",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "69 16th Street",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11215",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Cuddle Avenue Academy — 591 3rd Avenue",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "591 3rd Avenue",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11215",
+        "addressCountry": "US"
+      }
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Programs",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Infant care" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Toddler care" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2K program" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NYC 3-K for All" }, "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Summer camp" } }
+    ]
+  }
+}
+</script>
+
+<script src="{{ROOT}}js/concept-2.js" defer></script>
+
