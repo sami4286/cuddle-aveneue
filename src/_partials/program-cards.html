@@ -1,139 +1,153 @@
-      <ul class="c2-progs__grid c2-progs__grid--5">
+<!-- ════════════════════ PROGRAMME CARDS ════════════════════
+     Rebuilt to Ayna's sample: five cards that are not five of the same
+     card. A photograph cut to an organic shape sits beside a tinted
+     panel carrying the age, the name and a sentence, and the five are
+     laid out three-then-two rather than in a flat row.
 
-        <!-- ─── Infant Care ─── -->
-        <li class="c2-prog">
-          <figure class="c2-prog__media">
-            <picture>
-              <source type="image/webp" srcset="{{ROOT}}assets/img/program-infant.webp">
-              <img src="{{ROOT}}assets/img/program-infant.jpg" width="640" height="800" loading="lazy" decoding="async"
-                   alt="A teacher holds up a picture book for four infants sitting together on a rug.">
-            </picture>
-            <div class="c2-prog__pills">
-              <span class="c2-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3.2"/><path d="M6.5 21v-4.4a5.5 5.5 0 0 1 11 0V21"/></svg>
-                6 wks &ndash; 18 mos
-              </span>
-            </div>
-          </figure>
-          <h3 class="c2-prog__title">Infant care</h3>
-          <p class="c2-prog__body">A calm, low-ratio room that follows your baby&rsquo;s own rhythm for
-            feeding, sleeping and play, with breastfeeding and infant-feeding support throughout.</p>
-          <p class="c2-prog__meta">7:30am &ndash; 6:00pm</p>
-          <a class="ca-prog__cta" href="{{ROOT}}programs/infant-care.html">Explore infant care
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+     Her reference is in bright primaries, pink, green, blue, yellow,
+     purple. Taken literally that would fight every other section, and
+     her own site-wide note asks for one consistent set of colours. So
+     the structure, the per-programme colour and the stagger are hers;
+     the tints are drawn from this site's palette instead.
 
-        <!-- ─── Toddler Care ─── -->
-        <li class="c2-prog">
-          <figure class="c2-prog__media">
-            <picture>
-              <source type="image/webp" srcset="{{ROOT}}assets/img/program-toddler.webp">
-              <img src="{{ROOT}}assets/img/program-toddler.jpg" width="640" height="800" loading="lazy" decoding="async"
-                   alt="A toddler in a red jumper plays a wooden xylophone with two mallets on the classroom floor.">
-            </picture>
-            <div class="c2-prog__pills">
-              <span class="c2-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3.2"/><path d="M6.5 21v-4.4a5.5 5.5 0 0 1 11 0V21"/></svg>
-                18 mos &ndash; 2 yrs
-              </span>
-            </div>
-          </figure>
-          <h3 class="c2-prog__title">Toddler care</h3>
-          <p class="c2-prog__body">First words, first friendships, and a great deal of pouring, sorting
-            and tidying up again &mdash; with potty-learning support when your child is ready.</p>
-          <p class="c2-prog__meta">7:30am &ndash; 6:00pm</p>
-          <a class="ca-prog__cta" href="{{ROOT}}programs/toddler-care.html">Explore toddler care
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+     Each card carries its own --tint and --ink, so a programme's colour
+     is one line in the modifier class and nothing else has to know.
 
-        <!-- ─── 2K Program ─── -->
-        <li class="c2-prog">
-          <figure class="c2-prog__media">
-            <picture>
-              <source type="image/webp" srcset="{{ROOT}}assets/img/program-preschool.webp">
-              <img src="{{ROOT}}assets/img/program-preschool.jpg" width="640" height="800" loading="lazy" decoding="async"
-                   alt="Two preschoolers stand at an easel arranging picture cards on a magnetic board.">
-            </picture>
-            <div class="c2-prog__pills">
-              <span class="c2-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3.2"/><path d="M6.5 21v-4.4a5.5 5.5 0 0 1 11 0V21"/></svg>
-                2 years
-              </span>
-            </div>
-          </figure>
-          <h3 class="c2-prog__title">2K program</h3>
-          <p class="c2-prog__body">Montessori-inspired work cycles, early literacy and early
-            mathematics, and the independence that gets a two-year-old ready for 3-K.</p>
-          <p class="c2-prog__meta">7:30am &ndash; 6:00pm</p>
-          <a class="ca-prog__cta" href="{{ROOT}}programs/2k.html">Explore our 2K program
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+     Copy, age ranges and photographs are Ayna's. The pictures are her
+     own card images, cut square and centred; they are named card-*
+     rather than replacing program-*, which are still the masthead and
+     promise-band images on the programme pages.
 
-        <!-- ─── NYC 3-K for All ───
-             The brief singles this card out: FREE, the school-day hours,
-             and the paid extension must all be legible without a click. -->
-        <li class="c2-prog c2-prog--feature">
-          <!-- PHOTO GAP: no 3-K-specific photograph exists in the library yet.
-               This is the closest real one (preschool-age children at table
-               work). research/content-inventory.md already recommends a
-               half-day shoot; a 3-K classroom shot belongs on that list. -->
-          <figure class="c2-prog__media">
-            <picture>
-              <source type="image/webp" srcset="{{ROOT}}assets/img/review-craft.webp">
-              <img src="{{ROOT}}assets/img/review-craft.jpg" width="640" height="800" loading="lazy" decoding="async"
-                   alt="Three preschoolers around a table assembling paper figures together.">
-            </picture>
-            <div class="c2-prog__pills">
-              <span class="c2-pill c2-pill--free">Free</span>
-              <span class="c2-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3.2"/><path d="M6.5 21v-4.4a5.5 5.5 0 0 1 11 0V21"/></svg>
-                3 years
-              </span>
-            </div>
-          </figure>
-          <h3 class="c2-prog__title">NYC 3-K for All</h3>
-          <p class="c2-prog__body">A full, free school day for three-year-olds, funded by New York
-            City &mdash; the same Montessori-inspired classroom, curriculum and meals.</p>
+     Copy and age ranges are verbatim from Feedback.docx.
+     These ages are the site's reference: every other page states the
+     same bands.
 
-          <dl class="ca-prog__hours">
-            <dt>Free school day</dt>
-            <dd><strong>8:40am &ndash; 3:00pm</strong></dd>
-            <dt>With Before &amp; After Care</dt>
-            <dd><strong>7:30am &ndash; 6:00pm</strong></dd>
-          </dl>
-          <p class="ca-prog__note">Before &amp; After Care extends coverage for an additional
-            out-of-pocket fee.</p>
+     One partial, two pages: the homepage and the programmes hub both
+     include this, so a programme changes in one place.
 
-          <a class="ca-prog__cta" href="{{ROOT}}programs/nyc-3k.html">Explore NYC 3-K
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+     The whole card is a single link. The "Explore" pill is a span
+     styled as a button rather than a second anchor, because a link
+     inside a link is invalid and a screen reader would read the card
+     twice.
+     ============================================================== -->
+<!-- Age selector for the phone slider: tap an age to jump to that program;
+     the highlight follows the card on screen. Hidden on wider screens. -->
+<div class="c2-tabs sx-agepick" role="group" aria-label="Jump to a program by your child's age" data-c2-agepick="pcards">
+  <button class="c2-tab" type="button" aria-pressed="true" aria-label="Infant care, 6 weeks to 12 months">Infants</button>
+  <button class="c2-tab" type="button" aria-pressed="false" aria-label="Toddler care, 12 to 24 months">1&ndash;2 yrs</button>
+  <button class="c2-tab" type="button" aria-pressed="false" aria-label="2K, 2 to 3 years">2&ndash;3 yrs</button>
+  <button class="c2-tab" type="button" aria-pressed="false" aria-label="NYC 3-K, 3 to 4 years">3&ndash;4 yrs</button>
+  <button class="c2-tab" type="button" aria-pressed="false" aria-label="Summer camp, 2 to 5 years">Summer</button>
+</div>
+<ul class="sx-pcards" id="pcards">
 
-        <!-- ─── Summer Camp ─── -->
-        <li class="c2-prog">
-          <figure class="c2-prog__media">
-            <picture>
-              <source type="image/webp" srcset="{{ROOT}}assets/img/program-playroom.webp">
-              <img src="{{ROOT}}assets/img/program-playroom.jpg" width="640" height="800" loading="lazy" decoding="async"
-                   alt="A child playing in the outdoor playhouse on a bright summer morning.">
-            </picture>
-            <div class="c2-prog__pills">
-              <span class="c2-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
-                Summer
-              </span>
-            </div>
-          </figure>
-          <h3 class="c2-prog__title">Summer camp</h3>
-          <p class="c2-prog__body">Outdoor and water play, theme days, cooking, gardening and STEM,
-            with the same meals and the same familiar teachers all summer.</p>
-          <p class="c2-prog__meta ca-tbc">Ages and hours to be confirmed</p>
-          <a class="ca-prog__cta" href="{{ROOT}}programs/summer-camp.html">Explore summer camp
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+  <!-- ─── Infant care ─── -->
+  <li>
+    <a class="sx-pcard sx-pcard--infant" href="{{ROOT}}programs/infant-care.html">
+      <span class="sx-pcard__photo">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/card-infant-300.webp 300w, {{ROOT}}assets/img/card-infant-600.webp 600w, {{ROOT}}assets/img/card-infant.webp 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw">
+          <img src="{{ROOT}}assets/img/card-infant.jpg" srcset="{{ROOT}}assets/img/card-infant-300.jpg 300w, {{ROOT}}assets/img/card-infant-600.jpg 600w, {{ROOT}}assets/img/card-infant.jpg 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw" width="1145" height="1145" loading="lazy" decoding="async"
+               alt="A smiling baby lying on her front on a play mat with a soft toy rabbit and sensory toys, beneath a sign reading Little Minds Big Futures.">
+        </picture>
+      </span>
+      <span class="sx-pcard__panel">
+        <span class="sx-pcard__name">Infant care</span>
+        <span class="sx-pcard__age">6 weeks &ndash; 12 months</span>
+        <span class="sx-pcard__body">Nurturing infant care with individualized feeding, sleep,
+          sensory play, and loving attention during your baby&rsquo;s earliest months.</span>
+        <span class="sx-pcard__cta">Explore infant care</span>
+      </span>
+    </a>
+  </li>
 
-      </ul>
+  <!-- ─── Toddler care ─── -->
+  <li>
+    <a class="sx-pcard sx-pcard--toddler" href="{{ROOT}}programs/toddler-care.html">
+      <span class="sx-pcard__photo">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/card-toddler-300.webp 300w, {{ROOT}}assets/img/card-toddler-600.webp 600w, {{ROOT}}assets/img/card-toddler.webp 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw">
+          <img src="{{ROOT}}assets/img/card-toddler.jpg" srcset="{{ROOT}}assets/img/card-toddler-300.jpg 300w, {{ROOT}}assets/img/card-toddler-600.jpg 600w, {{ROOT}}assets/img/card-toddler.jpg 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw" width="1145" height="1145" loading="lazy" decoding="async"
+               alt="A laughing toddler stacking coloured rings and wooden blocks at a low classroom table.">
+        </picture>
+      </span>
+      <span class="sx-pcard__panel">
+        <span class="sx-pcard__name">Toddler care</span>
+        <span class="sx-pcard__age">12 &ndash; 24 months</span>
+        <span class="sx-pcard__body">A safe, engaging toddler program filled with hands-on learning,
+          movement, language development, and opportunities to build independence.</span>
+        <span class="sx-pcard__cta">Explore toddler care</span>
+      </span>
+    </a>
+  </li>
+
+  <!-- ─── 2K ─── -->
+  <li>
+    <a class="sx-pcard sx-pcard--twok" href="{{ROOT}}programs/2k.html">
+      <span class="sx-pcard__photo">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/card-2k-300.webp 300w, {{ROOT}}assets/img/card-2k-600.webp 600w, {{ROOT}}assets/img/card-2k.webp 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw">
+          <img src="{{ROOT}}assets/img/card-2k.jpg" srcset="{{ROOT}}assets/img/card-2k-300.jpg 300w, {{ROOT}}assets/img/card-2k-600.jpg 600w, {{ROOT}}assets/img/card-2k.jpg 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw" width="1145" height="1145" loading="lazy" decoding="async"
+               alt="A child placing small wooden figures into a pegboard at a table, with coloured blocks beside them.">
+        </picture>
+      </span>
+      <span class="sx-pcard__panel">
+        <span class="sx-pcard__name">2K program</span>
+        <span class="sx-pcard__age">2 &ndash; 3 years</span>
+        <span class="sx-pcard__body">A Montessori-inspired learning experience where children learn through play, build confidence, develop social skills, and prepare for 3K.</span>
+        <span class="sx-pcard__cta">Explore 2K</span>
+      </span>
+    </a>
+  </li>
+
+  <!-- ─── NYC 3-K ─── -->
+  <li>
+    <a class="sx-pcard sx-pcard--threek" href="{{ROOT}}programs/nyc-3k.html">
+      <span class="sx-pcard__photo">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/card-3k-300.webp 300w, {{ROOT}}assets/img/card-3k-600.webp 600w, {{ROOT}}assets/img/card-3k.webp 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw">
+          <img src="{{ROOT}}assets/img/card-3k.jpg" srcset="{{ROOT}}assets/img/card-3k-300.jpg 300w, {{ROOT}}assets/img/card-3k-600.jpg 600w, {{ROOT}}assets/img/card-3k.jpg 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw" width="1145" height="1145" loading="lazy" decoding="async"
+               alt="A grinning child holding up both hands covered in bright paint at a craft table.">
+        </picture>
+      </span>
+      <span class="sx-pcard__panel">
+        <span class="sx-pcard__name">NYC 3-K</span>
+        <span class="sx-pcard__age">3 &ndash; 4 years</span>
+        <span class="sx-pcard__body">Free NYC 3-K combining purposeful play, early academics,
+          creativity, and social-emotional learning to build a strong foundation for Pre-K.</span>
+        <span class="sx-pcard__cta">Explore NYC 3-K</span>
+      </span>
+    </a>
+  </li>
+
+  <!-- ─── Summer camp ─── -->
+  <li>
+    <a class="sx-pcard sx-pcard--camp" href="{{ROOT}}programs/summer-camp.html">
+      <span class="sx-pcard__photo">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/card-camp-300.webp 300w, {{ROOT}}assets/img/card-camp-600.webp 600w, {{ROOT}}assets/img/card-camp.webp 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw">
+          <img src="{{ROOT}}assets/img/card-camp.jpg" srcset="{{ROOT}}assets/img/card-camp-300.jpg 300w, {{ROOT}}assets/img/card-camp-600.jpg 600w, {{ROOT}}assets/img/card-camp.jpg 1145w" sizes="(max-width: 620px) 40vw, (max-width: 1000px) 22vw, 15vw" width="1145" height="1145" loading="lazy" decoding="async"
+               alt="A child with arms outstretched coming down a yellow slide outdoors, wearing a Summer Fun t-shirt.">
+        </picture>
+      </span>
+      <span class="sx-pcard__panel">
+        <span class="sx-pcard__name">Summer camp</span>
+        <span class="sx-pcard__age">2 &ndash; 5 years</span>
+        <span class="sx-pcard__body">A fun-filled summer program with art, STEM, sensory experiences,
+          outdoor play, water activities, music, and exciting weekly themes.</span>
+        <span class="sx-pcard__cta">Explore summer camp</span>
+      </span>
+    </a>
+  </li>
+
+</ul>
+
+<!-- Arrows for the phone slider (hidden on wider screens, where the cards sit in a grid). -->
+<div class="c2-gallery__nav sx-pcards__nav">
+  <button class="c2-gallery__prev" type="button" data-c2-pcards-prev aria-label="Show the previous program" aria-controls="pcards">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+  </button>
+  <button class="c2-gallery__next" type="button" data-c2-pcards-next aria-label="Show the next program" aria-controls="pcards">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+</div>

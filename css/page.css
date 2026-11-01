@@ -1,11 +1,11 @@
 /* ============================================================
-   Cuddle Avenue — subpage patterns
+   Cuddle Avenue, subpage patterns
 
    Loaded last, on every page. The homepage's sections are the design
    system; this sheet adds only what a subpage needs and the homepage
    never did:
 
-     .pg-head    the page header band — crumbs, h1, lead, actions
+     .pg-head    the page header band, crumbs, h1, lead, actions
      .pg-crumbs  breadcrumb trail
      .pg-prose   a readable column of running copy
      .pg-split   copy beside a photograph, alternating
@@ -15,8 +15,8 @@
      .pg-note    an aside that is not a warning
      .pg-anchors the in-page jump list on the long program pages
 
-   Everything else — buttons, tabs, carousels, the slate safety band, the
-   warm meals panel, quote cards, the dark closing card — is reused from
+   Everything else, buttons, tabs, carousels, the slate safety band, the
+   warm meals panel, quote cards, the dark closing card, is reused from
    concept-2.css and home.css exactly as the homepage uses it. A visitor
    should not be able to tell which page a component was designed for.
    ============================================================ */
@@ -71,7 +71,7 @@
 }
 
 /* ═══════════════════════ breadcrumbs ═══════════════════════ */
-.pg-crumbs { font-size: var(--c2-fs-sm); }
+.pg-crumbs { font-size: var(--c2-fs-label); }
 .pg-crumbs ol {
   list-style: none; margin: 0; padding: 0;
   display: flex; flex-wrap: wrap; align-items: center; gap: .5rem;
@@ -114,7 +114,7 @@
 
 /* ═══════════════════════ prose ═══════════════════════ */
 .pg-prose { max-width: 68ch; }
-.pg-prose > * + * { margin-top: clamp(.9rem, 1.6vw, 1.2rem); }
+.pg-prose > * + * { margin-top: var(--c2-flow); }
 
 .pg-prose h2 {
   font-size: clamp(1.5rem, 2.6vw, 2.25rem);
@@ -140,7 +140,7 @@
 .pg-prose a:not(.c2-btn):hover { border-bottom-color: currentColor; }
 
 /* A checked list, for "what your child will learn" style content.
-   Deliberately NOT display:flex — a bare text node beside a <strong>
+   Deliberately NOT display:flex, a bare text node beside a <strong>
    becomes its own anonymous flex item, which sets the bold lead-in as a
    column of its own and wraps it mid-word. Absolute marker, normal flow. */
 .pg-ticks { list-style: none; padding: 0; }
@@ -192,7 +192,16 @@
 
 @media (max-width: 860px) {
   .pg-split { grid-template-columns: 1fr; }
-  .pg-split__media { aspect-ratio: 16 / 10; order: -1; }
+  /* Stacked, the words come before the picture. A photograph at the top
+     of a stacked block is a lid: you scroll past something you cannot
+     read yet to reach the sentence that says what it is. Reversed, the
+     heading names the thing and the photograph answers it. */
+  /* the prose rather than the media, because one of these splits puts a
+     pair of photographs in the media slot and they carry no class the
+     media rule would catch */
+  .pg-split > .pg-prose { order: -1; }
+  .pg-split--flip .pg-split__media { order: 0; }
+  .pg-split__media { aspect-ratio: 16 / 10; }
 }
 
 /* ═══════════════════════ answer-at-a-glance ═══════════════════════ */
@@ -249,7 +258,7 @@
   color: var(--c2-green-ink);
 }
 .pg-card__icon svg { width: 1.5rem; height: 1.5rem; }
-.pg-card__title { font-size: 1.25rem; margin-bottom: .5rem; }
+.pg-card__title { margin-bottom: .5rem; }   /* size: the card group */
 .pg-card__body { margin-bottom: 1.2rem; }
 .pg-card__link {
   margin-top: auto; align-self: start;
@@ -296,18 +305,24 @@
 }
 
 /* ═══════════════════════ aside ═══════════════════════ */
+/* The original note, and the site's only one: white, a pink rule down
+   the left, and the full width of whatever holds it, no measure. */
 .pg-note {
   padding: clamp(1.1rem, 2.2vw, 1.6rem) clamp(1.25rem, 2.4vw, 1.85rem);
-  background: var(--c2-well);
+  background: var(--c2-white, #fff);
   border-left: 4px solid var(--c2-lime);
   border-radius: 0 var(--c2-r-card) var(--c2-r-card) 0;
 }
 .pg-note > * + * { margin-top: .6rem; }
+/* Space under it when something follows, the 3-K curriculum note has
+   the strand grid beneath it. A note that ends its section needs none:
+   the section's own padding gives it. */
+.pg-note:not(:last-child) { margin-bottom: var(--sx-gap, 1.5rem); }
 .pg-note strong { color: var(--c2-forest); }
 
 /* section rhythm on pages that stack many blocks */
 .pg-sec  { padding-top: var(--c2-sec-y); }
-.pg-sec--tight { padding-top: clamp(2rem, 4vw, 3.25rem); }
+.pg-sec--tight { padding-top: var(--sx-y-tight); }
 .pg-sec--last  { padding-bottom: var(--c2-sec-y); }
 
 .pg-sec__head {
@@ -320,17 +335,32 @@
    One form style for the whole site: the tour request, the enrollment
    inquiry and the contact form are the same object with different fields.
    Posted through Netlify Forms, so there is no backend to style around. */
-.pg-form {
-  display: grid; gap: clamp(.9rem, 1.6vw, 1.15rem);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: var(--c2-white);
-  border: 1px solid var(--c2-hair);
-  border-radius: var(--c2-r-card);
-  box-shadow: 0 18px 48px rgb(var(--c2-shadow-rgb) / .08);
-}
+/* Layout and nothing else. Every one of the four forms sits inside
+   .sx-formsplit__main, which is already a white card with padding, a
+   radius and a shadow, so the form drew a second white card inside the
+   first, a hairline rectangle around the fields with a gap of dead
+   white between the two borders. The card that holds it is the card. */
+.pg-form { display: grid; gap: clamp(.9rem, 1.6vw, 1.15rem); }
 
 /* the honeypot: a field a person never sees and a bot fills in */
 .pg-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* What the form says back. One line under the button, announced to a
+   screen reader through role="status", which is why it is in the
+   markup from the start and hidden, rather than created on submit:
+   a live region has to be in the page before the text arrives or it
+   is not announced at all. */
+.pg-form__status {
+  margin: var(--c2-card-gap) 0 0;
+  padding: .85rem 1.1rem;
+  border-radius: var(--c2-r-card);
+  font-size: var(--c2-fs-sm); font-weight: 600;
+  border-left: 4px solid currentColor;
+}
+.pg-form__status--ok   { color: var(--c2-green-ink); background: var(--c2-lime-pale); }
+.pg-form__status--bad  { color: #9B2C3B;             background: #FCE9EC; }
+.pg-form__status--busy { color: var(--c2-muted);     background: var(--c2-well); }
+.pg-form__submit[aria-disabled="true"] { opacity: .6; pointer-events: none; }
 
 .pg-form__row { display: grid; gap: .4rem; }
 .pg-form__grid {
@@ -373,7 +403,7 @@
 }
 
 .pg-form__submit { justify-self: start; margin-top: .4rem; }
-.pg-form__note { font-size: var(--c2-fs-sm); }
+/* the note under a form is a .pg-note like every other aside */
 
 /* ═══════════════════════ virtual tours ═══════════════════════ */
 .pg-tours {
@@ -391,7 +421,29 @@
   background: var(--c2-lime-pale);
   box-shadow: 0 14px 38px rgb(var(--c2-shadow-rgb) / .10);
 }
-.pg-tour__video { object-fit: cover; display: block; }
+/* a button now, not an inline <video>: it opens the overlay */
+.pg-tour__video {
+  display: block; position: relative; padding: 0; border: 0;
+  overflow: hidden; cursor: pointer;
+}
+.pg-tour__video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pg-tour__play {
+  position: absolute; inset: 0; margin: auto;
+  width: clamp(52px, 6vw, 68px); height: clamp(52px, 6vw, 68px);
+  border-radius: 50%; background: rgb(255 255 255 / .92);
+  display: grid; place-items: center;
+  box-shadow: 0 10px 30px rgb(var(--c2-shadow-rgb) / .28);
+  transition: transform .24s var(--c2-ease), background-color .2s var(--c2-ease);
+}
+.pg-tour__play svg { width: 42%; height: 42%; fill: var(--c2-green); margin-left: 8%; }
+@media (hover: hover) {
+  .pg-tour__video:hover .pg-tour__play { transform: scale(1.08); background: #fff; }
+}
+.pg-tour__video:focus-visible { outline: 3px solid var(--c2-green); outline-offset: 3px; }
+
+/* the gap under a card's copy is the card's own, and the button was
+   adding a section's worth of space on top of it */
+.pg-tour__body p:has(> .c2-btn) { margin-top: calc(1.5rem - var(--c2-card-gap)); }
 
 .pg-tour__empty {
   display: grid; place-items: center;
@@ -404,11 +456,261 @@
     var(--c2-lime-pale);
 }
 
-.pg-tour__body { padding-top: clamp(.9rem, 1.6vw, 1.15rem); display: grid; gap: .45rem; }
-.pg-tour__title { font-size: 1.15rem; }
+.pg-tour__body { padding-top: clamp(.9rem, 1.6vw, 1.15rem); display: grid; gap: var(--c2-card-gap); }
+
 .pg-tour__body a {
   color: var(--c2-green-ink); font-weight: 700;
   border-bottom: 2px solid transparent;
   transition: border-color .2s var(--c2-ease);
 }
 .pg-tour__body a:hover { border-bottom-color: currentColor; }
+
+/* ═══════════════════════ FAQ ═══════════════════════
+   The concept sheet's accordion, given a readable measure and a rule
+   above the first question so a group reads as a group. */
+.pg-faq {
+  max-width: 74ch;
+  border-top: 1px solid var(--c2-hair);
+}
+
+/* ═══════════════════════ legal pages ═══════════════════════
+   Privacy, accessibility and terms: one column, generous measure, and
+   nothing decorative. People read these when something has gone wrong. */
+.pg-legal { max-width: 72ch; }
+.pg-legal h2 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  margin-top: clamp(2rem, 3.4vw, 3rem);
+}
+.pg-legal h3 { font-size: clamp(1.05rem, 1.5vw, 1.2rem); }
+.pg-legal__updated {
+  font-size: var(--c2-fs-sm);
+  color: var(--c2-muted);
+}
+.pg-legal dl { margin: clamp(.9rem, 1.6vw, 1.2rem) 0 0; }
+.pg-legal dt { font-weight: 700; color: var(--c2-forest); margin-top: .9rem; }
+.pg-legal dd { margin: .2rem 0 0; }
+
+/* ════════════════════════════════════════════════════════════
+   SIMPLIFIED SECTION VOCABULARY  (subpage redesign)
+
+   The first pass gave every subpage the same shape, head, then a
+   stack of tick lists, fact panels, two-column text walls and note
+   boxes. Read end to end it is exhausting, and no section has a
+   single job.
+
+   These are the replacements. A subpage should now be built from at
+   most five blocks, in this order:
+
+     1  pg-head        who this page is for, one lead, two CTAs
+     2  pg-statement   one sentence with air around it
+     3  pg-split       a picture and sixty words, alternating
+     4  one detail block, pg-day, or accordions for anything long
+     5  a shared band + the shared closing CTA
+
+   Anything that was a grid of cards is either a shared band now or
+   it belongs on another page.
+   ════════════════════════════════════════════════════════════ */
+
+/* ---------- a sentence, given room ---------- */
+/* specificity: .pg-statement p already sets the display size, so the
+   note has to out-rank it or it comes out the same size */
+/* ---------- a band carrying one idea ---------- */
+
+/* ---------- three figures, no panel ---------- */
+.pg-figures {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.pg-figures b {
+  display: block;
+  font-size: clamp(1.6rem, 2.6vw, 2.35rem);
+  line-height: 1.05;
+  color: var(--c2-green-ink);
+  font-weight: 700; letter-spacing: -.02em;
+}
+.pg-figures span { display: block; font-size: var(--c2-fs-sm); margin-top: .35rem; }
+
+/* ---------- one quote, reused ---------- */
+.pg-quote {
+  max-width: 42ch;
+  margin-inline: auto;
+  text-align: center;
+}
+.pg-quote blockquote {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  line-height: 1.3;
+  color: var(--c2-forest);
+  font-weight: 600;
+}
+.pg-quote figcaption {
+  margin-top: 1rem;
+  font-size: var(--c2-fs-sm);
+}
+.pg-quote figcaption b { color: var(--c2-forest); }
+
+/* ---------- accordions carry the long detail ---------- */
+.pg-faq { max-width: 62rem; }
+.pg-faq .c2-acc:first-of-type { border-top: 1px solid var(--c2-hair); }
+
+/* ════════════════════════════════════════════════════════════
+   ABOUT, a page built rather than assembled
+
+   Everything below is scoped to .ab- and used on one page. The rest of
+   the site is a kit of parts on purpose; About is the page a family
+   reads while deciding whether they like us, so it gets its own
+   geometry: a full-bleed masthead, a story told down a rail, the six
+   feelings as gradient tiles, a mission band, and a partnership list
+   whose heading stays put while the list moves.
+   ════════════════════════════════════════════════════════════ */
+
+/* ---------- masthead ---------- */
+/* two rings, mostly out of frame, the only geometry the page repeats */
+.ab-arc {
+  position: absolute; z-index: -1;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255 255 255 / .16);
+  pointer-events: none;
+}
+.ab-arc--a { right: -14rem; top: -12rem; width: min(46rem, 70vw); }
+.ab-arc--b { right: -6rem;  top: -4rem;  width: min(28rem, 46vw); }
+
+/* ---------- the story, told down a rail ---------- */
+.ab-rail { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); }
+.ab-rail__label { position: sticky; top: calc(var(--c2-header-h, 76px) + 2rem); align-self: start; }
+.ab-rail__label .c2-h2 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); margin-top: .6rem; }
+
+.ab-chapters { display: grid; gap: clamp(2.5rem, 6vw, 5rem); position: relative; }
+.ab-chapters::before {
+  content: ""; position: absolute; left: 0; top: .6rem; bottom: 4rem; width: 2px;
+  background: var(--c2-green);
+}
+.ab-chapter {
+  position: relative;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding-left: clamp(1.75rem, 3vw, 2.75rem);
+  align-items: center;
+}
+.ab-chapter__n {
+  position: absolute; left: -9px; top: .35rem;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--c2-white); box-shadow: inset 0 0 0 3px var(--c2-green);
+}
+.ab-chapter h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); margin-bottom: .7rem; }
+.ab-chapter p + p { margin-top: .8rem; }
+.ab-chapter figure { margin: 0; border-radius: var(--c2-r-card); overflow: hidden; box-shadow: 0 24px 60px rgb(var(--c2-shadow-rgb) / .16); }
+.ab-chapter figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ab-chapter--flip figure { order: -1; }
+
+@media (max-width: 900px) {
+  .ab-rail { grid-template-columns: 1fr; }
+  .ab-rail__label { position: static; }
+  .ab-chapter { grid-template-columns: 1fr; }
+  .ab-chapter--flip figure { order: 0; }
+}
+
+/* ---------- six feelings, as gradient tiles ---------- */
+.ab-feelings {
+  list-style: none; margin: 0; padding: 0;
+  /* three across, twice, auto-fit put five in a row and orphaned the
+     sixth, which reads as a mistake rather than a set of six */
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.9rem, 1.8vw, 1.35rem);
+}
+.ab-feel {
+  position: relative; isolation: isolate; overflow: hidden;
+  padding: clamp(1.5rem, 2.6vw, 2.1rem);
+  min-height: clamp(8rem, 11vw, 10rem);
+  border-radius: var(--c2-r-card);
+  /* the numeral that used to fill the upper half is gone, so the
+     copy sits at the top and the six headings line up across a row */
+  display: grid; align-content: start; gap: .4rem;
+  min-height: 0;
+  color: var(--c2-forest);
+}
+.ab-feel b { font-size: clamp(1.35rem, 2vw, 1.7rem); letter-spacing: -.02em; }
+.ab-feel span { font-size: var(--c2-fs-sm); }
+.ab-feel:nth-child(1) { background: #CBE2E9; }
+.ab-feel:nth-child(2) { background: #F8C4CA; }
+.ab-feel:nth-child(3) { background: #F3D7B8; }
+.ab-feel:nth-child(4) { background: #C4DED7; }
+.ab-feel:nth-child(5) { background: #D4D2EB; }
+.ab-feel:nth-child(6) { background: #D8DFE3; }
+
+/* ---------- mission, on a gradient ---------- */
+.ab-mission {
+  position: relative; isolation: isolate; overflow: hidden;
+  padding-block: var(--sx-y);
+  color: var(--c2-white);
+  text-align: center;
+  background: var(--c2-bar, #34434A);
+}
+/* A photograph rather than the drawn rings, under a flat scrim. The
+   section keeps its slate background underneath, so it is still
+   readable in the moment before the picture arrives. */
+.ab-mission__bg { position: absolute; inset: 0; z-index: -2; }
+.ab-mission__bg picture,
+.ab-mission__bg img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ab-mission::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: rgb(26 38 44 / .8);
+}
+/* the statement only, this used to be .ab-mission p, which caught the
+   tagline above it and set it at display size too */
+/* It is an h2, and it is now sized as one. It had a scale of its own, 
+   1.5rem to 2.75rem against the site's 2rem to 3.5rem, so the mission
+   band on the about page and the promise band on all five programme
+   pages read a size down from every other heading around them. */
+.ab-mission__statement {
+  max-width: 26ch; margin-inline: auto;
+  font-size: var(--c2-fs-h2);
+  line-height: var(--c2-lh-h2); letter-spacing: -.02em;
+  color: var(--c2-white);
+  text-wrap: balance;
+}
+.ab-mission ul {
+  list-style: none; margin: clamp(2rem, 4vw, 3rem) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem;
+}
+.ab-mission li {
+  padding: .55rem 1.1rem;
+  border-radius: var(--c2-r-pill);
+  border: 1px solid rgb(255 255 255 / .26);
+  font-size: var(--c2-fs-sm); font-weight: 700;
+  color: rgba(255, 255, 255, .9);
+}
+
+/* ---------- educators: two photographs, overlapped ---------- */
+.ab-stack { position: relative; padding-bottom: clamp(3rem, 7vw, 5rem); }
+.ab-stack figure { margin: 0; border-radius: var(--c2-r-card); overflow: hidden; }
+.ab-stack figure img { width: 100%; object-fit: cover; }
+.ab-stack__a img { aspect-ratio: 4 / 3; }
+.ab-stack__b {
+  position: absolute; right: -1rem; bottom: 0; width: 52%;
+  border: 8px solid var(--c2-white);
+  box-shadow: 0 26px 60px rgb(var(--c2-shadow-rgb) / .2);
+}
+.ab-stack__b img { aspect-ratio: 1 / 1; }
+@media (max-width: 700px) {
+  .ab-stack { padding-bottom: 0; }
+  /* figure.ab-stack__b, not .ab-stack__b: '.ab-stack figure { margin: 0 }'
+     above carries a type selector and so outranks a lone class, and it
+     was quietly winning, the margin-top here computed to 0 and the two
+     photographs sat edge to edge with nothing between them. */
+  .ab-stack figure.ab-stack__b {
+    position: static; width: auto; border-width: 0;
+    margin-top: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+/* ---------- reasons, numbered ---------- */
+@media (max-width: 780px) { .ab-reasons { grid-template-columns: 1fr; } }
+
+/* ---------- partnership: heading stays, list moves ---------- */
+
+/* ---------- closing, over a photograph ---------- */
+@media (max-width: 900px) { .ab-feelings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .ab-feelings { grid-template-columns: 1fr; } }

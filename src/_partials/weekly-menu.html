@@ -1,0 +1,244 @@
+        <!-- ─── This week on the tray ───
+             The school's own fifteen menu cards, one per meal per weekday.
+             Every item is repeated as real text under its photograph: the
+             brief's Google/AI discovery goal asks for exactly that, and a
+             parent reading on a phone should not have to pinch a picture to
+             find out what lunch is. The day tabs open on today. -->
+        <div class="ca-menu">
+
+          <div class="ca-menu__head">
+            <div>
+              <h3 class="ca-menu__title">This week on the tray</h3>
+              <p class="ca-menu__lead">Breakfast, lunch and an afternoon snack, the same for every
+                classroom. Milk and water with every meal.</p>
+            </div>
+
+            <div class="c2-tabs" role="tablist" aria-label="Menu by day" data-c2-tablist data-c2-tab-today>
+              <button class="c2-tab" type="button" role="tab" id="menu-tab-mon" aria-controls="menu-panel-mon" aria-selected="true"><span class="c2-tab__full">Monday</span><span class="c2-tab__abbr">Mon</span></button>
+              <button class="c2-tab" type="button" role="tab" id="menu-tab-tue" aria-controls="menu-panel-tue" aria-selected="false"><span class="c2-tab__full">Tuesday</span><span class="c2-tab__abbr">Tue</span></button>
+              <button class="c2-tab" type="button" role="tab" id="menu-tab-wed" aria-controls="menu-panel-wed" aria-selected="false"><span class="c2-tab__full">Wednesday</span><span class="c2-tab__abbr">Wed</span></button>
+              <button class="c2-tab" type="button" role="tab" id="menu-tab-thu" aria-controls="menu-panel-thu" aria-selected="false"><span class="c2-tab__full">Thursday</span><span class="c2-tab__abbr">Thu</span></button>
+              <button class="c2-tab" type="button" role="tab" id="menu-tab-fri" aria-controls="menu-panel-fri" aria-selected="false"><span class="c2-tab__full">Friday</span><span class="c2-tab__abbr">Fri</span></button>
+            </div>
+          </div>
+
+          <!-- ─── Monday ─── -->
+          <ul class="ca-menu__day" id="menu-panel-mon" role="tabpanel" aria-labelledby="menu-tab-mon" tabindex="0">
+            <li class="ca-meal">
+                <p class="ca-meal__when">Breakfast</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-mon-breakfast-800.webp 800w, {{ROOT}}assets/img/menu-mon-breakfast.webp 1402w" sizes="(max-width: 860px) 91vw, 44vw">
+                  <img src="{{ROOT}}assets/img/menu-mon-breakfast.jpg" srcset="{{ROOT}}assets/img/menu-mon-breakfast-800.jpg 800w, {{ROOT}}assets/img/menu-mon-breakfast.jpg 1402w" sizes="(max-width: 860px) 91vw, 44vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Monday breakfast tray: a bowl of oatmeal, a bowl of mixed berries and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Oatmeal &middot; mixed berries &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Lunch</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-mon-lunch.webp">
+                  <img src="{{ROOT}}assets/img/menu-mon-lunch.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Monday lunch tray: macaroni and cheese, a bowl of mixed vegetables and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Macaroni &amp; cheese &middot; mixed veggies &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Snack</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-mon-snack.webp">
+                  <img src="{{ROOT}}assets/img/menu-mon-snack.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Monday snack tray: honey graham crackers, a bowl of fruit, a bowl of cheese cubes and a glass of water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Honey Maid crackers &middot; fruit &middot; cheese &middot; water</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- ─── Tuesday ─── -->
+          <ul class="ca-menu__day" id="menu-panel-tue" role="tabpanel" aria-labelledby="menu-tab-tue" tabindex="0">
+            <li class="ca-meal">
+                <p class="ca-meal__when">Breakfast</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-tue-breakfast.webp">
+                  <img src="{{ROOT}}assets/img/menu-tue-breakfast.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Tuesday breakfast tray: a bagel with cream cheese, a bowl of mixed berries and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Bagel &amp; cream cheese &middot; mixed berries &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Lunch</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-tue-lunch-800.webp 800w, {{ROOT}}assets/img/menu-tue-lunch.webp 1402w" sizes="(max-width: 860px) 100vw, 100vw">
+                  <img src="{{ROOT}}assets/img/menu-tue-lunch.jpg" srcset="{{ROOT}}assets/img/menu-tue-lunch-800.jpg 800w, {{ROOT}}assets/img/menu-tue-lunch.jpg 1402w" sizes="(max-width: 860px) 100vw, 100vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Tuesday lunch tray: brown rice with beans and a veggie salad beside brown rice with meatballs and a veggie salad, with milk and water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Brown rice &amp; beans with veggie salad, <em>or</em> brown rice &amp; meatballs
+                with veggie salad &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Snack</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-tue-snack.webp">
+                  <img src="{{ROOT}}assets/img/menu-tue-snack.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Tuesday snack tray: goldfish crackers, a bowl of mixed fruit, a bowl of cheese cubes and a glass of water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Goldfish crackers &middot; mixed fruit &middot; cheese &middot; water</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- ─── Wednesday ─── -->
+          <ul class="ca-menu__day" id="menu-panel-wed" role="tabpanel" aria-labelledby="menu-tab-wed" tabindex="0">
+            <li class="ca-meal">
+                <p class="ca-meal__when">Breakfast</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-wed-breakfast.webp">
+                  <img src="{{ROOT}}assets/img/menu-wed-breakfast.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Wednesday breakfast tray: waffles, a bowl of mixed berries and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Waffles &middot; mixed berries &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Lunch</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-wed-lunch-800.webp 800w, {{ROOT}}assets/img/menu-wed-lunch.webp 1386w" sizes="(max-width: 860px) 91vw, 16vw">
+                  <img src="{{ROOT}}assets/img/menu-wed-lunch.jpg" srcset="{{ROOT}}assets/img/menu-wed-lunch-800.jpg 800w, {{ROOT}}assets/img/menu-wed-lunch.jpg 1386w" sizes="(max-width: 860px) 91vw, 16vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Wednesday lunch tray: ravioli and tortellini in sauce, a bowl of broccoli and chickpeas, and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Ravioli &amp; tortellini &middot; broccoli &amp; chickpeas &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Snack</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-wed-snack.webp">
+                  <img src="{{ROOT}}assets/img/menu-wed-snack.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Wednesday snack tray: cheese crackers, a bowl of mixed fruit, a bowl of cheese cubes and a glass of water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Cheez-It crackers &middot; mixed fruit &middot; cheese &middot; water</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- ─── Thursday ─── -->
+          <ul class="ca-menu__day" id="menu-panel-thu" role="tabpanel" aria-labelledby="menu-tab-thu" tabindex="0">
+            <li class="ca-meal">
+                <p class="ca-meal__when">Breakfast</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-thu-breakfast.webp">
+                  <img src="{{ROOT}}assets/img/menu-thu-breakfast.jpg" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Thursday breakfast tray: a bowl of plain yogurt, a bowl of mixed berries and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Plain yogurt &middot; mixed berries &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Lunch</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-thu-lunch-800.webp 800w, {{ROOT}}assets/img/menu-thu-lunch.webp 1402w" sizes="(max-width: 860px) 91vw, 44vw">
+                  <img src="{{ROOT}}assets/img/menu-thu-lunch.jpg" srcset="{{ROOT}}assets/img/menu-thu-lunch-800.jpg 800w, {{ROOT}}assets/img/menu-thu-lunch.jpg 1402w" sizes="(max-width: 860px) 91vw, 44vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Thursday lunch tray: baked potato, meatballs, bell pepper with bread, and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Baked potato &middot; meatballs &middot; bell pepper &amp; bread &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Snack</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-thu-snack-800.webp 800w, {{ROOT}}assets/img/menu-thu-snack.webp 1402w" sizes="(max-width: 860px) 91vw, 44vw">
+                  <img src="{{ROOT}}assets/img/menu-thu-snack.jpg" srcset="{{ROOT}}assets/img/menu-thu-snack-800.jpg 800w, {{ROOT}}assets/img/menu-thu-snack.jpg 1402w" sizes="(max-width: 860px) 91vw, 44vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Thursday snack tray: saltine crackers, a bowl of mixed fruit, a bowl of cheese cubes and a glass of water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Saltine crackers &middot; mixed fruit &middot; cheese &middot; water</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- ─── Friday ─── -->
+          <ul class="ca-menu__day" id="menu-panel-fri" role="tabpanel" aria-labelledby="menu-tab-fri" tabindex="0">
+            <li class="ca-meal">
+                <p class="ca-meal__when">Breakfast</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-fri-breakfast-800.webp 800w, {{ROOT}}assets/img/menu-fri-breakfast.webp 1402w" sizes="(max-width: 860px) 86vw, 20vw">
+                  <img src="{{ROOT}}assets/img/menu-fri-breakfast.jpg" srcset="{{ROOT}}assets/img/menu-fri-breakfast-800.jpg 800w, {{ROOT}}assets/img/menu-fri-breakfast.jpg 1402w" sizes="(max-width: 860px) 86vw, 20vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Friday breakfast tray: avocado toast, a bowl of mixed berries and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Avocado toast &middot; mixed berries &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Lunch</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-fri-lunch-800.webp 800w, {{ROOT}}assets/img/menu-fri-lunch.webp 1402w" sizes="(max-width: 860px) 91vw, 44vw">
+                  <img src="{{ROOT}}assets/img/menu-fri-lunch.jpg" srcset="{{ROOT}}assets/img/menu-fri-lunch-800.jpg 800w, {{ROOT}}assets/img/menu-fri-lunch.jpg 1402w" sizes="(max-width: 860px) 91vw, 44vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Friday lunch tray: fish sticks with pasta, a bowl of carrots and a cup of milk.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Fish sticks &amp; pasta &middot; carrots &middot; milk or water</p>
+              </div>
+            </li>
+            <li class="ca-meal">
+                <p class="ca-meal__when">Snack</p>
+              <figure class="ca-meal__media">
+                <picture>
+                  <source type="image/webp" srcset="{{ROOT}}assets/img/menu-fri-snack-800.webp 800w, {{ROOT}}assets/img/menu-fri-snack.webp 1402w" sizes="(max-width: 860px) 86vw, 20vw">
+                  <img src="{{ROOT}}assets/img/menu-fri-snack.jpg" srcset="{{ROOT}}assets/img/menu-fri-snack-800.jpg 800w, {{ROOT}}assets/img/menu-fri-snack.jpg 1402w" sizes="(max-width: 860px) 86vw, 20vw" width="1100" height="880" loading="lazy" decoding="async"
+                       alt="Friday snack tray: animal crackers, a bowl of mixed fruit, a bowl of cheese cubes and a glass of water.">
+                </picture>
+              </figure>
+              <div class="ca-meal__body">
+                <p class="ca-meal__what">Animal crackers &middot; mixed fruit &middot; cheese &middot; water</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="pg-note sx-after">Menu items vary with the season and with what is available. Allergies and
+            individual diets are agreed with your child&rsquo;s teacher before the first day.</p>
+
+        </div>

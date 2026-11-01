@@ -1,26 +1,27 @@
-# Homepage vs. the client brief
+# The site vs. the client brief
 
-Checked against **Complete Website Structure, Content & Developer Guide** (client `.docx`, section *1. HOME*, plus the global HEADER, FOOTER and BUTTON RULE sections).
+Checked against **Complete Website Structure, Content & Developer Guide** (client `.docx`) — the HOME section, all five section trees, and the global HEADER, FOOTER, PROGRAM-PAGE and BUTTON RULE sections.
 
-The homepage was rebuilt to the brief's section order and CTA wording. What follows is what matches, what is deliberately different, and what is blocked on the client.
+What follows is what matches the brief, what is deliberately different, and what is blocked on the client.
 
 ---
 
 ## Pages
 
 The brief specifies 24 pages. The site ships **19**, because five of the brief's subpages are
-sections instead — a deliberate difference, argued below. **Nine are built**, including every
-destination in the main navigation.
+sections instead — a deliberate difference, argued below. **All nineteen are written.** No route
+is a placeholder, no internal link 404s, and no in-page anchor points at an id that does not
+exist.
 
-| Built | Still to build |
+| | |
 |---|---|
-| `/` homepage | `programs/toddler-care` · `programs/2k` · `programs/nyc-3k` · `programs/summer-camp` |
-| `about` | `admissions/tuition-financial-assistance` |
-| `about/health-and-safety` | `for-families/meals-nutrition-breastfeeding` · `for-families/faq` |
-| `programs` | `privacy-policy` · `accessibility` · `terms` |
-| `programs/infant-care` | |
-| `admissions` · `admissions/schedule-a-tour` | |
-| `for-families` · `contact` | |
+| **Home** | `/` |
+| **About** | `about` (story · philosophy · mission · educators · why families choose us · family partnership) · `about/health-and-safety` |
+| **Programs** | `programs` · `infant-care` · `toddler-care` · `2k` · `nyc-3k` · `summer-camp` |
+| **Admissions** | `admissions` (six steps + enrollment inquiry) · `admissions/schedule-a-tour` · `admissions/tuition-financial-assistance` |
+| **For families** | `for-families` (Brightwheel · what to bring · forms · pickup · routines · calendar) · `meals-nutrition-breastfeeding` · `faq` |
+| **Contact** | `contact` |
+| **Legal** | `privacy-policy` · `terms` — both **drafts pending legal review**. The accessibility page was removed on request. |
 
 ### Five subpages became sections
 
@@ -52,15 +53,24 @@ conversion destination every CTA points at), `for-families/meals-nutrition-breas
 keywords, and the hierarchy earns breadcrumb sitelinks. Short vanity URLs (`/tuition`, `/tour`)
 can be added as redirects for ads and print without changing the structure.
 
-`programs/infant-care` is the pattern for the other four program pages: the brief's
-PROGRAM-PAGE RULE answered in order — the day, the curriculum, feeding, sleep, communication,
-safety, the room, the tour video, and the three CTAs that close it.
+Every program page answers the brief's PROGRAM-PAGE RULE in the same order — a typical day, the
+curriculum, meals, naps, communication, safety, the room, and the three CTAs that close it.
 
-The fifteen unwritten routes are **not dead links**. The build generates a placeholder page for
-each one — full header and footer, an honest line about the page not being written yet, a phone
-number and a tour button. They are generated, never committed, and each disappears the moment a
-real page takes its place. A reviewer clicking anything in the footer today lands somewhere
-sensible rather than on a 404.
+The build still generates a placeholder page for any route that is linked but not yet written.
+Nothing triggers it today; it exists so that adding a link before its page can never produce a
+404.
+
+### What each new page still needs from the school
+
+| Page | Missing |
+|---|---|
+| `programs/toddler-care` | Photo gallery of the toddler room; its own tour film |
+| `programs/2k` | Photo gallery; tour film (the 2K tour folder in the drop was empty) |
+| `programs/nyc-3k` | Photo gallery; tour film; **the MySchools listing, program code and application deadlines** |
+| `programs/summer-camp` | **Ages, hours and dates** — none supplied anywhere; photos; tour film |
+| `admissions/tuition-financial-assistance` | **Whether to publish a starting rate** (recommended — see the page) |
+| `for-families` | Illness/exclusion policy, school calendar, parent handbook, what the school supplies vs. what families bring |
+| `privacy-policy` · `terms` | Legal entity name, postal address, retention periods, governing law — **and a lawyer's review** |
 
 **New open item — the booking system.** The brief routes SCHEDULE A TOUR to "the actual tour
 booking system", and none was supplied. `admissions/schedule-a-tour` therefore carries a real
@@ -123,6 +133,40 @@ block is meant to be replaced by its embed.
    confirmation of **which location** each existing video was filmed in, since the brief asks
    for one per location and both films open on a street entrance.
 
+7b. **Twelve photographs cannot be sharpened — they need new source files.**
+   Two thirds of the site's photographs were shipping smaller than the space they fill, so
+   the browser was enlarging them: a 640px plate stretched across 2880 device pixels reads
+   as soft, and that is what it was. Twenty-five have been re-cut from the originals at up
+   to 2400px, with a srcset so a phone does not pay for a desktop's pixels.
+
+   The other twelve are already at their source resolution. There is no larger version of
+   them in the repository, in its history, or on disk — they have been 640x800 or 800x800
+   since the first upload, and the 93 interior stills are empty rooms, so none of them is a
+   source for a photograph with children in it:
+
+   | Ships at | Needs |
+   |---|---|
+   | `program-infant`, `program-toddler`, `program-preschool`, `program-playroom` — 640×800 | 2400px |
+   | `review-craft`, `review-explore`, `review-holiday` — 800×800 | 1600px |
+   | `story-table`, `story-playroom` — 900×620 · `story-gardening` — 760×1000 | 1800px |
+   | `og-cuddle-avenue` — 1200×630 | 2400px |
+
+   Every one of these shows children, and the 93 interior stills are empty rooms — every
+   one checked, not taken on trust — so none of them is a source for any of these. The shoot
+   the brief keeps asking for would replace them all anyway. Until then they are the sharpest
+   the supplied files allow.
+
+   The two tour posters were on this list and are not any more: they are frames of the two
+   tour films, and both films have a source far larger than the 720p copy the site serves —
+   `final.mov` at 3840×2160 and the infant tour at 1920×1080. The posters were cut again from
+   those, at the frame they already showed. They are 2400×1350 and 1920×1080 now.
+
+   Worth knowing for later: those same sources mean **both tour videos could be re-encoded at
+   1080p**. The lightbox draws them up to 1100px wide, so the 720p copies are being enlarged
+   there too. Not done here, because it roughly doubles what a visitor downloads to watch
+   one, and that is a call worth making deliberately rather than as a side effect of fixing
+   the photographs.
+
 7a. **Stock photography — a deliberate exception to the brief.** The brief says to *"use real
    Cuddle Avenue Academy photography rather than generic stock photography whenever
    possible."* Two enrichment cards now break that rule, because **STEM** and **Creative
@@ -134,7 +178,46 @@ block is meant to be replaced by its embed.
    | `stock-stem.jpg` / `.webp` | 529112232 | a real STEM activity at the shoot |
    | `stock-creative.jpg` / `.webp` | 448815197 | a real art or making session |
 
-   Both are filenamed `stock-*` so they cannot be mistaken for the school's own library, and
+   **The homepage hero is now a third, and a larger exception than either.** It is
+   AdobeStock_260198254 — two adults on the floor with two toddlers and a xylophone, with
+   the child who was walking through the background cropped out — and it runs on the
+   homepage, About and Programs. It is not filenamed `stock-*`, because it kept the name of
+   the photograph it replaced, so nothing in the filename says it is not this school. Its
+   alt text does the work instead: it describes children at an activity and does not place
+   them at Cuddle Avenue, where the previous alt said "at Cuddle Avenue Academy in Brooklyn"
+   of a photograph that had been taken there.
+
+   **And a fourth: the welcome section.** `welcome-paint` is AdobeStock_620023397 — a child
+   holding up paint-covered hands — cut square with the face centred, on the homepage only.
+   It did not replace `story-table`, which is still on About twice and For families once; it
+   is a new file, so those three keep the photograph they had.
+
+   **And a fifth: 3-K.** `program-3k` is AdobeStock_1680895093 — a circle of children with
+   their hands stacked — cut square from the exact centre of the frame. It takes the four
+   places `review-craft` was standing in for 3-K: the programme card, the readiness section
+   and promise band on the 3-K page, and the 3-K block on Admissions. The reviews carousel
+   on the homepage keeps `review-craft`, because that one is about reviews, not 3-K.
+
+   This one at least replaces an acknowledged gap rather than a real photograph: the card
+   carried a PHOTO GAP note saying no 3-K photograph existed and this was "the closest real
+   one". The note now says stock, and points here.
+
+   **And a sixth, which is the same file twice.** `program-toddler` is now
+   AdobeStock_529112232 — two children swirling colour through trays — cut portrait. That is
+   the photograph `stock-stem` already uses, and both land on the homepage: the programme
+   cards and the enrichment carousel are on the same page. **The same picture appears twice
+   there.** Worth changing one of them; `stock-stem` is the easier of the two to move, and
+   several of the nine unused stock images would serve a STEM card.
+
+   This is the case 7a warns about — "a stock child standing in for a 3-K classroom or a
+   location is a claim about this school that the photograph cannot support" — and the
+   homepage hero is the most prominent place on the site to make it. It was asked for
+   deliberately and the real photograph it replaced was 1600px against the 2400 it needed,
+   so there was a reason. **It should still be the first thing swapped out when the shoot
+   happens.**
+
+   Both `stock-stem` and `stock-creative` are filenamed `stock-*` so they cannot be mistaken for
+   the school's own library, and
    their alt text describes children at an activity without claiming they are Cuddle Avenue
    children in a Cuddle Avenue room. Eleven licensed stock images were supplied; the other
    nine are unused, several of them visibly AI-generated (a world map that is not a map, a
@@ -192,8 +275,8 @@ block is meant to be replaced by its embed.
   as a benefit while its enrichment list names 15 activities; the benefit keeps the brief's
   "16+" wording, and the section heading avoids asserting a number the list contradicts.
 
-- **Privacy Policy / Accessibility / Terms** are linked in the footer as the brief requires,
-  but the pages do not exist yet. They must exist before launch.
+- **Privacy Policy / Terms** are linked in the footer (the brief also listed Accessibility; that page was removed on request),
+  and both pages exist as drafts pending legal review.
 
 ---
 

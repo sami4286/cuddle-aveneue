@@ -1,4 +1,4 @@
-/* Programs carousel — scroll-snap track driven by two arrow buttons.
+/* Programs carousel, scroll-snap track driven by two arrow buttons.
    No dependencies. The track is natively scrollable/swipeable; the buttons
    are a convenience layer, so JS failing degrades to a normal scroller. */
 (function () {

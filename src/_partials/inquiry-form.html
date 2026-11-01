@@ -1,0 +1,83 @@
+<!-- ════════════════════ THE INQUIRY FORM ════════════════════
+     The fields of Ayna's contact page design (2026-10-29): name, email,
+     phone, child's age, preferred location, inquiry type and a message.
+     The contact page is its only home now: tours book on Calendly, and
+     Admissions and Tuition no longer carry a form.
+
+     The page sets:
+       FORM_NAME     which page it came from (the email subject is chosen
+                     from this in api/inquiry.js)
+       FORM_SUBJECT  the subject for the Web3Forms path
+       FORM_BUTTON   the button label
+     ============================================================== -->
+<form class="pg-form" name="{{FORM_NAME}}" method="POST" action="{{ROOT}}api/inquiry" novalidate>
+  <input type="hidden" name="form-name" value="{{FORM_NAME}}">
+  <!-- For the Web3Forms path only, and inert on ours: the key is
+       substituted at build time from the environment. -->
+  <input type="hidden" name="access_key" value="{{WEB3FORMS_KEY}}">
+  <input type="hidden" name="subject" value="{{FORM_SUBJECT}}">
+  <input type="hidden" name="from_name" value="Cuddle Avenue website">
+  <p class="pg-form__hp">
+    <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label>
+  </p>
+
+  <div class="pg-form__grid">
+    <div class="pg-form__row">
+      <label for="q-name">Parent/guardian name <span class="pg-form__req" aria-hidden="true">*</span></label>
+      <input id="q-name" name="parent-name" type="text" autocomplete="name" required maxlength="80" data-c2-check="name" placeholder="Your name">
+    </div>
+    <div class="pg-form__row">
+      <label for="q-email">Email address <span class="pg-form__req" aria-hidden="true">*</span></label>
+      <input id="q-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="120" data-c2-check="email" placeholder="you@example.com">
+    </div>
+  </div>
+  <div class="pg-form__grid">
+    <div class="pg-form__row">
+      <label for="q-phone">Phone number <span class="pg-form__req" aria-hidden="true">*</span></label>
+      <input id="q-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required maxlength="14" data-c2-check="phone" placeholder="(123) 456-7890">
+    </div>
+    <div class="pg-form__row">
+      <label for="q-age">Child&rsquo;s age</label>
+      <select id="q-age" name="child-age">
+        <option value="">Select age range</option>
+        <option>Expecting</option>
+        <option>Under 12 months</option>
+        <option>12 &ndash; 24 months</option>
+        <option>2 &ndash; 3 years</option>
+        <option>3 &ndash; 4 years</option>
+      </select>
+    </div>
+  </div>
+  <div class="pg-form__grid">
+    <div class="pg-form__row">
+      <label for="q-location">Preferred location</label>
+      <select id="q-location" name="location">
+        <option value="">Select a location</option>
+        <option>69 16th Street</option>
+        <option>591 3rd Avenue</option>
+        <option>71 16th Street</option>
+        <option>No preference</option>
+      </select>
+    </div>
+    <div class="pg-form__row">
+      <label for="q-topic">Inquiry type</label>
+      <select id="q-topic" name="topic">
+        <option value="">Select a topic</option>
+        <option>Enrollment</option>
+        <option>Schedule a tour</option>
+        <option>Tuition &amp; financial assistance</option>
+        <option>NYC 3-K</option>
+        <option>Current family</option>
+        <option>General question</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="pg-form__row">
+    <label for="q-msg">Message <span class="pg-form__req" aria-hidden="true">*</span></label>
+    <textarea id="q-msg" name="message" rows="4" required data-c2-check="message" placeholder="How can we help you?"></textarea>
+  </div>
+
+  <button class="c2-btn c2-btn--green pg-form__submit" type="submit">{{FORM_BUTTON}} <span aria-hidden="true">&rarr;</span></button>
+  <p class="pg-form__status" role="status" aria-live="polite" hidden></p>
+</form>

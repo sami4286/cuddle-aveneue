@@ -1,3 +1,11 @@
+# Secrets. The form endpoint reads its keys from the environment and
+# nothing else — RESEND_API_KEY, WEB3FORMS_ACCESS_KEY, INQUIRY_TO — and
+# those live in the host's settings, never here. This is belt and braces
+# for a local .env someone makes while testing.
+.env
+.env.*
+!.env.example
+
 # Client-confidential source material — must never reach the public repo
 # or a published URL. See netlify-build.sh for the publish allow-list.
 *.docx
@@ -16,3 +24,15 @@ assets/Menu Pictures/
 # cropped derivatives in assets/img/stock-*.jpg|webp are what ships; the
 # licence IDs are recorded in BRIEF-COMPLIANCE.md.
 assets/AdobeStock_*.jpeg
+
+# Client material dropped in the project root: Ayna's design mockups, PDFs,
+# review exports and question lists. Working references, not site source;
+# the published handbook lives in assets/docs/.
+/*.png
+/*.pdf
+/*reviews.txt
+/CLIENT-QUESTIONS.md
+/Enrichment/
+/New folder/
+/Pictures under the hero/
+/montage

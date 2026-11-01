@@ -1,0 +1,359 @@
+{
+  "_comment": [
+    "Reviews, one entry per location. Each location renders as a tab in the",
+    "homepage reviews section, in this order; the first is open by default.",
+    "",
+    "Live reviews: when a location's environment variables are set at build",
+    "time, tools/fetch-reviews.js replaces that location's reviews with the",
+    "live ones from Google. Variable names are listed under each location's",
+    "\"live\" key. Nothing secret lives in this file.",
+    "",
+    "Fallback: with no live source, the reviews listed here are shown. Mark",
+    "a review \"source\": \"google\" only if it genuinely came from Google:",
+    "that is what earns it the \"Review on Google\" label. The reviews below",
+    "were copied from each location's Google listing by the school (2026-10-06),",
+    "so they are marked source: google; 10 chosen per location.",
+    "",
+    "rating/count are deliberately absent here: aggregateRating schema is",
+    "only written from a live response, never from a hand-typed figure.",
+    "",
+    "photos: each tab's cards take the next photo from that location's set, in",
+    "order, wrapping round if there are more reviews than photos. Square, 800px,",
+    "jpg + webp in assets/img/. Swap in new photographs here when Ayna sends them.",
+    "",
+    "listing: each Google listing's own rating and review count, typed in from",
+    "Google by the school (asOf). Shown above that location's reviews and summed",
+    "into the footer figure. A live source replaces them; the aggregateRating",
+    "schema is still only written from live data.",
+    "",
+    "reviewUrl: opens the listing's \"write a review\" box on Google (the ,3 in #lrd). Used for \"Leave us a review\" on the program pages."
+  ],
+  "locations": [
+    {
+      "id": "3rd",
+      "name": "591 3rd Avenue",
+      "allUrl": "https://maps.app.goo.gl/sKnmjJ36ZtxVjE1c7",
+      "_note": "\"Cuddle Avenue Daycare\" on Google. The same listing as maps.app.goo.gl/Po8kz4i1Uj7rmcuL7 and fcPfFxWho5n8fueN9.",
+      "primary": true,
+      "live": {
+        "featurable": "FEATURABLE_WIDGET_3RD",
+        "places": "GOOGLE_PLACE_ID_3RD",
+        "gbp": "GBP_LOCATION_3RD"
+      },
+      "reviews": [
+        {
+          "name": "Jess Garfinkel",
+          "rating": 5,
+          "source": "google",
+          "when": "3 months ago",
+          "text": "I cannot say enough amazing things about Cuddle Ave!!! We have been sending our son there since he was about 5.5 months old. As first-time parents, we were nervous about leaving him but Cuddle Ave has gone above and beyond to put us at ease!! The staff is truly incredible - Ayna, Zumrat, Nadia, Muhabbat, plus all of the toddler teachers that help out with the infants!! It’s so clear how much they love each of the kids when they come in each day. They also send tons of pictures and videos throughout the day of them playing, learning Spanish and sign language, doing puppet shows, and more! Love this place so much!!!"
+        },
+        {
+          "name": "Aya El Masry",
+          "rating": 5,
+          "source": "google",
+          "when": "9 months ago",
+          "text": "Cuddle Avenue Daycare is an amazing place for children. The staff are kind, attentive, and genuinely care about every child. The environment feels safe, warm, and welcoming, which gives parents real peace of mind. Highly recommend to any parent looking for a trustworthy and loving daycare."
+        },
+        {
+          "name": "Jen Chen",
+          "rating": 5,
+          "source": "google",
+          "when": "9 months ago",
+          "text": "I’ve had a great experience with Cuddle Avenue Daycare. From the very beginning, the staff have been caring, attentive, and genuinely invested in the children. I always felt comfortable and confident knowing my child was in a safe, loving, and supportive environment. I would highly recommend Cuddle Avenue Daycare to any parent looking for a place they can truly trust."
+        },
+        {
+          "name": "Emily Donaldson",
+          "rating": 5,
+          "source": "google",
+          "when": "a year ago",
+          "text": "Like any first time mom I struggled sending my baby to daycare. Ayna and her team do everything possible to make you feel comfortable and confident in their care. From a phone call the first day to check in, to the many many photos and videos throughout each day, to their responsiveness to messages, it was a truly great experience. One day I picked him up and he reached back for his teacher, a wonderful indication of the warm, caring environment they foster. Thank you Cuddle for the care and love you showed our son ❤️"
+        },
+        {
+          "name": "Hiba Ghoumrassi",
+          "rating": 5,
+          "source": "google",
+          "when": "a year ago",
+          "text": "I am beyond impressed with Cuddle Avenue Daycare! The staff is exceptional, always showing kindness and patience with the children. The activities are creative and educational, and my child looks forward to each day. It’s clear they take the time to understand each child’s needs and personality. I feel completely confident leaving my child in their care, knowing they are in a safe, nurturing environment. Highly recommend to anyone looking for a daycare that truly cares!"
+        },
+        {
+          "name": "Niema",
+          "rating": 5,
+          "source": "google",
+          "when": "a year ago",
+          "text": "Cuddle Avenue Daycare is truly a gem! The staff is caring, attentive, and always goes above and beyond to make every child feel loved and supported. My little one has thrived in their nurturing environment, and I couldn’t be happier with the personalized care. The daycare provides a perfect balance of fun and learning, and I love how they create a safe, engaging space for children to grow. If you're looking for a daycare that treats your child like family, this is the place!"
+        },
+        {
+          "name": "Sabrina Kerai",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "We cannot say enough great things about Cuddle Avenue Academy. We switched our son at about 8 months old to Cuddle Avenue after spending 3 months at another daycare because we felt that the quality of education and care was far superior. We were commuting to Cuddle Avenue in Park Slope from our home in Manhattan for almost a year because we were huge fans of the curriculum and the teachers! Ayna has been an exceptional director of the school, and is constantly adapting to meet the needs of the students, always adding enriching activities and curriculum, and in general incredibly focused on the development of the children in her care.  Our son has been there for nearly 2 years now, and we have another baby on the way that we are excited will join the Cuddle Avenue family."
+        },
+        {
+          "name": "S Q",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "A true Gem ! I found Cuddle Ave after searching and searching for the most fitting daycare. All the teachers are caring, attentive and loving. My daughter has developed so much mentally and physically and I am so grateful for the lesson planning , daily updates on the app and just the overall treatment the Children get. The facility itself is very clean, bright, organized and most importantly fun. Would definitely recommend for the future littles 😊"
+        },
+        {
+          "name": "Akua Damptey",
+          "rating": 5,
+          "source": "google",
+          "when": "3 years ago",
+          "text": "To say we had exceptional childcare for our child would be an understatement. We felt as if our child was left with family! The kids are exposed not just to important academic basics but also yoga, gardening, music and lots of support for learning both academic and social. Throughout the day I receive updates and photos that allow us to feel more connected to our son. The staff is warm and very communicative. Thank you to all the staff for giving me peace of mind as I head off to work every day. If you’re looking for a great pre-school/day care I would highly recommend Cuddle Avenue. I promise you would have no regrets. Ayna, thank you for the services you have offered my family."
+        },
+        {
+          "name": "Carrie",
+          "rating": 5,
+          "source": "google",
+          "when": "4 years ago",
+          "text": "Ayna is the most wonderful caregiver. Children are naturally drawn to her, and she's built an amazing team focused on teaching and nurturing all the babies and toddlers lucky enough to be in her program.  The communication from the team is excellent (we received daily updates and photos) and most of all we had complete trust in the safety and care of our child whilst at daycare.  I cannot recommend Cuddle Avenue Academy highly enough."
+        }
+      ],
+      "photos": [
+        {
+          "file": "rv-program-infant",
+          "alt": "Three toddlers sitting on a rug, looking at a picture book a teacher holds open for them."
+        },
+        {
+          "file": "rv-program-toddler",
+          "alt": "Two children at a sensory tray, scooping and pouring with small tools."
+        },
+        {
+          "file": "review-explore",
+          "alt": "Two toddlers lean over a low wooden shelf together, exploring the blocks stored inside it."
+        },
+        {
+          "file": "rv-story-gardening",
+          "alt": "A teacher helps a smiling toddler hold a plant pot while labelled seedlings sprout on the table."
+        },
+        {
+          "file": "rv-program-playroom",
+          "alt": "A toddler crawling out of a colourful play-house tunnel onto an indoor lawn mat."
+        },
+        {
+          "file": "rv-card-infant",
+          "alt": "A smiling baby lying on a play mat with a soft toy rabbit and sensory toys."
+        },
+        {
+          "file": "rv-card-toddler",
+          "alt": "A laughing toddler stacking coloured rings and wooden blocks at a low classroom table."
+        },
+        {
+          "file": "rv-gallery-water",
+          "alt": "Three children at a water table, pouring between funnels and coloured cups."
+        },
+        {
+          "file": "rv-gallery-shapes",
+          "alt": "A child working at a wooden tray, fitting coloured shapes into their places."
+        },
+        {
+          "file": "rv-meals-toddler",
+          "alt": "A smiling toddler holding a piece of broccoli beside a divided plate of fruit, vegetables and egg."
+        }
+      ],
+      "listing": {
+        "rating": 5,
+        "count": 48,
+        "asOf": "2026-10-06"
+      },
+      "reviewUrl": "https://www.google.com/search?q=Cuddle+Avenue+Daycare#lrd=0xa4047fca07ffdb7:0x9acd8c24d208ad75,3,,,"
+    },
+    {
+      "id": "69",
+      "name": "69 16th Street",
+      "allUrl": "https://maps.app.goo.gl/EcKasTcVvDkba5nx5",
+      "_note": "\"Cuddle Avenue Preschool\" on Google.",
+      "live": {
+        "featurable": "FEATURABLE_WIDGET_69",
+        "places": "GOOGLE_PLACE_ID_69",
+        "gbp": "GBP_LOCATION_69"
+      },
+      "reviews": [
+        {
+          "name": "Noma",
+          "rating": 5,
+          "source": "google",
+          "when": "9 months ago",
+          "text": "Cuddle Avenue Daycare stands out because of how much the staff truly care. You can tell this isn't just a job for them. They are attentive, loving, and always willing to communicate with parents. My child has grown so much socially and emotionally since starting here. The environment feels safe and nurturing, and I'm grateful to have found a daycare we can fully trust."
+        },
+        {
+          "name": "gorkem bektas",
+          "rating": 5,
+          "source": "google",
+          "when": "a year ago",
+          "text": "I am very glad this was a location i chose to send my son. Ayna the owner ,the teachers and staff are very professional, attentive and friendly. I’ve never had a problem since my son started the daycare in October 2023. A very loving and caring environment. My son is always excited and happy when he goes to the school. I have always felt comfortable leaving my son in their hands. They share everything about my son through the app throughout the day. I highly recommend this place."
+        },
+        {
+          "name": "Cynthia R",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "Cuddle Avenue is the best! They offer genuine, loving care to my child and the babies they care for. The staff is welcoming, will answer any questions or concerns. They keep you updated on your child’s day, offer healthy meals, and an educational, fun daily routine. My child started when she was 4 months old, and they made me comfortable with leaving my baby so young at daycare. She is now 21 months and as always is all smiles when she is dropped off, and all smiles at pick up. The reality is that it is difficult to select a daycare without knowing something about it. Cuddle Avenue was recommended to me by a friend who had both children attend and now I want to recommend it to anyone who may just not know where to start the search, what to decide. Cuddle Avenue truly cares ❤️"
+        },
+        {
+          "name": "Nolan Woodle",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "We love Cuddle Avenue! Our son has had the most amazing time in their daycare. The teachers do a terrific job- they take a real interest in our son’s development and we can tell they genuinely love spending time with him. Our son has learned and developed so much since starting with them, I highly recommend them if you are looking for a daycare provider."
+        },
+        {
+          "name": "abbey ginsburg",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "We love Cuddle Avenue! We've been sending our son there since he was 4 months old and they are truly wonderful caregivers.  They provide so many updates throughout the day and treat our son like one of their own.  They're invested in his happiness and development and I truly feel so at ease leaving him in their care.  As a first time mom I could not ask for a better set of caregivers.  If you're looking for super high quality childcare, this is the place!"
+        },
+        {
+          "name": "Julia Wilson Fisher",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "My son has attended this daycare for the past six months. He started at six months old and he is now almost 13 months old. He has always been happy to attend. The space is very clean and we receive many photo updates throughout the day, as well as updates about eating, diapers and naps. The team always responds nearly instantly to any messages we send. Everyone is friendly and seems to share a true love for the children under their care."
+        },
+        {
+          "name": "Angela Wanslow",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "We were so nervous to start our daughter in daycare when she was about six months old, but she LOVES daycare! All of the teachers at Cuddle Avenue are so kind and attentive, and we always know that our daughter is safe with them. We have had a great experience and would highly recommend it to anyone!"
+        },
+        {
+          "name": "Faraaz Javed",
+          "rating": 5,
+          "source": "google",
+          "when": "2 years ago",
+          "text": "Enrolling my son at a time when it was very hard for us to trust anyone with him, at cuddle Avenue was the best decision we ever made. The team is so friendly and made sure to give our son the individual attention he needed to adjust. Week 1 to week 6 was a massive difference and that was all due to the effort their team put in. Can’t thank these guys enough !"
+        },
+        {
+          "name": "Loann Le",
+          "rating": 5,
+          "source": "google",
+          "when": "3 years ago",
+          "text": "Choosing Cuddle Avenue Daycare was the best choice we made for our little one. Not only is the staff professional and caring the place (indoor and outdoor) is beautifully set up and clean. There are always educational activities scheduled and healthy food options available. I’ve seen our little one continue to thrive with each milestone through the months. She loves the staff and looks forward to going to daycare every day. We feel confident and safe knowing the loving staff will give her the attention and time she needs. I highly recommend them!"
+        },
+        {
+          "name": "Irene Udovichenko",
+          "rating": 5,
+          "source": "google",
+          "when": "4 years ago",
+          "text": "Bringing your 15 months old daughter to Cuddle Avenue Daycare was the best decision we made! All caregivers is extremely professional and not less important very loving! Great homemade meals, very well balanced. They have so many activities every day, cooking, gardening, crafting, yoga, music classes and more...She learns so mush every day. Definitely recommend this place. Thank you very much guys!"
+        }
+      ],
+      "photos": [
+        {
+          "file": "rv-program-preschool",
+          "alt": "Two preschoolers arranging picture cards at an easel."
+        },
+        {
+          "file": "review-craft",
+          "alt": "Three children around a table assembling paper dolls, one of them laughing."
+        },
+        {
+          "file": "review-holiday",
+          "alt": "Three children laughing and reaching up to hang paper hearts on a branch arrangement."
+        },
+        {
+          "file": "rv-story-playroom",
+          "alt": "Children playing on the playroom floor among wooden play structures."
+        },
+        {
+          "file": "rv-card-2k",
+          "alt": "A child placing small wooden figures into a pegboard, with coloured blocks beside them."
+        },
+        {
+          "file": "rv-card-3k",
+          "alt": "A grinning child holding up both hands covered in bright paint."
+        },
+        {
+          "file": "rv-enrich-art",
+          "alt": "Children gluing coloured paper shapes onto card at a table."
+        },
+        {
+          "file": "rv-enrich-music",
+          "alt": "Children in a circle holding tambourines and maracas during music time."
+        },
+        {
+          "file": "rv-gallery-reading",
+          "alt": "A teacher sitting on the floor reading a picture book to children gathered around her."
+        },
+        {
+          "file": "rv-enrich-gardening",
+          "alt": "Children watering seedlings in a raised planter labelled Little Gardeners."
+        }
+      ],
+      "listing": {
+        "rating": 4.7,
+        "count": 57,
+        "asOf": "2026-10-06"
+      },
+      "reviewUrl": "https://www.google.com/search?q=Cuddle+Avenue+Preschool#lrd=0x89c25b9b67d21db3:0xd4e9b0f6439f5398,3,,,"
+    },
+    {
+      "id": "71",
+      "name": "71 16th Street",
+      "allUrl": "https://maps.app.goo.gl/9gXdXyoUAtj6hgRh8",
+      "_note": "The 2K Program. Google listing maps.app.goo.gl/9gXdXyoUAtj6hgRh8, moved by the school from 66 15th Street to 71 16th Street (Ayna, 2026-10-18).",
+      "live": {
+        "featurable": "FEATURABLE_WIDGET_71",
+        "places": "GOOGLE_PLACE_ID_71",
+        "gbp": "GBP_LOCATION_71"
+      },
+      "reviews": [
+        {
+          "name": "Yeon Soo Kim",
+          "rating": 5,
+          "source": "google",
+          "when": "3 weeks ago",
+          "text": "I highly recommend Cuddle Avenue. My two children were enrolled in all Cuddle Avenue locations at different times in the past five years until we sadly moved, and our last stop was at this newest 15st location. We came to get to know all 2s teachers and my child was extremely fond of them."
+        },
+        {
+          "name": "Mariah Torres",
+          "rating": 5,
+          "source": "google",
+          "when": "a month ago",
+          "text": "My son has been attending this school since he was just 4 months old, and we have had such a wonderful experience from the very beginning. His 2K class was absolutely amazing! His teachers were caring, patient, attentive, and genuinely invested in his growth and development. It was so comforting knowing he was in a safe, loving, and nurturing environment every day. We’ve watched him grow so much since starting here, not only academically, but also socially and emotionally. The staff has always been welcoming, communicative, and supportive, and I truly appreciate how much they care about the children. As a parent, finding a school where you feel comfortable leaving your child is so important, and this school has given us that peace of mind. I’m so grateful for all the teachers and staff who have been a part of my son’s journey. We’ve had such a positive experience and would absolutely recommend this school to other families! ❤️"
+        }
+      ],
+      "photos": [
+        {
+          "file": "rv-gallery-painting",
+          "alt": "Children painting at a shared table, with brushes and flower-shaped paint palettes between them."
+        },
+        {
+          "file": "rv-enrich-stem",
+          "alt": "Children building towers from interlocking plastic blocks."
+        },
+        {
+          "file": "rv-enrich-chefs",
+          "alt": "Children in aprons mixing dough together in a metal bowl."
+        },
+        {
+          "file": "rv-gallery-mealtime",
+          "alt": "Children eating a meal together at a low table, with plates of vegetables and fruit."
+        },
+        {
+          "file": "rv-enrich-yoga",
+          "alt": "Children sitting cross-legged on mats with their hands stretched overhead."
+        },
+        {
+          "file": "rv-why-families",
+          "alt": "Three children building with wooden blocks at a classroom table."
+        },
+        {
+          "file": "rv-enrich-drama",
+          "alt": "Three children in dress-up costumes, a princess, a firefighter and a dinosaur, playing together."
+        }
+      ],
+      "listing": {
+        "rating": 5,
+        "count": 2,
+        "asOf": "2026-10-06"
+      },
+      "reviewUrl": "https://www.google.com/search?q=Cuddle+Avenue+Daycare+2K#lrd=0x89c25b706b4d9981:0xff8cdaec3480e7d5,3,,,"
+    }
+  ]
+}

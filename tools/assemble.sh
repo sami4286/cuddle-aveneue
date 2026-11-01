@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Assemble src/**/*.html into dist/, expanding partials and page variables.
 #
-# There is no framework here and no npm — this is a couple of dozen static
+# There is no framework here and no npm, this is a couple of dozen static
 # pages that share one header, one footer and one <head>, and the whole
 # templating need is "paste this file in, substitute a few strings". That is
 # about fifty lines of bash, runs identically on this machine and on Netlify,
@@ -47,16 +47,22 @@ find "$SRC" -name '*.html' -not -path "$PARTIALS/*" | sort | while read -r page;
   # ---- one sed script carrying this page's variables ------------------
   subst=$(mktemp)
   printf 's|{{ROOT}}|%s|g\n' "$root" > "$subst"
-  grep -o '<!--@var [^:]*:[^>]*-->' "$page" 2>/dev/null | while read -r decl; do
+  # The value runs to the closing --> rather than to the first >, so a
+  # variable may carry markup (the CTA title carries <br class="c2-lb">).
+  # This assumes one @var declaration per line, which is the convention.
+  grep -o '<!--@var [^:]*:.*-->' "$page" 2>/dev/null | while read -r decl; do
     key=${decl#<!--@var }; key=${key%%:*}
     val=${decl#*: }; val=${val%-->}
     # sed's replacement side is not literal: \ escapes, & repeats the match,
-    # and | is our delimiter. Order matters — backslashes first.
+    # and | is our delimiter. Order matters, backslashes first.
     val=${val//\\/\\\\}
     val=${val//&/\\&}
     val=${val//|/\\|}
     printf 's|{{%s}}|%s|g\n' "$key" "$val"
   done >> "$subst"
+  # And once more at the end, so a variable may carry {{ROOT}} itself: a
+  # CTA button's href is either {{ROOT}}page.html or an outside address.
+  printf 's|{{ROOT}}|%s|g\n' "$root" >> "$subst"
 
   # ---- paste the partials, drop the @var lines ------------------------
   # Repeated until no marker is left: a partial may include another one
@@ -75,8 +81,8 @@ find "$SRC" -name '*.html' -not -path "$PARTIALS/*" | sort | while read -r page;
       }
     }
     /^[[:space:]]*<!--@var /  { next }
-    /<!--@include [a-z-]+-->/ {
-      match($0, /<!--@include [a-z-]+-->/)
+    /<!--@include [a-z0-9-]+-->/ {
+      match($0, /<!--@include [a-z0-9-]+-->/)
       paste(substr($0, RSTART + 13, RLENGTH - 16))
       next
     }

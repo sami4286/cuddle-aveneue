@@ -1,432 +1,581 @@
-<!--@var TITLE: Infant Care in Brooklyn, from Six Weeks | Cuddle Avenue Academy-->
-<!--@var DESC: Licensed infant care in Brooklyn from six weeks to 18 months. Individual feeding and sleep routines, breastfeeding support, responsive caregiving, daily Brightwheel updates. 7:30am to 6:00pm. Book a classroom tour.-->
+<!--@var TITLE: Infant Daycare in Brooklyn, 6 Weeks to 12 Months | Cuddle Avenue Academy-->
+<!--@var MAST_IMG: card-infant-->
+<!--@var DESC: Licensed infant care in Brooklyn for children 6 weeks to 12 months. Your baby's own feeding and sleep routine, breastfeeding support, daily Brightwheel updates, 7:30am to 6:00pm. Book a classroom tour.-->
 <!--@var OGTITLE: Infant Care at Cuddle Avenue Academy, Brooklyn-->
-<!--@var OGDESC: Six weeks to 18 months. Your baby&rsquo;s own routine, kept by the same familiar faces every day.-->
+<!--@var OGDESC: 6 weeks to 12 months. Gentle care, meaningful connections and enriching experiences for the earliest milestones.-->
+<!--@var CTA_EYEBROW: Come and visit-->
+<!--@var CTA_TITLE: Discover our <br class="c2-lb">infant program-->
+<!--@var CTA_LEAD: We invite you to visit our nurturing infant classroom, meet our dedicated teachers, and discover how we support your child&rsquo;s growth, development, and individual needs.-->
+<!--@var CTA_BTN1_HREF: https://calendly.com/cuddleavenue/in-person-tour-->
+<!--@var CTA_BTN1: Schedule an infant tour-->
+<!--@var CTA_BTN2_HREF: {{ROOT}}admissions/tuition-financial-assistance.html-->
+<!--@var CTA_BTN2: Ask about infant tuition-->
 <!--@include head-->
 <!--@include announce-->
 <!--@include header-->
 
-<main id="main">
+<main id="main" class="sx" data-c2-loc="3rd">
 
-  <!-- ════════════════════ PAGE HEAD ════════════════════
-       The brief's PROGRAM-PAGE RULE: a parent should be able to answer
-       eighteen questions without leaving. The jump list below is the
-       contents page for those answers. -->
-  <section class="pg-head">
-    <div class="c2-shell pg-head__grid">
-
-      <div class="pg-head__body">
-        <nav class="pg-crumbs" aria-label="Breadcrumb">
-          <ol>
-            <li><a href="{{ROOT}}index.html">Home</a></li>
-            <li><a href="{{ROOT}}programs.html">Programs</a></li>
-            <li><span aria-current="page">Infant care</span></li>
-          </ol>
-        </nav>
-
-        <h1 class="pg-title">Infant care,<br class="c2-lb">
-          from six weeks</h1>
-
-        <p class="pg-head__lead">A calm, low-ratio room that follows your baby&rsquo;s own rhythm
-          for feeding, sleeping and play &mdash; not a room schedule your baby has to fit into.
-          The same familiar faces every morning, and a message when something happens worth
-          knowing about.</p>
-
-        <div class="pg-head__actions">
-          <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html?program=infant">Schedule an infant tour</a>
-          <a class="c2-btn c2-btn--outline" href="#tour">Watch the infant center tour</a>
-        </div>
-
-        <ul class="pg-anchors">
-          <li><a href="#day">A typical day</a></li>
-          <li><a href="#learning">What we do together</a></li>
-          <li><a href="#feeding">Feeding &amp; breastfeeding</a></li>
-          <li><a href="#sleep">Safe sleep</a></li>
-          <li><a href="#communication">How we keep in touch</a></li>
-          <li><a href="#safety">Safety</a></li>
-          <li><a href="#room">The room</a></li>
-          <li><a href="#visit">Visit &amp; enroll</a></li>
-        </ul>
+  <!-- ════════════════════ HERO → SUPPORTING EVERY STAGE ════════════════════
+       Ayna's reference design (2026-10-27), followed as closely as the
+       site's palette allows: a light hero with the photograph on the
+       right, four promises in a card across its foot, the program in
+       words beside a photo collage, and the five milestones on a line.
+       The collage photographs are cropped from her reference. -->
+  <section class="pg-ihero" aria-labelledby="pg-title">
+    <div class="pg-ihero__photo" aria-hidden="true">
+      <picture>
+        <source type="image/webp" srcset="{{ROOT}}assets/img/card-infant-600.webp 600w, {{ROOT}}assets/img/card-infant.webp 1145w" sizes="(max-width: 900px) 100vw, 55vw">
+        <img src="{{ROOT}}assets/img/card-infant.jpg" srcset="{{ROOT}}assets/img/card-infant-600.jpg 600w, {{ROOT}}assets/img/card-infant.jpg 1145w" sizes="(max-width: 900px) 100vw, 55vw" width="1145" height="1145" fetchpriority="high" decoding="async" alt="">
+      </picture>
+    </div>
+    <div class="c2-shell pg-ihero__inner">
+      <p class="pg-ihero__eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3.2"/></svg>Infant care program</p>
+      <h1 class="pg-ihero__title" id="pg-title">A safe, nurturing <br class="c2-lb">start for their <br><em>brightest <span class="pg-ihero__last">tomorrow<span class="pg-ihero__heart" aria-hidden="true"><svg aria-hidden="true"><use href="#i-heart"/></svg></span></span></em></h1>
+      <p class="pg-ihero__lead">Gentle care, meaningful connections, and enriching experiences designed for your baby&rsquo;s earliest milestones.</p>
+      <ul class="pg-ihero__facts" aria-label="At a glance">
+        <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-baby"/></svg></span><span><b>Ages</b>6 weeks &ndash; 12 months</span></li>
+        <li><span class="pg-ih__ico pg-tone--sage" aria-hidden="true"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span><span><b>Schedule</b>Monday &ndash; Friday<br>7:30 AM &ndash; 6:00 PM</span></li>
+        <li><span class="pg-ih__ico pg-tone--sand" aria-hidden="true"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><b>Location</b>591 3rd Avenue<br>Brooklyn, NY</span></li>
+      </ul>
+      <div class="sx-mast__actions pg-ihero__actions">
+        <a class="c2-btn c2-btn--green" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour <span aria-hidden="true">&rarr;</span></a>
       </div>
-
-      <figure class="pg-head__media">
-        <picture>
-          <source type="image/webp" srcset="{{ROOT}}assets/img/program-infant.webp">
-          <img src="{{ROOT}}assets/img/program-infant.jpg" width="640" height="800" fetchpriority="high" decoding="async"
-               alt="An infant room at Cuddle Avenue Academy, with low shelves, soft flooring and a teacher sitting at floor level.">
-        </picture>
-      </figure>
-
     </div>
   </section>
 
-  <!-- ════════════════════ AT A GLANCE ════════════════════ -->
-  <section class="pg-sec--tight" aria-label="Infant care at a glance">
+  <section class="pg-ifeats" aria-label="What we offer">
     <div class="c2-shell">
-      <dl class="pg-facts">
-        <div>
-          <dt>Ages</dt>
-          <dd>6 weeks &ndash; 18 months</dd>
-        </div>
-        <div>
-          <dt>Hours</dt>
-          <dd>7:30am &ndash; 6:00pm, Monday to Friday</dd>
-        </div>
-        <div>
-          <dt>Location</dt>
-          <dd>591 3rd Avenue, Brooklyn</dd>
-        </div>
-        <div>
-          <dt>Meals</dt>
-          <dd>Bottles, breast milk and first foods</dd>
-        </div>
-      </dl>
+      <ul class="pg-ifeats__card">
+          <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Nurturing Relationships</h3><p>Consistent, loving care from our dedicated teachers</p></li>
+          <li><span class="pg-ih__ico pg-tone--sage" aria-hidden="true"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span><h3>Age-Appropriate Learning</h3><p>Sensory-rich experiences to support early development</p></li>
+          <li><span class="pg-ih__ico pg-tone--sand" aria-hidden="true"><svg aria-hidden="true"><use href="#i-sun"/></svg></span><h3>Safe &amp; Stimulating Environment</h3><p>Designed with your baby&rsquo;s needs in mind</p></li>
+          <li><span class="pg-ih__ico pg-tone--blue" aria-hidden="true"><svg aria-hidden="true"><use href="#i-star"/></svg></span><h3>A Strong Foundation</h3><p>Building confidence, curiosity, and connection</p></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ════════════════════ OVERVIEW ════════════════════ -->
-  <section class="pg-sec" id="overview" aria-labelledby="overview-title">
-    <div class="c2-shell pg-split">
-
-      <div class="pg-prose">
-        <p class="c2-eyebrow">The program</p>
-        <h2 id="overview-title">Care that answers your baby, not a timetable</h2>
-
-        <p>Infancy is the year of secure relationships. A baby who is answered &mdash; picked up
-          when they reach, fed when they are hungry, put down when they are tired &mdash; learns
-          that the world responds. That is the whole curriculum at this age, and everything else
-          rests on it.</p>
-
-        <p>So our infant room runs on <strong>individual routines</strong>. You tell us your
-          baby&rsquo;s rhythm on the first day, we keep it, and we adjust it with you as it
-          changes. Teachers stay with the same babies rather than rotating, because a familiar
-          face is what makes a new place safe.</p>
-
-        <h3>What is developing, and what we do about it</h3>
-        <ul class="pg-ticks">
-          <li><strong>Social-emotional</strong> &mdash; responsive caregiving, one-to-one attention,
-            and the same small group of adults every day.</li>
-          <li><strong>Cognitive</strong> &mdash; treasure baskets, cause and effect, object
-            permanence games, and long uninterrupted stretches to work something out.</li>
-          <li><strong>Language and communication</strong> &mdash; narration through the day, books
-            at floor level, songs, and simple sign language for <em>more</em>, <em>milk</em>,
-            <em>all done</em>.</li>
-          <li><strong>Fine motor</strong> &mdash; grasping, transferring, self-feeding, and the
-            first attempts at a spoon.</li>
-          <li><strong>Gross motor</strong> &mdash; tummy time every day, floor space kept clear for
-            rolling and crawling, and pulling up on furniture that is built for it.</li>
-        </ul>
+  <section class="sx-sec pg-iabout" id="care" aria-labelledby="care-title">
+    <div class="c2-shell pg-iabout__grid">
+      <div class="pg-iabout__text">
+        <p class="sx-eyebrow">Our infant program</p>
+        <h2 id="care-title">More Than Care, <br class="c2-lb">A Strong Beginning</h2>
+        <p>Our infant program is thoughtfully designed to support your baby&rsquo;s growth, development, and well-being during their first year (6 weeks to 12 months). Through responsive caregiving, engaging experiences, and a warm, home-like environment, we help your little one feel safe, loved, and ready to explore the world around them.</p>
       </div>
-
-      <figure class="pg-split__media">
-        <picture>
-          <source type="image/webp" srcset="{{ROOT}}assets/img/story-playroom.webp">
-          <img src="{{ROOT}}assets/img/story-playroom.jpg" width="1000" height="1000" loading="lazy" decoding="async"
-               alt="Children playing on the floor of the Cuddle Avenue playroom beside a wooden climbing structure.">
-        </picture>
-      </figure>
-
+      <div class="pg-iabout__collage">
+        <figure class="pg-iabout__main">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-collage-main.webp">
+              <img src="{{ROOT}}assets/img/infant-collage-main.jpg" width="264" height="325" loading="lazy" decoding="async"
+                   alt="A smiling baby with a pink bow lying on a soft rug, holding a wooden teething ring.">
+            </picture>
+        </figure>
+        <figure>
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-collage-teacher.webp">
+              <img src="{{ROOT}}assets/img/infant-collage-teacher.jpg" width="242" height="131" loading="lazy" decoding="async"
+                   alt="A teacher cuddling a laughing baby in the classroom.">
+            </picture>
+        </figure>
+        <figure>
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-collage-room.webp">
+              <img src="{{ROOT}}assets/img/infant-collage-room.jpg" width="242" height="171" loading="lazy" decoding="async"
+                   alt="A calm infant room with wooden cribs, a rocking chair and a soft rug.">
+            </picture>
+        </figure>
+      </div>
     </div>
   </section>
 
-  <!-- ════════════════════ A TYPICAL DAY ════════════════════ -->
-  <section class="pg-sec" id="day" aria-labelledby="day-title">
+  <section class="sx-sec pg-istages" id="milestones" aria-labelledby="stages-title">
+    <svg class="pg-istages__leaf pg-istages__leaf--l" viewBox="0 0 120 160" aria-hidden="true"><path d="M110 10C40 30 10 80 14 150 54 120 100 90 110 10z"/><path d="M110 10 18 146" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/></svg>
+    <svg class="pg-istages__leaf pg-istages__leaf--r" viewBox="0 0 160 120" aria-hidden="true"><path d="M10 20c60-20 120 0 140 70-50 10-110-10-140-70z"/><path d="M10 20 148 88" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/></svg>
     <div class="c2-shell">
-      <div class="pg-sec__head">
-        <p class="c2-eyebrow">A typical day</p>
-        <h2 class="c2-h2" id="day-title">What the day looks like</h2>
-        <p>Infant days are led by the babies, so treat this as the shape of a day rather than a
-          schedule. Feeds and naps happen when your child needs them.</p>
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">Supporting every stage</p>
+        <h2 id="stages-title">Little Moments. Big Milestones.</h2>
+        <p class="sx-lead">From their first smiles to their first steps, we&rsquo;re here to support every stage of your baby&rsquo;s development.</p>
+      </div>
+      <ol class="pg-istages__list">
+          <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-brain"/></svg></span><h3>Sensory Exploration</h3><p>Discovering the world through their senses</p></li>
+          <li><span class="pg-ih__ico pg-tone--sage" aria-hidden="true"><svg aria-hidden="true"><use href="#i-crawl"/></svg></span><h3>Motor Skill Development</h3><p>Building strength and coordination</p></li>
+          <li><span class="pg-ih__ico pg-tone--sand" aria-hidden="true"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Early Communication</h3><p>Encouraging sounds, expressions, and connection</p></li>
+          <li><span class="pg-ih__ico pg-tone--blue" aria-hidden="true"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Social-Emotional Growth</h3><p>Feeling secure, valued, and loved</p></li>
+          <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-book"/></svg></span><h3>A Love for Learning</h3><p>Curiosity today, confidence tomorrow</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ════════════════════ A DAY IN OUR INFANT CLASSROOM ════════════════════
+       Ayna's example schedule (2026-10-18), as a compact two-column card:
+       morning and afternoon side by side, one list on a phone. Feeds and
+       naps carry a heart: they follow each baby's own schedule. -->
+  <section class="sx-sec pg-schedsec" id="day" aria-labelledby="day-title">
+    <div class="c2-shell">
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">A typical day</p>
+        <h2 id="day-title">A Day in Our Infant Classroom</h2>
+        <p class="sx-lead">Every baby has their own rhythm, and we respect that. While we have a daily schedule filled with learning, play, and enrichment activities, feeding and nap times are always adjusted to each baby&rsquo;s individual needs. Our goal is to provide a balance of loving care, exploration, and early learning throughout the day.</p>
       </div>
 
-      <ul class="pg-day">
-        <li>
-          <span class="pg-day__time">7:30 &ndash; 8:40</span>
-          <span class="pg-day__what">Arrival and settling
-            <span>Hellos at the door, a note from you about the night, and quiet floor play.</span></span>
+      <div class="pg-sched">
+        <h3 class="pg-sched__title">Example of Our Daily Schedule</h3>
+        <div class="pg-sched__cols">
+          <div class="pg-sched__col">
+            <p class="pg-sched__part">Morning</p>
+            <ol class="pg-sched__list">
+            <li><span class="pg-sched__time">7:30&ndash;8:00am</span><span class="pg-sched__what">Arrival and morning welcome</span></li>
+            <li><span class="pg-sched__time">8:00&ndash;9:00am</span><span class="pg-sched__what">Morning stretches, movement &amp; dance</span></li>
+            <li class="is-own"><span class="pg-sched__time">9:00&ndash;9:30am</span><span class="pg-sched__what">Breakfast / milk<span class="pg-sched__own" title="Follows your baby&rsquo;s own schedule"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="sx-vh">, follows your baby&rsquo;s own schedule</span></span></span></li>
+            <li class="is-own"><span class="pg-sched__time">9:30&ndash;11:00am</span><span class="pg-sched__what">Morning nap / individual activities<span class="pg-sched__own" title="Follows your baby&rsquo;s own schedule"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="sx-vh">, follows your baby&rsquo;s own schedule</span></span></span></li>
+            <li><span class="pg-sched__time">11:00&ndash;11:30am</span><span class="pg-sched__what">Enrichment class</span></li>
+            <li><span class="pg-sched__time">11:30am&ndash;12:00pm</span><span class="pg-sched__what">Storytime &amp; age-appropriate play</span></li>
+            <li class="is-own"><span class="pg-sched__time">12:00&ndash;12:30pm</span><span class="pg-sched__what">Lunch / milk<span class="pg-sched__own" title="Follows your baby&rsquo;s own schedule"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="sx-vh">, follows your baby&rsquo;s own schedule</span></span></span></li>
+            </ol>
+          </div>
+          <div class="pg-sched__col">
+            <p class="pg-sched__part">Afternoon</p>
+            <ol class="pg-sched__list" start="8">
+            <li><span class="pg-sched__time">12:30&ndash;1:30pm</span><span class="pg-sched__what">Sensory development activities</span></li>
+            <li class="is-own"><span class="pg-sched__time">1:30&ndash;3:00pm</span><span class="pg-sched__what">Afternoon nap / individual activities<span class="pg-sched__own" title="Follows your baby&rsquo;s own schedule"><svg aria-hidden="true"><use href="#i-heart"/></svg><span class="sx-vh">, follows your baby&rsquo;s own schedule</span></span></span></li>
+            <li><span class="pg-sched__time">3:00&ndash;3:30pm</span><span class="pg-sched__what">Fine motor development</span></li>
+            <li><span class="pg-sched__time">3:30&ndash;4:00pm</span><span class="pg-sched__what">Storytime, circle time &amp; confidence building</span></li>
+            <li><span class="pg-sched__time">4:00&ndash;4:30pm</span><span class="pg-sched__what">Afternoon snack</span></li>
+            <li><span class="pg-sched__time">4:30&ndash;5:00pm</span><span class="pg-sched__what">Sensory exploration &amp; play</span></li>
+            <li><span class="pg-sched__time">5:00&ndash;6:00pm</span><span class="pg-sched__what">Age-appropriate toys, soft blocks &amp; departure</span></li>
+            </ol>
+          </div>
+        </div>
+        <p class="pg-sched__key"><svg aria-hidden="true"><use href="#i-heart"/></svg>Follows your baby&rsquo;s own feeding and sleep schedule</p>
+      </div>
+
+      <p class="pg-note sx-after">This is an example of our daily routine. Infants follow their individual feeding and sleeping schedules, and activities are adjusted based on their age, development, and needs. Some babies may nap two or three times throughout the day.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════ ENRICHMENTS ════════════════════
+       Ayna's design (2026-10-27): six photo cards, an icon disc on the
+       photo's edge, a tinted panel underneath. Photographs cropped from
+       her reference; the disc covers the one drawn into each crop. -->
+  <section class="sx-sec pg-ienrich" id="curriculum" aria-labelledby="cur-title">
+    <div class="c2-shell">
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">Enrichments</p>
+        <h2 id="cur-title">More Ways to Explore, Grow and Thrive</h2>
+        <p class="sx-lead">Our enrichment activities are specially designed for infants to spark curiosity, support development and build confidence, all through fun, age-appropriate experiences.</p>
+      </div>
+      <ul class="pg-ien__grid">
+        <li class="pg-ien pg-tone--pink">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-signing.webp">
+              <img src="{{ROOT}}assets/img/infant-en-signing.jpg" width="476" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-hand"/></svg></span>
+          </figure>
+          <h3>Baby Sign Language</h3>
+          <p>Helps babies express their needs, build communication skills and strengthen the parent&ndash;teacher connection.</p>
         </li>
-        <li>
-          <span class="pg-day__time">8:40 &ndash; 9:30</span>
-          <span class="pg-day__what">Breakfast and bottles
-            <span>Older infants at the low table; bottles held and given on each baby&rsquo;s own schedule.</span></span>
+        <li class="pg-ien pg-tone--sage">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-music.webp">
+              <img src="{{ROOT}}assets/img/infant-en-music.jpg" width="446" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-music"/></svg></span>
+          </figure>
+          <h3>Music Class</h3>
+          <p>Songs, rhythm and instruments introduce sounds, support language development and make learning fun.</p>
         </li>
-        <li>
-          <span class="pg-day__time">9:30 &ndash; 11:00</span>
-          <span class="pg-day__what">Tummy time, treasure baskets, songs
-            <span>The longest waking stretch of the morning, and where most of the work happens.</span></span>
+        <li class="pg-ien pg-tone--sand">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-yoga.webp">
+              <img src="{{ROOT}}assets/img/infant-en-yoga.jpg" width="475" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-yoga"/></svg></span>
+          </figure>
+          <h3>Baby Yoga</h3>
+          <p>Gentle movement and stretching support motor skills, body awareness and a sense of calm.</p>
         </li>
-        <li>
-          <span class="pg-day__time">11:00 &ndash; 12:00</span>
-          <span class="pg-day__what">Lunch, then naps begin
-            <span>First foods for babies who have started solids, purées and finger foods from the same kitchen.</span></span>
+        <li class="pg-ien pg-tone--blue">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-spanish.webp">
+              <img src="{{ROOT}}assets/img/infant-en-spanish.jpg" width="476" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+          </figure>
+          <h3>Spanish Class</h3>
+          <p>Playful exposure to a second language builds listening skills, memory and cultural awareness.</p>
         </li>
-        <li>
-          <span class="pg-day__time">12:00 &ndash; 2:30</span>
-          <span class="pg-day__what">Sleep, in each baby&rsquo;s own rhythm
-            <span>Cribs, back to sleep, and a teacher in the room the whole time.</span></span>
+        <li class="pg-ien pg-tone--peach">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-sensory.webp">
+              <img src="{{ROOT}}assets/img/infant-en-sensory.jpg" width="446" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-sensory"/></svg></span>
+          </figure>
+          <h3>Sensory Development</h3>
+          <p>Exploring different textures, colors and materials strengthens the senses, curiosity and brain development.</p>
         </li>
-        <li>
-          <span class="pg-day__time">2:30 &ndash; 3:30</span>
-          <span class="pg-day__what">Snack, sensory play, books
-            <span>Water, textures, mirrors, and board books chewed as much as read.</span></span>
-        </li>
-        <li>
-          <span class="pg-day__time">3:30 &ndash; 6:00</span>
-          <span class="pg-day__what">Afternoon play and pickup
-            <span>Movement, music, and a handover in person about how the day actually went.</span></span>
+        <li class="pg-ien pg-tone--pink">
+          <figure class="pg-ien__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-en-stem.webp">
+              <img src="{{ROOT}}assets/img/infant-en-stem.jpg" width="475" height="208" loading="lazy" decoding="async"
+                   alt="">
+            </picture>
+            <span class="pg-ien__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-bulb"/></svg></span>
+          </figure>
+          <h3>STEM &amp; Confidence Building</h3>
+          <p>Simple, hands-on exploration introduces early problem-solving skills and encourages independence and confidence.</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ════════════════════ LEARNING EXPERIENCES ════════════════════
-       The brief's own list for this age, as real text. -->
-  <section class="pg-sec" id="learning" aria-labelledby="learning-title">
+  <!-- ════════════════════ FEEDING ════════════════════
+       Ayna's design (2026-10-27): the arched photograph, the two-tone
+       heading, three cards, and the band for children ready for regular
+       daycare meals. -->
+  <section class="sx-sec pg-ifeed" id="feeding" aria-labelledby="meals-title">
     <div class="c2-shell">
-      <div class="pg-sec__head">
-        <p class="c2-eyebrow">Learning experiences</p>
-        <h2 class="c2-h2" id="learning-title">What we do together</h2>
-      </div>
-
-      <div class="pg-prose pg-cols" style="max-width: none">
-        <ul class="pg-ticks">
-          <li><strong>Tummy time</strong> every day, from the first weeks.</li>
-          <li><strong>Sensory play</strong> &mdash; water, fabric, wooden objects, safe household things.</li>
-          <li><strong>Music and songs</strong>, sung live rather than played from a speaker.</li>
-          <li><strong>Books</strong> at floor height, chosen and re-chosen by the babies.</li>
-          <li><strong>Movement</strong> &mdash; rolling, crawling, cruising, and space kept clear for it.</li>
-          <li><strong>Sign language</strong> for the words that matter before speech arrives.</li>
-          <li><strong>Outdoor experiences</strong>, weather permitting, with sun and hydration care.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ FEEDING ════════════════════ -->
-  <section class="pg-sec" id="feeding" aria-labelledby="feeding-title">
-    <div class="c2-shell pg-split pg-split--flip">
-
-      <figure class="pg-split__media">
-        <picture>
-          <source type="image/webp" srcset="{{ROOT}}assets/img/menu-mon-breakfast.webp">
-          <img src="{{ROOT}}assets/img/menu-mon-breakfast.jpg" width="1100" height="880" loading="lazy" decoding="async"
-               alt="A Cuddle Avenue breakfast tray: a bowl of oatmeal, a bowl of mixed berries and a cup of milk.">
-        </picture>
-      </figure>
-
-      <div class="pg-prose">
-        <p class="c2-eyebrow">Feeding</p>
-        <h2 id="feeding-title">Bottles, breast milk and first foods</h2>
-
-        <p>Every baby is fed on their own schedule, written down with you and updated whenever it
-          shifts. We take <strong>expressed breast milk</strong> and <strong>formula</strong>,
-          labelled and stored to the standards that apply, and we will tell you what your baby
-          took and when.</p>
-
-        <h3>Breastfeeding support</h3>
-        <p>Nursing parents are welcome to feed here before drop-off, at lunch, or at pickup &mdash;
-          there is a quiet place to do it, and no need to arrange it in advance.</p>
-
-        <h3>Starting solids</h3>
-        <p>When you are ready to begin solids, we begin with you: the same foods in the same order
-          you are introducing at home, from the kitchen that cooks for every classroom. Once your
-          child is eating a full meal, it is the meal on that day&rsquo;s menu.</p>
-
-        <p><a href="{{ROOT}}for-families/meals-nutrition-breastfeeding.html">See this week&rsquo;s
-          menu and how meals work</a></p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ════════════════════ SAFE SLEEP + COMMUNICATION ════════════════════ -->
-  <section class="pg-sec" id="sleep" aria-labelledby="sleep-title">
-    <div class="c2-shell">
-      <div class="pg-sec__head">
-        <p class="c2-eyebrow">Sleep and communication</p>
-        <h2 class="c2-h2" id="sleep-title">Naps, and how you hear about them</h2>
-      </div>
-
-      <div class="pg-prose" style="max-width: none">
-        <div class="pg-cols">
-          <div>
-            <h3>Safe sleep</h3>
-            <p>Babies sleep on their backs, in their own crib, on a firm surface with nothing else
-              in it &mdash; the safe-sleep practice required of licensed programs, without
-              exception and regardless of what happens at home.</p>
-            <p>Within that, sleep is individual: your baby&rsquo;s nap pattern is the one we keep,
-              and we will not wake a sleeping baby to fit a room schedule.</p>
-          </div>
-          <div id="communication">
-            <h3>How we keep in touch</h3>
-            <p>Two ways, every day. In person at drop-off and pickup, which is where the real
-              handover happens &mdash; and through <strong>Brightwheel</strong>, where feeds,
-              nappy changes, naps and photographs are logged as they happen.</p>
-            <p>If something needs saying before pickup, you will hear from us before pickup.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ SAFETY ════════════════════
-       The homepage's slate band, with the infant-specific practices the
-       brief lists for this program. Same component, same colours. -->
-  <section class="c2-sec ca-safety" id="safety" aria-labelledby="safety-title">
-    <div class="c2-shell">
-      <div class="ca-safety__panel">
-
-        <figure class="ca-safety__media">
+      <div class="pg-ifeed__top">
+        <figure class="pg-ifeed__photo">
           <picture>
-            <source type="image/webp" srcset="{{ROOT}}assets/img/space-play.webp">
-            <img src="{{ROOT}}assets/img/space-play.jpg" width="800" height="800" loading="lazy" decoding="async"
-                 alt="A Cuddle Avenue playroom: brick walls, tall windows, low material shelves and a wooden climbing structure.">
-          </picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/infant-feeding.webp">
+              <img src="{{ROOT}}assets/img/infant-feeding.jpg" width="520" height="665" loading="lazy" decoding="async"
+                   alt="A smiling baby in a high chair holding a spoon, with a pink bowl on the tray.">
+            </picture>
         </figure>
-
-        <div class="ca-safety__body">
-          <p class="c2-eyebrow">Infant health &amp; safety</p>
-          <h2 class="c2-h2" id="safety-title">The practices that<br class="c2-lb">
-            apply to babies</h2>
-          <p class="ca-safety__lead">Everything in our general health and safety practice applies
-            here, plus the ones that exist only for infants.</p>
-
-          <ul class="ca-safety__list">
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.2 8.2 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg></span>
-              Back to sleep, own crib, empty crib</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5h5l-.6 4.2a5 5 0 0 1 3.1 4.6v5.2a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3v-5.2a5 5 0 0 1 3.1-4.6z"/></svg></span>
-              Labelled bottle and breast-milk handling</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.6v5.2M12 16v.2"/></svg></span>
-              Allergy awareness &amp; no nuts on site</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5h4.5l1 3.5H9z"/><path d="M6.5 7h9.5l1.2 13.5H5.3z"/><path d="M9 12.5h6"/></svg></span>
-              Diapering and surface sanitation</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8.5" r="3.2"/><path d="M4 20v-1.4a6 6 0 0 1 12 0V20"/><path d="M17.5 8.6l1.7 1.7 3-3.2"/></svg></span>
-              Background-cleared, CPR-trained staff</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8.2 10.5V7.8a3.8 3.8 0 0 1 7.6 0v2.7"/><path d="M12 14.6v2.2"/></svg></span>
-              Brightwheel QR check-in and authorized pickup</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5h10.5a3 3 0 1 0-3-3"/><path d="M4 15.5h12a3 3 0 1 1-3 3"/><path d="M4 12h16"/></svg></span>
-              HVAC and air filtration</li>
-            <li><span class="ca-safety__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l7.3 3.3v5c0 4.2-2.9 7.8-7.3 9.1-4.4-1.3-7.3-4.9-7.3-9.1v-5z"/><path d="M9 12.4l2.1 2.1 4-4.3"/></svg></span>
-              Age-appropriate furniture and materials</li>
+        <div class="pg-ifeed__body">
+          <p class="sx-eyebrow">Nutrition</p>
+          <h2 id="meals-title">Little Tummies, <br><em>Thoughtful Nutrition</em></h2>
+          <p class="pg-ifeed__lead">Feeding time is more than just nutrition. It&rsquo;s a time to build trust, encourage independence, and create positive, healthy eating habits from the very beginning.</p>
+          <ul class="pg-ifeed__cards">
+          <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-bottle"/></svg></span><h3>Breast Milk &amp; Formula</h3><p>We support your baby&rsquo;s individual feeding routine.</p></li>
+          <li><span class="pg-ih__ico pg-tone--sage" aria-hidden="true"><svg aria-hidden="true"><use href="#i-spoon"/></svg></span><h3>When Your Baby Is Ready for Solids</h3><p>You will provide purees and first foods at your baby&rsquo;s pace.</p></li>
+          <li><span class="pg-ih__ico pg-tone--pink" aria-hidden="true"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Personalized Feeding</h3><p>We follow your baby&rsquo;s schedule, preferences, and developmental readiness.</p></li>
           </ul>
-
-          <div class="ca-safety__actions">
-            <a class="c2-btn c2-btn--green" href="{{ROOT}}about/health-and-safety.html">Explore our health &amp; safety practices</a>
+        </div>
+      </div>
+      <div class="pg-ifeed__band">
+        <div class="pg-ifeed__ready">
+          <span class="pg-ifeed__bowl" aria-hidden="true"><svg aria-hidden="true"><use href="#i-bowl"/></svg></span>
+          <div>
+            <h3>When Your Child Is Ready <br><em>for Regular Daycare Meals</em></h3>
+            <p>Once your child is ready to transition to regular meals, we will provide nutritious, balanced meals as part of our daycare menu.</p>
           </div>
         </div>
-
+        <div class="pg-ifeed__menu">
+          <p class="pg-note">Our weekly daycare menu is in the Brightwheel app.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════ THE VIRTUAL TOUR ════════════════════
-       The brief asks for the actual infant-centre video embedded on this
-       page. It is the same band the homepage uses, pointed at the second
-       tour cut, so it plays itself as the section arrives. -->
-  <section class="c2-sec c2-cta" id="tour" aria-labelledby="tour-title"
+  <!-- ════════════════════ 7 · THE FILM ════════════════════
+       Kept as the site's video band, because it carries the
+       scroll-into-view autoplay wiring. -->
+  <section class="c2-sec c2-cta sx-sec--flush" id="tour" aria-labelledby="tour-title"
            data-c2-tour-video="{{ROOT}}assets/video/tour-infant-toddler.mp4">
     <div class="c2-shell">
       <div class="c2-cta__card">
 
         <div class="c2-cta__media">
           <picture>
-            <source type="image/webp" srcset="{{ROOT}}assets/img/cta-classroom.webp">
-            <img src="{{ROOT}}assets/img/cta-classroom.jpg" width="1600" height="842" loading="lazy" decoding="async"
-                 alt="The main Cuddle Avenue classroom: a round table beneath an indoor tree, low shelves, exposed brick and tall windows.">
+            <source type="image/webp" srcset="{{ROOT}}assets/img/cta-classroom-800.webp 800w, {{ROOT}}assets/img/cta-classroom-1600.webp 1600w, {{ROOT}}assets/img/cta-classroom.webp 2400w" sizes="(max-width: 860px) 100vw, 100vw">
+            <img src="{{ROOT}}assets/img/cta-classroom.jpg" srcset="{{ROOT}}assets/img/cta-classroom-800.jpg 800w, {{ROOT}}assets/img/cta-classroom-1600.jpg 1600w, {{ROOT}}assets/img/cta-classroom.jpg 2400w" sizes="(max-width: 860px) 100vw, 100vw" width="1600" height="842" loading="lazy" decoding="async"
+                 alt="The main Cuddle Avenue classroom: a round table beneath an indoor tree, low shelves and tall windows.">
           </picture>
         </div>
 
-        <a class="c2-cta__video" href="{{ROOT}}assets/video/tour-infant-toddler.mp4">
+        <a class="c2-cta__video" href="{{ROOT}}assets/video/tour-infant-toddler.mp4"
+           data-c2-video="{{ROOT}}assets/video/tour-infant-toddler.mp4">
           <span class="c2-cta__play">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
           </span>
           <span class="c2-cta__vt">
-            <b>Watch the infant center tour</b>
-            <span>1:09 min</span>
+            <b>Watch in full screen</b>
+            <span>Infant &amp; toddler rooms &middot; 1:09 min</span>
           </span>
         </a>
 
-        <h2 class="c2-cta__title" id="tour-title">Walk the room<br class="c2-lb">
-          before you<br class="c2-lb">
-          ever visit</h2>
+        <h2 class="c2-cta__title" id="tour-title">Take a Look Inside <br class="c2-lb">Our Infant Classroom</h2>
 
-        <a class="c2-btn c2-btn--green c2-cta__btn" href="{{ROOT}}admissions/schedule-a-tour.html?program=infant">Schedule an infant tour</a>
+        <a class="c2-btn c2-btn--green c2-cta__btn" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule an infant tour</a>
 
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════ THE ROOM ════════════════════ -->
-  <section class="pg-sec" id="room" aria-labelledby="room-title">
+  <!--@include locations-->
+
+  <!-- ════════════════════ LOVED BY FAMILIES ════════════════════
+       The 591 3rd Avenue listing only (Ayna, 2026-10-18): its rating, three
+       review cards at a time, Read More Reviews on Google. Generated from
+       content/reviews.json by tools/fetch-reviews.js. -->
+  <section class="sx-sec pg-rvsec" id="reviews" aria-labelledby="rv-title">
     <div class="c2-shell">
-      <div class="pg-sec__head">
-        <p class="c2-eyebrow">The room</p>
-        <h2 class="c2-h2" id="room-title">Where the infant program runs</h2>
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">Parent reviews</p>
+        <h2 id="rv-title">Loved by Families, Trusted by Parents</h2>
+        <p class="sx-lead">We are proud of the trust families place in us. Read what parents have to say about their experiences at Cuddle Avenue Academy.</p>
       </div>
-
-      <dl class="pg-facts">
-        <div>
-          <dt>Address</dt>
-          <dd>591 3rd Avenue, Brooklyn, NY 11215</dd>
+      <!-- REVIEWS-ONE:START loc=3rd, generated by tools/fetch-reviews.js from
+           content/reviews.json. Edit the JSON and run: node tools/fetch-reviews.js --src -->
+      <p class="pg-rv__score"><strong>5.0</strong><span class="pg-rv__stars" role="img" aria-label="Rated 5.0 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></span><span>48 Google reviews</span><svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></p>
+      <div class="pg-rv">
+        <ul class="pg-rv__track" id="pg-rv-3rd" tabindex="0" role="group" aria-label="Reviews of 591 3rd Avenue, scrollable">
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">JG</span>
+              <span class="pg-rv__who"><cite>Jess Garfinkel</cite><span>3 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I cannot say enough amazing things about Cuddle Ave!!! We have been sending our son there since he was about 5.5 months old. As first-time parents, we were nervous about leaving him but Cuddle Ave has gone above and beyond to put us at ease!! The staff is truly incredible - Ayna, Zumrat, Nadia, Muhabbat, plus all of the toddler teachers that help out with the infants!! It’s so clear how much they love each of the kids when they come in each day. They also send tons of pictures and videos throughout the day of them playing, learning Spanish and sign language, doing puppet shows, and more! Love this place so much!!!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AE</span>
+              <span class="pg-rv__who"><cite>Aya El Masry</cite><span>9 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue Daycare is an amazing place for children. The staff are kind, attentive, and genuinely care about every child. The environment feels safe, warm, and welcoming, which gives parents real peace of mind. Highly recommend to any parent looking for a trustworthy and loving daycare.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">JC</span>
+              <span class="pg-rv__who"><cite>Jen Chen</cite><span>9 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I’ve had a great experience with Cuddle Avenue Daycare. From the very beginning, the staff have been caring, attentive, and genuinely invested in the children. I always felt comfortable and confident knowing my child was in a safe, loving, and supportive environment. I would highly recommend Cuddle Avenue Daycare to any parent looking for a place they can truly trust.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">ED</span>
+              <span class="pg-rv__who"><cite>Emily Donaldson</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Like any first time mom I struggled sending my baby to daycare. Ayna and her team do everything possible to make you feel comfortable and confident in their care. From a phone call the first day to check in, to the many many photos and videos throughout each day, to their responsiveness to messages, it was a truly great experience. One day I picked him up and he reached back for his teacher, a wonderful indication of the warm, caring environment they foster. Thank you Cuddle for the care and love you showed our son ❤️</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">HG</span>
+              <span class="pg-rv__who"><cite>Hiba Ghoumrassi</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I am beyond impressed with Cuddle Avenue Daycare! The staff is exceptional, always showing kindness and patience with the children. The activities are creative and educational, and my child looks forward to each day. It’s clear they take the time to understand each child’s needs and personality. I feel completely confident leaving my child in their care, knowing they are in a safe, nurturing environment. Highly recommend to anyone looking for a daycare that truly cares!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">N</span>
+              <span class="pg-rv__who"><cite>Niema</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue Daycare is truly a gem! The staff is caring, attentive, and always goes above and beyond to make every child feel loved and supported. My little one has thrived in their nurturing environment, and I couldn’t be happier with the personalized care. The daycare provides a perfect balance of fun and learning, and I love how they create a safe, engaging space for children to grow. If you&rsquo;re looking for a daycare that treats your child like family, this is the place!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">SK</span>
+              <span class="pg-rv__who"><cite>Sabrina Kerai</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">We cannot say enough great things about Cuddle Avenue Academy. We switched our son at about 8 months old to Cuddle Avenue after spending 3 months at another daycare because we felt that the quality of education and care was far superior. We were commuting to Cuddle Avenue in Park Slope from our home in Manhattan for almost a year because we were huge fans of the curriculum and the teachers! Ayna has been an exceptional director of the school, and is constantly adapting to meet the needs of the students, always adding enriching activities and curriculum, and in general incredibly focused on the development of the children in her care. Our son has been there for nearly 2 years now, and we have another baby on the way that we are excited will join the Cuddle Avenue family.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">SQ</span>
+              <span class="pg-rv__who"><cite>S Q</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">A true Gem ! I found Cuddle Ave after searching and searching for the most fitting daycare. All the teachers are caring, attentive and loving. My daughter has developed so much mentally and physically and I am so grateful for the lesson planning , daily updates on the app and just the overall treatment the Children get. The facility itself is very clean, bright, organized and most importantly fun. Would definitely recommend for the future littles 😊</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AD</span>
+              <span class="pg-rv__who"><cite>Akua Damptey</cite><span>3 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">To say we had exceptional childcare for our child would be an understatement. We felt as if our child was left with family! The kids are exposed not just to important academic basics but also yoga, gardening, music and lots of support for learning both academic and social. Throughout the day I receive updates and photos that allow us to feel more connected to our son. The staff is warm and very communicative. Thank you to all the staff for giving me peace of mind as I head off to work every day. If you’re looking for a great pre-school/day care I would highly recommend Cuddle Avenue. I promise you would have no regrets. Ayna, thank you for the services you have offered my family.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">C</span>
+              <span class="pg-rv__who"><cite>Carrie</cite><span>4 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Ayna is the most wonderful caregiver. Children are naturally drawn to her, and she&rsquo;s built an amazing team focused on teaching and nurturing all the babies and toddlers lucky enough to be in her program. The communication from the team is excellent (we received daily updates and photos) and most of all we had complete trust in the safety and care of our child whilst at daycare. I cannot recommend Cuddle Avenue Academy highly enough.</p>
+          </li>
+        </ul>
+        <div class="pg-rv__nav">
+          <button type="button" data-pg-rv-prev aria-label="Show earlier reviews" aria-controls="pg-rv-3rd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" data-pg-rv-next aria-label="Show more reviews" aria-controls="pg-rv-3rd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
-        <div>
-          <dt>Phone</dt>
-          <dd><a href="tel:+19179605618">(917) 960-5618</a></dd>
-        </div>
-        <div>
-          <dt>Hours</dt>
-          <dd>7:30am &ndash; 6:00pm</dd>
-        </div>
-        <div>
-          <dt>Getting here</dt>
-          <dd>Gowanus, one block from 69 16th Street</dd>
-        </div>
-      </dl>
-
-      <div class="c2-sec__actions">
-        <a class="c2-btn c2-btn--outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=591+3rd+Avenue+Brooklyn+NY+11215" target="_blank" rel="noopener">Get directions</a>
-        <a class="c2-btn c2-btn--outline" href="{{ROOT}}contact.html">See both locations</a>
       </div>
-
-      <p class="pg-note" style="margin-top: clamp(1.5rem, 3vw, 2.25rem)">
-        <strong>Photo gallery to come.</strong> The brief asks for a gallery of this room in
-        particular &mdash; classroom, learning areas, infant equipment, activities, sensory play
-        and outdoor time. The photographs on this page are real Cuddle Avenue rooms, but which
-        building each was taken in has not been confirmed, so none is captioned as the infant room
-        until it is.</p>
+      <p class="pg-rv__actions">
+        <a class="c2-btn c2-btn--green" href="https://maps.app.goo.gl/sKnmjJ36ZtxVjE1c7" target="_blank" rel="noopener">Read more reviews on Google</a>
+        <a class="c2-btn c2-btn--outline" href="https://www.google.com/search?q=Cuddle+Avenue+Daycare#lrd=0xa4047fca07ffdb7:0x9acd8c24d208ad75,3,,," target="_blank" rel="noopener">Leave us a review</a>
+      </p>
+      <!-- REVIEWS-ONE:END -->
     </div>
   </section>
 
-  <!-- ════════════════════ VISIT & ENROLL ════════════════════ -->
-  <section class="c2-join pg-sec--last" id="visit" aria-labelledby="visit-title">
+  <!-- ════════════════════ FAQ ════════════════════ -->
+  <section class="sx-sec" id="faq" aria-labelledby="qa-title">
     <div class="c2-shell">
-      <div class="c2-join__card">
+      <div class="sx-head">
+        <p class="sx-eyebrow">Questions</p>
+        <h2 id="qa-title">Frequently Asked Questions About Infant Care</h2>
+      </div>
 
-        <svg class="c2-join__arcs" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2">
-            <circle cx="1010" cy="210" r="120"/><circle cx="1010" cy="210" r="190"/><circle cx="1010" cy="210" r="264"/>
-          </g>
-        </svg>
-
-        <div class="c2-join__left">
-          <p class="c2-join__eyebrow">Infant care</p>
-          <h2 class="c2-join__title" id="visit-title">Come and see<br class="c2-lb">
-            where they would sleep</h2>
-        </div>
-
-        <div class="c2-join__right">
-          <p class="c2-join__lead">Half an hour on a weekday morning, while the room is actually
-            running. Bring your baby &mdash; it tells you more than anything we can write here.</p>
-          <div class="ca-join__actions">
-            <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html?program=infant">Schedule an infant tour</a>
-            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}admissions/tuition-financial-assistance.html">Ask about infant tuition</a>
-            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}admissions.html#inquire">Start infant enrollment</a>
+      <div class="sx-qa">
+        <details open>
+          <summary><span class="sx-qa__n">01</span><span>What ages do you accept in your infant program?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Our infant program welcomes children from 6 weeks to 12 months. We provide individualized care and age-appropriate learning experiences that support each child&rsquo;s development.</p>
           </div>
-        </div>
+        </details>
 
+        <details>
+          <summary><span class="sx-qa__n">02</span><span>Do infants follow a daily schedule?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Yes. Our infant classroom has a daily routine that includes enrichment activities, sensory exploration, movement, storytime, and early learning experiences. Feeding and sleeping schedules are individualized to each child&rsquo;s needs.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">03</span><span>How do you handle feeding schedules?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>We follow each child&rsquo;s individual feeding schedule, including the bottle-feeding routine provided by parents. Our teachers work closely with families to keep feeding consistent between home and daycare.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">04</span><span>Do you provide meals for infants?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Yes. Breakfast, lunch, and an afternoon snack are included in tuition for infants who are developmentally ready to eat our regular daycare meals. Parents must provide pur&eacute;es or specially prepared infant foods.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">05</span><span>What if my child needs more than two naps?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Younger infants often need two or three naps a day. Our teachers follow each child&rsquo;s individual sleep schedule.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">06</span><span>What learning and enrichment do infants take part in?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Our infant program includes sensory exploration, storytime, fine motor activities and early communication, plus enrichment classes: baby sign language, live music and guitar, baby yoga, Spanish, sensory development, and confidence-building activities. All enrichment classes and educational activities are included in tuition.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">07</span><span>How will I receive updates during the day?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>We use the Brightwheel app to share feeding updates, diaper changes, naps, photos, videos, classroom activities, and important announcements. Parents can message their child&rsquo;s teacher directly through Brightwheel.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">08</span><span>How do you keep infants safe?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Our infant classroom is supervised by trained childcare professionals who follow applicable health and safety regulations. Our teachers complete required background checks and safety training, including CPR and First Aid. We also maintain regular cleaning and sanitizing procedures.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">09</span><span>What happens if my child becomes sick?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>If your child becomes sick while at daycare, we contact you and follow our illness policy. Children with a fever must remain home until they have been fever-free for at least 24 hours without fever-reducing medication. A doctor&rsquo;s note is also required before returning.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">10</span><span>Are vaccinations required?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Yes. Children must meet applicable New York State childcare immunization requirements. Families must provide updated medical and vaccination records.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">11</span><span>Is tuition charged monthly?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Yes. Tuition is due on the 1st of each month, with payment required by the 10th to avoid late fees.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="sx-qa__n">12</span><span>Can I schedule a tour before enrolling?</span>
+            <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </summary>
+          <div class="sx-qa__body">
+            <p>Absolutely! We encourage families to visit our infant classroom, meet our teachers, and learn more about our daily routines and educational approach. You can <a href="https://calendly.com/cuddleavenue/in-person-tour">schedule an in-person tour</a> through our website.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
+
+  <!-- Phones only: appears once the hero's buttons have scrolled away and
+       goes for good when the closing card comes into view, so it lives
+       only between the hero and the call to action. The phone button is the
+       navbar's own. -->
+  <div class="pg-stickycta" data-c2-stickycta hidden>
+    <ul class="pg-stickycta__facts" aria-label="Infant care at a glance">
+      <li><svg aria-hidden="true"><use href="#i-heart"/></svg>6 wks&ndash;12 mo</li>
+      <li><svg aria-hidden="true"><use href="#i-clock"/></svg>7:30am&ndash;6pm</li>
+      <li><svg aria-hidden="true"><use href="#i-pin"/></svg>591 3rd Ave</li>
+    </ul>
+    <div class="pg-stickycta__btns">
+      <a class="c2-btn c2-btn--green" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
+      <a class="c2-btn c2-btn--outline c2-header__call" href="tel:+18006204221"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.6h3l1.5 4-2 1.4a12 12 0 0 0 6.1 6.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.8a2 2 0 0 1 2-2.2z"/></svg> <span class="c2-header__num">(800)&nbsp;620&#8209;4221</span> <span class="sx-vh">Call Cuddle Avenue Academy</span> </a>
+    </div>
+  </div>
+
+  <!--@include cta-join-->
 
 </main>
 

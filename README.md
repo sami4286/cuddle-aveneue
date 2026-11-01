@@ -1,26 +1,28 @@
-# Cuddle Avenue — Website Revamp (Phase 1)
+# Cuddle Avenue — Website Revamp
 
-Redesign concept and SEO foundation for **Cuddle Avenue Academy**, a Montessori daycare and preschool in Gowanus, Brooklyn.
+Website and SEO foundation for **Cuddle Avenue Academy**, a Montessori daycare and preschool in Gowanus, Brooklyn.
 
-This phase delivers a client-facing homepage concept plus the research that drives the full rebuild.
+Nineteen pages built to the client brief, plus the research that drives the rebuild.
 
 ---
 
 ## View it
 
-Open `index.html` in any browser. No build step, no server, no dependencies.
+```bash
+bash netlify-build.sh     # assembles src/ + assets → dist/
+start dist/index.html     # Windows   (open dist/index.html on macOS)
+```
 
-```
-start index.html          # Windows
-open index.html           # macOS
-```
+Preview from `dist/`, not from the repo root — the root holds no built page. Add `?motion=on`
+to the URL if your machine has reduced motion switched on; see **Motion** below.
 
 ---
 
 ## What's here
 
 ```
-├─ index.html                      Homepage, built to the client brief
+├─ src/                            Page bodies + _partials/ (the shared chrome)
+├─ tools/assemble.sh               Pastes partials, substitutes vars → dist/
 ├─ BRIEF-COMPLIANCE.md             Brief vs. page, and what is blocked on the client
 ├─ css/
 │  ├─ concept-2.css                Layout, type, sections, responsive rules
@@ -48,11 +50,27 @@ concept. Nothing on the current homepage loads them; they are kept only for refe
 
 ---
 
-## The homepage
+## The pages
 
-Built to the section order in the client brief (*Complete Website Structure, Content &
-Developer Guide*, section **1. HOME**), with Health & safety moved up — see
-BRIEF-COMPLIANCE.md:
+Nineteen, built to the client brief (*Complete Website Structure, Content & Developer Guide*).
+Five of the brief's subpages are sections instead — see BRIEF-COMPLIANCE.md for the argument.
+
+```
+index.html
+about.html                    story · philosophy · mission · educators · why us · partnership
+about/health-and-safety.html
+programs.html                 infant-care · toddler-care · 2k · nyc-3k · summer-camp
+admissions.html               six steps · enrollment inquiry form
+admissions/schedule-a-tour.html · admissions/tuition-financial-assistance.html
+for-families.html             Brightwheel · what to bring · forms · pickup · routines
+for-families/meals-nutrition-breastfeeding.html · for-families/faq.html
+contact.html
+privacy-policy.html · terms.html                          ← drafts, need legal review
+```
+
+### The homepage, section by section
+
+With Health & safety moved up from the brief's order:
 
 1. **Hero** — "A loving place to learn, grow & belong", with the brief's three CTAs
 2. **Welcome** — the philosophy paragraphs, and *Our story*
@@ -67,9 +85,10 @@ BRIEF-COMPLIANCE.md:
 11. **Final CTA** — "Come experience Cuddle Avenue Academy"
 
 Read **[BRIEF-COMPLIANCE.md](BRIEF-COMPLIANCE.md)** before touching the copy. It maps each
-brief section to what shipped, and lists the seven items still blocked on the client —
-the third location, the program-to-location mapping, the main phone number, Summer Camp
-ages and hours, the nut-free wording, the tour videos, and the photo shoot.
+brief section to what shipped, and lists everything still blocked on the client —
+the third location, the program-to-location mapping, the phone number, Summer Camp ages
+and hours, the nut-free wording, three missing tour films, the photo shoot, and a legal
+review of the three policy pages.
 
 ### Design tokens
 
@@ -151,11 +170,15 @@ Everything is produced with ffmpeg (`winget install Gyan.FFmpeg`):
 ffmpeg -i "Monday Lunch.png" -vf scale=1100:-2 -frames:v 1 -update 1 -q:v 4  assets/img/menu-mon-lunch.jpg
 ffmpeg -i "Monday Lunch.png" -vf scale=1100:-2 -frames:v 1 -update 1 -c:v libwebp -quality 80 assets/img/menu-mon-lunch.webp
 
-# tour video → a silent 720p cut for the autoplaying band, and a full 1080p cut with sound
-ffmpeg -i final.mov -an -vf "scale=1280:-2,fps=30" -c:v libx264 -crf 26 -preset slow \
-       -pix_fmt yuv420p -movflags +faststart assets/video/center-tour-loop.mp4
-ffmpeg -i final.mov     -vf "scale=1920:-2,fps=30" -c:v libx264 -crf 23 -preset slow \
-       -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/center-tour.mp4
+# tour video → one 720p cut per tour, used twice: the band plays it muted and looping,
+# the tour page plays the same file with sound, so the browser fetches it once
+ffmpeg -i final.mov -vf "scale=1280:-2,fps=30" -c:v libx264 -profile:v high -crf 27 \
+       -preset slow -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart \
+       assets/video/center-tour.mp4
+
+# poster frame, taken from inside the film rather than the street it opens on
+ffmpeg -ss 14 -i assets/video/center-tour.mp4 -frames:v 1 -update 1 -vf scale=1280:-2 \
+       -q:v 4 assets/img/tour-center-poster.jpg
 ```
 
 HEIC needs `-frames:v 1 -update 1` and no `-vf`: an iPhone HEIC is tiled, ffmpeg stitches the

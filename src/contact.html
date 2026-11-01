@@ -1,171 +1,436 @@
-<!--@var TITLE: Contact Cuddle Avenue Academy &mdash; Brooklyn, NY-->
-<!--@var DESC: Contact Cuddle Avenue Academy in Brooklyn: phone, email, both Gowanus locations with directions, opening hours 7:30am to 6:00pm, and a form that reaches us directly.-->
+<!--@var TITLE: Contact Cuddle Avenue Academy in Brooklyn, NY-->
+<!--@var DESC: Contact Cuddle Avenue Academy in Brooklyn: call (800) 620-4221, email us, or send a message. Three Park Slope locations, 69 16th Street, 591 3rd Avenue and 71 16th Street, open Monday to Friday 7:30am to 6:00pm.-->
 <!--@var OGTITLE: Contact Cuddle Avenue Academy-->
-<!--@var OGDESC: Phone, email, both Brooklyn locations and a form that reaches a person.-->
+<!--@var OGDESC: We&rsquo;d love to hear from you. Call, email or send us a message.-->
+<!--@var CTA_EYEBROW: We can&rsquo;t wait to meet you-->
+<!--@var CTA_TITLE: Come see the <br class="c2-lb">Cuddle Avenue difference-->
+<!--@var CTA_LEAD: Schedule a tour to explore our classrooms, meet our team, and learn more about our programs.-->
+<!--@var CTA_BTN1_HREF: https://calendly.com/cuddleavenue/in-person-tour-->
+<!--@var CTA_BTN1: Schedule a tour-->
+<!--@var CTA_BTN2_HREF: {{ROOT}}index.html#programs-->
+<!--@var CTA_BTN2: Explore our programs-->
+<!--@var FORM_NAME: contact-->
+<!--@var FORM_SUBJECT: Cuddle Avenue: Message from the contact page-->
+<!--@var FORM_BUTTON: Send message-->
 <!--@include head-->
 <!--@include announce-->
 <!--@include header-->
 
-<main id="main">
+<main id="main" class="sx">
 
-  <section class="pg-head">
-    <div class="c2-shell pg-head__grid">
-
-      <div class="pg-head__body">
-        <nav class="pg-crumbs" aria-label="Breadcrumb">
-          <ol>
-            <li><a href="{{ROOT}}index.html">Home</a></li>
-            <li><span aria-current="page">Contact us</span></li>
-          </ol>
-        </nav>
-
-        <h1 class="pg-title">Contact<br class="c2-lb">
-          Cuddle Avenue Academy</h1>
-
-        <p class="pg-head__lead">A real person answers the phone during the day, and email is read
-          every weekday. If you are asking about a place for your child, the fastest route is
-          usually a tour &mdash; you will learn more in half an hour than in a week of emails.</p>
-
-        <div class="pg-head__actions">
-          <a class="c2-btn c2-btn--green" href="tel:+19179605618">Call (917) 960-5618</a>
-          <a class="c2-btn c2-btn--outline" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
-        </div>
+  <!-- ════════════════════ CONTACT US (2026-10-29) ════════════════════
+       Laid out as Ayna's design ("Contact page new.png"): the hello, how to
+       reach us, the message form, the three locations, a line for families
+       already enrolled, and the closing card. The design's "716 16th
+       Street" is 71 16th Street (Ayna: "Please correct the 71 16th Street
+       address"). -->
+  <section class="pg-ihero pg-ihero--match" aria-labelledby="pg-title">
+    <div class="pg-ihero__photo" aria-hidden="true">
+      <picture>
+        <source type="image/webp" srcset="{{ROOT}}assets/img/loc-interior-800.webp 800w, {{ROOT}}assets/img/loc-interior-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw">
+        <img src="{{ROOT}}assets/img/loc-interior-1600.jpg" srcset="{{ROOT}}assets/img/loc-interior-800.jpg 800w, {{ROOT}}assets/img/loc-interior-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" width="1600" height="960" fetchpriority="high" decoding="async" alt="">
+      </picture>
+    </div>
+    <div class="c2-shell pg-ihero__inner">
+      <p class="pg-ihero__eyebrow">A warm hello from our team</p>
+      <h1 class="pg-ihero__title" id="pg-title">We&rsquo;d love to <br><em>hear from you</em></h1>
+      <p class="pg-ihero__lead">Questions about enrollment, programs, or your child&rsquo;s first day? Our team is here to help.</p>
+      <div class="sx-mast__actions pg-ihero__actions">
+        <a class="c2-btn c2-btn--green" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour <span aria-hidden="true">&rarr;</span></a>
+        <a class="c2-btn c2-btn--outline" href="{{ROOT}}admissions.html">Apply for admission</a>
       </div>
+    </div>
+  </section>
 
-      <figure class="pg-head__media">
+  <!-- ════════════════════ HOW TO REACH US ════════════════════
+       One white card over the foot of the hero, the same floating strip
+       as the program and Admissions pages: call, email, hours. -->
+  <section class="pg-ifeats pg-reach-sec" id="reach" aria-labelledby="reach-title">
+    <div class="c2-shell">
+      <h2 class="sx-vh" id="reach-title">How to Reach Us</h2>
+      <ul class="pg-reach3">
+        <li class="pg-tone--pink">
+          <span class="pg-ih__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <p class="pg-reach3__label">Call us</p>
+          <a class="pg-reach3__big" href="tel:+18006204221">(800)&nbsp;620&#8209;4221</a>
+          <p>We&rsquo;re happy to answer your questions.</p>
+          <a class="pg-reach3__go" href="tel:+18006204221" tabindex="-1" aria-hidden="true">Call now <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="pg-tone--sage">
+          <span class="pg-ih__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <p class="pg-reach3__label">Email us</p>
+          <a class="pg-reach3__big pg-reach3__mail" href="mailto:customerservice@cuddleavenue.org">customerservice@<wbr>cuddleavenue.org</a>
+          <p>We typically respond within 1 business day.</p>
+          <a class="pg-reach3__go" href="mailto:customerservice@cuddleavenue.org" tabindex="-1" aria-hidden="true">Send an email <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="pg-tone--sand">
+          <span class="pg-ih__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+          <p class="pg-reach3__label">Our hours</p>
+          <p class="pg-reach3__big">Monday &ndash; Friday</p>
+          <p>7:30am &ndash; 6:00pm</p>
+          <a class="pg-reach3__go" href="#locations">Find a location <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ════════════════════ THE MESSAGE ════════════════════
+       The form card beside a tall classroom photograph; on a phone the
+       photograph goes after the form. -->
+  <section class="sx-sec pg-msg-sec" id="message" aria-labelledby="msg-title">
+    <div class="c2-shell pg-msg">
+      <div class="pg-msg__card">
+        <p class="sx-eyebrow">Send us a message</p>
+        <h2 id="msg-title">We&rsquo;re Here to Help</h2>
+        <p class="pg-msg__lead">Fill out the form below and we&rsquo;ll get back to you soon. We&rsquo;re here to help with enrollment, program details, tours, and more.</p>
+        <!--@include inquiry-form-->
+      </div>
+      <figure class="pg-msg__photo">
         <picture>
-          <source type="image/webp" srcset="{{ROOT}}assets/img/loc-exterior.webp">
-          <img src="{{ROOT}}assets/img/loc-exterior.jpg" width="1700" height="1020" fetchpriority="high" decoding="async"
-               alt="The Cuddle Avenue Academy storefront on a Brooklyn block, windows frosted with the two-bear logo above the word academy.">
+          <source type="image/webp" srcset="{{ROOT}}assets/img/space-play-800.webp 800w, {{ROOT}}assets/img/space-play-1600.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw">
+          <img src="{{ROOT}}assets/img/space-play-800.jpg" srcset="{{ROOT}}assets/img/space-play-800.jpg 800w, {{ROOT}}assets/img/space-play-1600.jpg 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="800" height="800" loading="lazy" decoding="async" alt="A bright Cuddle Avenue classroom with low wooden shelves, a play kitchen and a climbing house.">
         </picture>
       </figure>
-
     </div>
   </section>
 
-  <!-- ════════════════════ THE DETAILS ════════════════════ -->
-  <section class="pg-sec--tight" aria-label="Contact details">
+  <!-- ════════════════════ OUR BROOKLYN LOCATIONS ════════════════════
+       ⚠️ 71 16th Street keeps the pin placeholder until Ayna sends photos. -->
+  <section class="sx-sec pg-locs3-sec" id="locations" aria-labelledby="locs-title">
     <div class="c2-shell">
-      <dl class="pg-facts">
-        <div>
-          <dt>Phone</dt>
-          <dd><a href="tel:+19179605618">(917) 960-5618</a></dd>
-        </div>
-        <div>
-          <dt>Email</dt>
-          <dd><a href="mailto:customerservice@cuddleavenue.org">customerservice@cuddleavenue.org</a></dd>
-        </div>
-        <div>
-          <dt>Open</dt>
-          <dd>Monday &ndash; Friday, 7:30am &ndash; 6:00pm</dd>
-        </div>
-        <div>
-          <dt>Tours</dt>
-          <dd>Weekday mornings, by appointment</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- ════════════════════ THE FORM ════════════════════
-       ⚠️ Posts through Netlify Forms. Before launch: enable Forms for the
-       site and set a notification address, or these messages arrive
-       nowhere. Same component as the tour form, different fields. -->
-  <section class="pg-sec" id="message" aria-labelledby="msg-title">
-    <div class="c2-shell pg-split">
-
-      <div class="pg-prose">
-        <p class="c2-eyebrow">Send a message</p>
-        <h2 id="msg-title">Ask us anything</h2>
-        <p>Availability in a particular room, tuition, a sibling discount, whether we can take a
-          child with a specific allergy or medical need &mdash; ask directly. We answer honestly,
-          including when the answer is that we have no space.</p>
-
-        <div class="pg-note">
-          <p><strong>Already with us?</strong> For anything about your own child&rsquo;s day
-            &mdash; illness, absence, a late pickup &mdash; message us on Brightwheel or call the
-            building. It reaches the room faster than a form.</p>
-        </div>
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">Visit us</p>
+        <h2 id="locs-title">Our Brooklyn Locations</h2>
+        <p class="sx-lead">We welcome you to visit our schools and see our warm, nurturing environments in person.</p>
       </div>
-
-      <form class="pg-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="company">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="pg-form__hp">
-          <label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label>
-        </p>
-
-        <div class="pg-form__row">
-          <label for="c-name">Your name</label>
-          <input id="c-name" name="parent-name" type="text" autocomplete="name" required>
-        </div>
-
-        <div class="pg-form__grid">
-          <div class="pg-form__row">
-            <label for="c-email">Email</label>
-            <input id="c-email" name="email" type="email" autocomplete="email" required>
+      <ul class="pg-locs3">
+        <li class="pg-loc3">
+          <figure class="pg-loc3__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/tour-center-poster-800.webp">
+              <img src="{{ROOT}}assets/img/tour-center-poster-800.jpg" width="800" height="450" loading="lazy" decoding="async" alt="Inside 69 16th Street: low wooden shelves and the indoor climbing area.">
+            </picture>
+          </figure>
+          <h3 class="pg-loc3__name">69 16th Street</h3>
+          <p class="pg-loc3__city">Brooklyn, NY 11215</p>
+          <ul class="pg-loc3__tags" aria-label="Programs">
+            <li>NYC 3-K</li><li>Ages 3 &ndash; 4 years</li><li>DOE program</li>
+          </ul>
+          <div class="pg-loc3__facts">
+            <p><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Monday &ndash; Friday<br>7:30am &ndash; 6:00pm</span></p>
+            <p><svg aria-hidden="true"><use href="#i-pin"/></svg><a href="https://maps.app.goo.gl/EcKasTcVvDkba5nx5" target="_blank" rel="noopener">Get directions</a></p>
           </div>
-          <div class="pg-form__row">
-            <label for="c-phone">Phone</label>
-            <input id="c-phone" name="phone" type="tel" autocomplete="tel">
+          <a class="c2-btn c2-btn--outline pg-loc3__btn" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
+        </li>
+        <li class="pg-loc3">
+          <figure class="pg-loc3__photo">
+            <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/tour-infant-poster-800.webp">
+              <img src="{{ROOT}}assets/img/tour-infant-poster-800.jpg" width="800" height="450" loading="lazy" decoding="async" alt="Inside 591 3rd Avenue: the infant and toddler room with its climbing structure.">
+            </picture>
+          </figure>
+          <h3 class="pg-loc3__name">591 3rd Avenue</h3>
+          <p class="pg-loc3__city">Brooklyn, NY 11215</p>
+          <ul class="pg-loc3__tags" aria-label="Programs">
+            <li>Infant &amp; toddler care</li><li>Ages 0 &ndash; 2 years</li>
+          </ul>
+          <div class="pg-loc3__facts">
+            <p><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Monday &ndash; Friday<br>7:30am &ndash; 6:00pm</span></p>
+            <p><svg aria-hidden="true"><use href="#i-pin"/></svg><a href="https://maps.app.goo.gl/sKnmjJ36ZtxVjE1c7" target="_blank" rel="noopener">Get directions</a></p>
           </div>
-        </div>
-
-        <div class="pg-form__row">
-          <label for="c-about">What is this about</label>
-          <select id="c-about" name="topic">
-            <option>A place for my child</option>
-            <option>Tuition and financial assistance</option>
-            <option>NYC 3-K for All</option>
-            <option>Summer camp</option>
-            <option>Something else</option>
-          </select>
-        </div>
-
-        <div class="pg-form__row">
-          <label for="c-msg">Message</label>
-          <textarea id="c-msg" name="message" rows="5" required></textarea>
-        </div>
-
-        <button class="c2-btn c2-btn--green pg-form__submit" type="submit">Send message</button>
-        <p class="pg-form__note">We reply by email, usually within one working day.</p>
-      </form>
-
-    </div>
-  </section>
-
-  <!-- ════════════════════ LOCATIONS ════════════════════
-       The homepage's location tabs, from the same partial: one photograph
-       per building with its address, programs, hours and directions. -->
-  <!--@include locations-->
-
-  <section class="c2-join pg-sec--last" aria-labelledby="contact-cta">
-    <div class="c2-shell">
-      <div class="c2-join__card">
-
-        <svg class="c2-join__arcs" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2">
-            <circle cx="1010" cy="210" r="120"/><circle cx="1010" cy="210" r="190"/><circle cx="1010" cy="210" r="264"/>
-          </g>
-        </svg>
-
-        <div class="c2-join__left">
-          <p class="c2-join__eyebrow">Come and see</p>
-          <h2 class="c2-join__title" id="contact-cta">The door is open<br class="c2-lb">
-            on weekday mornings</h2>
-        </div>
-
-        <div class="c2-join__right">
-          <p class="c2-join__lead">Book a time and we will show you the room your child would
-            actually be in, with the children who are actually in it.</p>
-          <div class="ca-join__actions">
-            <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
-            <a class="c2-btn c2-btn--quiet" href="{{ROOT}}programs.html">Explore our programs</a>
+          <a class="c2-btn c2-btn--outline pg-loc3__btn" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
+        </li>
+        <li class="pg-loc3">
+          <figure class="pg-loc3__photo pg-loc3__photo--soon">
+            <span class="c2-loc__soon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+          </figure>
+          <h3 class="pg-loc3__name">71 16th Street</h3>
+          <p class="pg-loc3__city">Brooklyn, NY 11215</p>
+          <ul class="pg-loc3__tags" aria-label="Programs">
+            <li>2K program</li><li>Ages 2 &ndash; 3 years</li>
+          </ul>
+          <div class="pg-loc3__facts">
+            <p><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Monday &ndash; Friday<br>7:30am &ndash; 6:00pm</span></p>
+            <p><svg aria-hidden="true"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/dir/?api=1&amp;destination=71+16th+Street+Brooklyn+NY+11215" target="_blank" rel="noopener">Get directions</a></p>
           </div>
-        </div>
+          <a class="c2-btn c2-btn--outline pg-loc3__btn" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
+        </li>
+      </ul>
 
+      <div class="pg-enrolled">
+        <span class="pg-ih__ico pg-tone--sage" aria-hidden="true"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+        <p><b>Already enrolled?</b>Message us on Brightwheel for daily updates, absences, and pickup changes.</p>
       </div>
     </div>
   </section>
+
+  <!-- ════════════════════ LOVED BY FAMILIES ════════════════════
+       The program pages' review section (user, 2026-10-29) with a tab
+       for each of the three Google listings, since this page covers
+       every building. Generated from content/reviews.json by
+       tools/fetch-reviews.js. -->
+  <section class="sx-sec pg-rvsec" id="reviews" aria-labelledby="rv-title">
+    <div class="c2-shell">
+      <div class="sx-head sx-head--center">
+        <p class="sx-eyebrow">Parent reviews</p>
+        <h2 id="rv-title">Loved by Families, Trusted by Parents</h2>
+        <p class="sx-lead">We are proud of the trust families place in us. Read what parents have to say about their experiences at Cuddle Avenue Academy.</p>
+      </div>
+      <!-- REVIEWS-ONE:START loc=all, generated by tools/fetch-reviews.js from
+           content/reviews.json. Edit the JSON and run: node tools/fetch-reviews.js --src -->
+      <div class="c2-tabs pg-rv__tabs" role="tablist" aria-label="Reviews by location" data-c2-tablist>
+        <button class="c2-tab" type="button" role="tab" id="pg-rv-tab-3rd" aria-controls="pg-rv-panel-3rd" aria-selected="true"><span class="c2-tab__full">591 3rd Avenue</span><span class="c2-tab__abbr">591 3rd Ave</span></button>
+        <button class="c2-tab" type="button" role="tab" id="pg-rv-tab-69" aria-controls="pg-rv-panel-69" aria-selected="false"><span class="c2-tab__full">69 16th Street</span><span class="c2-tab__abbr">69 16th St</span></button>
+        <button class="c2-tab" type="button" role="tab" id="pg-rv-tab-71" aria-controls="pg-rv-panel-71" aria-selected="false"><span class="c2-tab__full">71 16th Street</span><span class="c2-tab__abbr">71 16th St</span></button>
+      </div>
+      <div class="pg-rv__panel" id="pg-rv-panel-3rd" role="tabpanel" aria-labelledby="pg-rv-tab-3rd">
+      <p class="pg-rv__score"><strong>5.0</strong><span class="pg-rv__stars" role="img" aria-label="Rated 5.0 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></span><span>48 Google reviews</span><svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></p>
+      <div class="pg-rv">
+        <ul class="pg-rv__track" id="pg-rv-3rd" tabindex="0" role="group" aria-label="Reviews of 591 3rd Avenue, scrollable">
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">JG</span>
+              <span class="pg-rv__who"><cite>Jess Garfinkel</cite><span>3 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I cannot say enough amazing things about Cuddle Ave!!! We have been sending our son there since he was about 5.5 months old. As first-time parents, we were nervous about leaving him but Cuddle Ave has gone above and beyond to put us at ease!! The staff is truly incredible - Ayna, Zumrat, Nadia, Muhabbat, plus all of the toddler teachers that help out with the infants!! It’s so clear how much they love each of the kids when they come in each day. They also send tons of pictures and videos throughout the day of them playing, learning Spanish and sign language, doing puppet shows, and more! Love this place so much!!!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AE</span>
+              <span class="pg-rv__who"><cite>Aya El Masry</cite><span>9 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue Daycare is an amazing place for children. The staff are kind, attentive, and genuinely care about every child. The environment feels safe, warm, and welcoming, which gives parents real peace of mind. Highly recommend to any parent looking for a trustworthy and loving daycare.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">JC</span>
+              <span class="pg-rv__who"><cite>Jen Chen</cite><span>9 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I’ve had a great experience with Cuddle Avenue Daycare. From the very beginning, the staff have been caring, attentive, and genuinely invested in the children. I always felt comfortable and confident knowing my child was in a safe, loving, and supportive environment. I would highly recommend Cuddle Avenue Daycare to any parent looking for a place they can truly trust.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">ED</span>
+              <span class="pg-rv__who"><cite>Emily Donaldson</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Like any first time mom I struggled sending my baby to daycare. Ayna and her team do everything possible to make you feel comfortable and confident in their care. From a phone call the first day to check in, to the many many photos and videos throughout each day, to their responsiveness to messages, it was a truly great experience. One day I picked him up and he reached back for his teacher, a wonderful indication of the warm, caring environment they foster. Thank you Cuddle for the care and love you showed our son ❤️</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">HG</span>
+              <span class="pg-rv__who"><cite>Hiba Ghoumrassi</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I am beyond impressed with Cuddle Avenue Daycare! The staff is exceptional, always showing kindness and patience with the children. The activities are creative and educational, and my child looks forward to each day. It’s clear they take the time to understand each child’s needs and personality. I feel completely confident leaving my child in their care, knowing they are in a safe, nurturing environment. Highly recommend to anyone looking for a daycare that truly cares!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">N</span>
+              <span class="pg-rv__who"><cite>Niema</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue Daycare is truly a gem! The staff is caring, attentive, and always goes above and beyond to make every child feel loved and supported. My little one has thrived in their nurturing environment, and I couldn’t be happier with the personalized care. The daycare provides a perfect balance of fun and learning, and I love how they create a safe, engaging space for children to grow. If you&rsquo;re looking for a daycare that treats your child like family, this is the place!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">SK</span>
+              <span class="pg-rv__who"><cite>Sabrina Kerai</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">We cannot say enough great things about Cuddle Avenue Academy. We switched our son at about 8 months old to Cuddle Avenue after spending 3 months at another daycare because we felt that the quality of education and care was far superior. We were commuting to Cuddle Avenue in Park Slope from our home in Manhattan for almost a year because we were huge fans of the curriculum and the teachers! Ayna has been an exceptional director of the school, and is constantly adapting to meet the needs of the students, always adding enriching activities and curriculum, and in general incredibly focused on the development of the children in her care. Our son has been there for nearly 2 years now, and we have another baby on the way that we are excited will join the Cuddle Avenue family.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">SQ</span>
+              <span class="pg-rv__who"><cite>S Q</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">A true Gem ! I found Cuddle Ave after searching and searching for the most fitting daycare. All the teachers are caring, attentive and loving. My daughter has developed so much mentally and physically and I am so grateful for the lesson planning , daily updates on the app and just the overall treatment the Children get. The facility itself is very clean, bright, organized and most importantly fun. Would definitely recommend for the future littles 😊</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AD</span>
+              <span class="pg-rv__who"><cite>Akua Damptey</cite><span>3 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">To say we had exceptional childcare for our child would be an understatement. We felt as if our child was left with family! The kids are exposed not just to important academic basics but also yoga, gardening, music and lots of support for learning both academic and social. Throughout the day I receive updates and photos that allow us to feel more connected to our son. The staff is warm and very communicative. Thank you to all the staff for giving me peace of mind as I head off to work every day. If you’re looking for a great pre-school/day care I would highly recommend Cuddle Avenue. I promise you would have no regrets. Ayna, thank you for the services you have offered my family.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">C</span>
+              <span class="pg-rv__who"><cite>Carrie</cite><span>4 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Ayna is the most wonderful caregiver. Children are naturally drawn to her, and she&rsquo;s built an amazing team focused on teaching and nurturing all the babies and toddlers lucky enough to be in her program. The communication from the team is excellent (we received daily updates and photos) and most of all we had complete trust in the safety and care of our child whilst at daycare. I cannot recommend Cuddle Avenue Academy highly enough.</p>
+          </li>
+        </ul>
+        <div class="pg-rv__nav">
+          <button type="button" data-pg-rv-prev aria-label="Show earlier reviews" aria-controls="pg-rv-3rd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" data-pg-rv-next aria-label="Show more reviews" aria-controls="pg-rv-3rd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <p class="pg-rv__actions">
+        <a class="c2-btn c2-btn--green" href="https://maps.app.goo.gl/sKnmjJ36ZtxVjE1c7" target="_blank" rel="noopener">Read more reviews on Google</a>
+        <a class="c2-btn c2-btn--outline" href="https://www.google.com/search?q=Cuddle+Avenue+Daycare#lrd=0xa4047fca07ffdb7:0x9acd8c24d208ad75,3,,," target="_blank" rel="noopener">Leave us a review</a>
+      </p>
+      </div>
+      <div class="pg-rv__panel" id="pg-rv-panel-69" role="tabpanel" aria-labelledby="pg-rv-tab-69">
+      <p class="pg-rv__score"><strong>4.7</strong><span class="pg-rv__stars" role="img" aria-label="Rated 4.7 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></span><span>57 Google reviews</span><svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></p>
+      <div class="pg-rv">
+        <ul class="pg-rv__track" id="pg-rv-69" tabindex="0" role="group" aria-label="Reviews of 69 16th Street, scrollable">
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">N</span>
+              <span class="pg-rv__who"><cite>Noma</cite><span>9 months ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue Daycare stands out because of how much the staff truly care. You can tell this isn&rsquo;t just a job for them. They are attentive, loving, and always willing to communicate with parents. My child has grown so much socially and emotionally since starting here. The environment feels safe and nurturing, and I&rsquo;m grateful to have found a daycare we can fully trust.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">GB</span>
+              <span class="pg-rv__who"><cite>gorkem bektas</cite><span>a year ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I am very glad this was a location i chose to send my son. Ayna the owner ,the teachers and staff are very professional, attentive and friendly. I’ve never had a problem since my son started the daycare in October 2023. A very loving and caring environment. My son is always excited and happy when he goes to the school. I have always felt comfortable leaving my son in their hands. They share everything about my son through the app throughout the day. I highly recommend this place.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">CR</span>
+              <span class="pg-rv__who"><cite>Cynthia R</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Cuddle Avenue is the best! They offer genuine, loving care to my child and the babies they care for. The staff is welcoming, will answer any questions or concerns. They keep you updated on your child’s day, offer healthy meals, and an educational, fun daily routine. My child started when she was 4 months old, and they made me comfortable with leaving my baby so young at daycare. She is now 21 months and as always is all smiles when she is dropped off, and all smiles at pick up. The reality is that it is difficult to select a daycare without knowing something about it. Cuddle Avenue was recommended to me by a friend who had both children attend and now I want to recommend it to anyone who may just not know where to start the search, what to decide. Cuddle Avenue truly cares ❤️</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">NW</span>
+              <span class="pg-rv__who"><cite>Nolan Woodle</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">We love Cuddle Avenue! Our son has had the most amazing time in their daycare. The teachers do a terrific job- they take a real interest in our son’s development and we can tell they genuinely love spending time with him. Our son has learned and developed so much since starting with them, I highly recommend them if you are looking for a daycare provider.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AG</span>
+              <span class="pg-rv__who"><cite>abbey ginsburg</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">We love Cuddle Avenue! We&rsquo;ve been sending our son there since he was 4 months old and they are truly wonderful caregivers. They provide so many updates throughout the day and treat our son like one of their own. They&rsquo;re invested in his happiness and development and I truly feel so at ease leaving him in their care. As a first time mom I could not ask for a better set of caregivers. If you&rsquo;re looking for super high quality childcare, this is the place!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">JW</span>
+              <span class="pg-rv__who"><cite>Julia Wilson Fisher</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">My son has attended this daycare for the past six months. He started at six months old and he is now almost 13 months old. He has always been happy to attend. The space is very clean and we receive many photo updates throughout the day, as well as updates about eating, diapers and naps. The team always responds nearly instantly to any messages we send. Everyone is friendly and seems to share a true love for the children under their care.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">AW</span>
+              <span class="pg-rv__who"><cite>Angela Wanslow</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">We were so nervous to start our daughter in daycare when she was about six months old, but she LOVES daycare! All of the teachers at Cuddle Avenue are so kind and attentive, and we always know that our daughter is safe with them. We have had a great experience and would highly recommend it to anyone!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">FJ</span>
+              <span class="pg-rv__who"><cite>Faraaz Javed</cite><span>2 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Enrolling my son at a time when it was very hard for us to trust anyone with him, at cuddle Avenue was the best decision we ever made. The team is so friendly and made sure to give our son the individual attention he needed to adjust. Week 1 to week 6 was a massive difference and that was all due to the effort their team put in. Can’t thank these guys enough !</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">LL</span>
+              <span class="pg-rv__who"><cite>Loann Le</cite><span>3 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Choosing Cuddle Avenue Daycare was the best choice we made for our little one. Not only is the staff professional and caring the place (indoor and outdoor) is beautifully set up and clean. There are always educational activities scheduled and healthy food options available. I’ve seen our little one continue to thrive with each milestone through the months. She loves the staff and looks forward to going to daycare every day. We feel confident and safe knowing the loving staff will give her the attention and time she needs. I highly recommend them!</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">IU</span>
+              <span class="pg-rv__who"><cite>Irene Udovichenko</cite><span>4 years ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">Bringing your 15 months old daughter to Cuddle Avenue Daycare was the best decision we made! All caregivers is extremely professional and not less important very loving! Great homemade meals, very well balanced. They have so many activities every day, cooking, gardening, crafting, yoga, music classes and more&hellip;She learns so mush every day. Definitely recommend this place. Thank you very much guys!</p>
+          </li>
+        </ul>
+        <div class="pg-rv__nav">
+          <button type="button" data-pg-rv-prev aria-label="Show earlier reviews" aria-controls="pg-rv-69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" data-pg-rv-next aria-label="Show more reviews" aria-controls="pg-rv-69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <p class="pg-rv__actions">
+        <a class="c2-btn c2-btn--green" href="https://maps.app.goo.gl/EcKasTcVvDkba5nx5" target="_blank" rel="noopener">Read more reviews on Google</a>
+        <a class="c2-btn c2-btn--outline" href="https://www.google.com/search?q=Cuddle+Avenue+Preschool#lrd=0x89c25b9b67d21db3:0xd4e9b0f6439f5398,3,,," target="_blank" rel="noopener">Leave us a review</a>
+      </p>
+      </div>
+      <div class="pg-rv__panel" id="pg-rv-panel-71" role="tabpanel" aria-labelledby="pg-rv-tab-71">
+      <p class="pg-rv__score"><strong>5.0</strong><span class="pg-rv__stars" role="img" aria-label="Rated 5.0 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></span><span>2 Google reviews</span><svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></p>
+      <div class="pg-rv pg-rv--few">
+        <ul class="pg-rv__track" id="pg-rv-71" tabindex="0" role="group" aria-label="Reviews of 71 16th Street, scrollable">
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">YS</span>
+              <span class="pg-rv__who"><cite>Yeon Soo Kim</cite><span>3 weeks ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">I highly recommend Cuddle Avenue. My two children were enrolled in all Cuddle Avenue locations at different times in the past five years until we sadly moved, and our last stop was at this newest 15st location. We came to get to know all 2s teachers and my child was extremely fond of them.</p>
+          </li>
+          <li class="pg-rv__card">
+            <div class="pg-rv__top">
+              <span class="c2-quote__avatar" aria-hidden="true">MT</span>
+              <span class="pg-rv__who"><cite>Mariah Torres</cite><span>a month ago</span></span>
+              <svg class="pg-rv__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>
+            </div>
+            <p class="pg-rv__stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.9 5.9 6.5.95-4.7 4.58 1.11 6.47L12 17.25l-5.81 3.05 1.11-6.47-4.7-4.58 6.5-.95z"/></svg></p>
+            <p class="pg-rv__text">My son has been attending this school since he was just 4 months old, and we have had such a wonderful experience from the very beginning. His 2K class was absolutely amazing! His teachers were caring, patient, attentive, and genuinely invested in his growth and development. It was so comforting knowing he was in a safe, loving, and nurturing environment every day. We’ve watched him grow so much since starting here, not only academically, but also socially and emotionally. The staff has always been welcoming, communicative, and supportive, and I truly appreciate how much they care about the children. As a parent, finding a school where you feel comfortable leaving your child is so important, and this school has given us that peace of mind. I’m so grateful for all the teachers and staff who have been a part of my son’s journey. We’ve had such a positive experience and would absolutely recommend this school to other families! ❤️</p>
+          </li>
+        </ul>
+        <div class="pg-rv__nav">
+          <button type="button" data-pg-rv-prev aria-label="Show earlier reviews" aria-controls="pg-rv-71"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" data-pg-rv-next aria-label="Show more reviews" aria-controls="pg-rv-71"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <p class="pg-rv__actions">
+        <a class="c2-btn c2-btn--green" href="https://maps.app.goo.gl/9gXdXyoUAtj6hgRh8" target="_blank" rel="noopener">Read more reviews on Google</a>
+        <a class="c2-btn c2-btn--outline" href="https://www.google.com/search?q=Cuddle+Avenue+Daycare+2K#lrd=0x89c25b706b4d9981:0xff8cdaec3480e7d5,3,,," target="_blank" rel="noopener">Leave us a review</a>
+      </p>
+      </div>
+      <!-- REVIEWS-ONE:END -->
+    </div>
+  </section>
+
+  <!--@include cta-join-->
 
 </main>
 

@@ -1,0 +1,116 @@
+<!-- ════════════════════ TUITION FAQ, TWO-COLUMN DESIGN (retired 2026-10-31) ════════════════════
+     Ayna's own FAQ design from "Tuitions page new.png": a sand band, a round
+     chat icon beside the heading, and the questions as white rounded cards in
+     two columns, each opening with a plus that turns into a cross.
+     The user liked it but swapped it for the site's standard numbered FAQ
+     (sx-qa) so every page matches. Kept here in case the client wants it back.
+     Screenshot: tuition-faq-two-column.png (1440px wide).
+
+     TO RESTORE
+     1. Replace the QUESTIONS section in src/admissions/tuition-financial-assistance.html
+        with the markup below.
+     2. Append the CSS below to css/sections.css (it relies on .pg-ihead,
+        .pg-ih__ico, .sx-qa and the tone classes, which are still in use).
+     3. The section before it (#assistance) then keeps its bottom padding:
+        remove the "section#assistance:has(+ #faq)" rule.
+     ============================================================================== -->
+
+<style>
+.sx-qa.pg-faqs summary { grid-template-columns: minmax(0, 1fr) auto; }
+.pg-faqs details[open] .sx-qa__chev { transform: rotate(45deg); }
+.pg-tqa .sx-qa { background: transparent; border: 0; display: grid; gap: .75rem; overflow: visible; }
+.pg-tqa .sx-qa details { border: 0; border-radius: 14px; background: var(--c2-white); overflow: hidden; box-shadow: 0 8px 22px -18px rgb(var(--c2-shadow-rgb) / .4); }
+.pg-tqa { background: var(--c2-sand-pale); }
+.pg-tqa__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem 1.5rem; align-items: start; }
+@media (max-width: 900px) { .pg-tqa__cols { grid-template-columns: minmax(0, 1fr); } }
+main.sx > section#faq.pg-tqa:has(~ #enroll):not(:has(~ section:not(#enroll))) { padding-bottom: var(--sx-y); }   /* tinted: keeps its own bottom edge */
+</style>
+
+  <!-- ════════════════════ QUESTIONS ════════════════════
+       The design asks fifteen questions. These ten are answered in Ayna's
+       own words from the program pages. Five wait for her answers, and
+       go back in when they arrive:
+         What payment methods do you accept?
+         Are there additional fees for credit card payments?
+         Do I still pay if my child is sick or on vacation?
+         Can missed days be made up or refunded?
+         Can there be a transition period when my child starts? -->
+  <section class="sx-sec pg-tqa" id="faq" aria-labelledby="qa-title">
+    <div class="c2-shell">
+      <div class="pg-ihead">
+        <span class="pg-ih__ico pg-tone--peach" aria-hidden="true"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+        <div>
+          <h2 id="qa-title">Frequently Asked Questions</h2>
+          <p>Find answers to common questions about tuition, payments, enrollment, attendance, and more.</p>
+        </div>
+      </div>
+
+      <div class="pg-tqa__cols">
+        <div class="sx-qa pg-faqs">
+          <details>
+            <summary><span>Is there a registration fee?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Yes. There is a one-time, non-refundable registration fee of $50.</p></div>
+          </details>
+          <details>
+            <summary><span>Is a deposit required to enroll?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Yes. One month&rsquo;s tuition is required to secure your child&rsquo;s spot. The deposit is non-refundable, but it may be applied toward your child&rsquo;s final month of tuition when you provide 60 days&rsquo; advance written notice.</p></div>
+          </details>
+          <details>
+            <summary><span>Is tuition paid monthly?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Yes. Tuition is billed on the first day of each month, and families have until the 10th to complete payment.</p></div>
+          </details>
+          <details>
+            <summary><span>What happens if payment is late?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Payments not completed by the 10th of the month are subject to a $20 daily late fee.</p></div>
+          </details>
+          <details>
+            <summary><span>Are enrollment hours flexible?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>You can choose a standard, extended or maximum day, two to five days a week, as in the <a href="#rates">tuition rates</a> above. Once enrolled, families follow their contracted hours.</p></div>
+          </details>
+        </div>
+
+        <div class="sx-qa pg-faqs">
+          <details>
+            <summary><span>What if I drop off or pick up outside my contracted hours?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Early drop-offs and late pick-ups outside contracted hours are subject to an additional fee of $1 per minute.</p></div>
+          </details>
+          <details>
+            <summary><span>What age range do you serve?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Children from 6 weeks to 4 years: <a href="{{ROOT}}programs/infant-care.html">infant care</a>, <a href="{{ROOT}}programs/toddler-care.html">toddler care</a>, <a href="{{ROOT}}programs/2k.html">2K</a> and <a href="{{ROOT}}programs/nyc-3k.html">free NYC 3-K</a>.</p></div>
+          </details>
+          <details>
+            <summary><span>Are meals and snacks included?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Yes. Breakfast, lunch, and an afternoon snack are included in tuition for every child ready to eat our regular daycare meals.</p></div>
+          </details>
+          <details>
+            <summary><span>Do you accept financial assistance or vouchers?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Yes. We accept ACS and HRA vouchers, All My Children (AMC), and Child Care Aware military child care assistance. Eligibility and authorization vary by program, so please <a href="{{ROOT}}contact.html">contact us</a> and we will help.</p></div>
+          </details>
+          <details>
+            <summary><span>How do I apply for the NYC 3-K program?</span>
+              <svg class="sx-qa__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="sx-qa__body"><p>Places go through New York City&rsquo;s own admissions. Apply through the city, name Cuddle Avenue, and we&rsquo;ll help you through it. <a href="{{ROOT}}programs/nyc-3k.html">How a 3-K place works</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>

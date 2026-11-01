@@ -1,0 +1,258 @@
+<!--@var TITLE: Organic Meals, Nutrition &amp; Breastfeeding Support | Cuddle Avenue-->
+<!--@var MAST_IMG: menu-tue-lunch-->
+<!--@var DESC: Fresh homemade organic meals cooked on site at Cuddle Avenue Academy in Brooklyn. See this week&rsquo;s menu, how allergies and dietary needs are handled, and our breastfeeding and infant feeding support.-->
+<!--@var OGTITLE: Meals, Nutrition &amp; Breastfeeding Support-->
+<!--@var OGDESC: Breakfast, lunch and snack cooked in our own kitchen, and the week&rsquo;s menu, in full.-->
+<!--@var CTA_EYEBROW: Come and visit-->
+<!--@var CTA_TITLE: Visit our kitchen <br class="c2-lb">and classrooms-->
+<!--@var CTA_LEAD: We would love to show you around. See where meals are made, and ask us anything about your child&rsquo;s diet.-->
+<!--@var CTA_BTN1_HREF: https://calendly.com/cuddleavenue/in-person-tour-->
+<!--@var CTA_BTN1: Schedule a tour-->
+<!--@var CTA_BTN2_HREF: {{ROOT}}contact.html-->
+<!--@var CTA_BTN2: Ask about dietary needs-->
+<!--@include head-->
+<!--@include announce-->
+<!--@include header-->
+
+<main id="main" class="sx">
+
+  <!-- ════════════════════ 1 · MASTHEAD · SPLIT GROUNDS ════════════════════
+       Tint on the left, a tray photographed at full height on the
+       right, running off the window edge. -->
+  <!-- ════════════════════ HERO ════════════════════
+       One hero for the whole site: the gradient, the dotted wash and
+       the drawn wave edge from the contact page. Sized to end exactly
+       at the fold, see .sx-mast in css/sections.css.
+       ============================================================ -->
+  <section class="sx-mast" aria-labelledby="pg-title">
+    <div class="c2-shell sx-mast__inner">
+      <nav class="sx-crumbs" aria-label="Breadcrumb">
+      <ol>
+      <li><a href="{{ROOT}}index.html">Home</a></li>
+      <li><a href="{{ROOT}}for-families.html">For families</a></li>
+      <li><span aria-current="page">Meals, nutrition &amp; breastfeeding</span></li>
+      </ol>
+      </nav>
+
+      <p class="sx-mast__eyebrow">Meals &amp; nutrition</p>
+      <h1 class="sx-mast__title" id="pg-title">Fresh, homemade, <br class="c2-lb">organic &amp; nut-free</h1>
+
+      <p class="sx-mast__lead">Breakfast, lunch and snack, cooked in our own kitchen every morning.</p>
+
+      <div class="sx-mast__actions">
+        <a class="c2-btn c2-btn--green" href="#menu">See this week&rsquo;s menu</a>
+        <a class="c2-btn c2-btn--outline" href="#feeding">Breastfeeding support</a>
+      </div>
+
+      <ul class="sx-mast__facts sx-mast__jump" aria-label="On this page">
+        <li><a href="#menu"><svg aria-hidden="true"><use href="#i-cup"/></svg>Weekly menu</a></li>
+        <li><a href="#allergies"><svg aria-hidden="true"><use href="#i-shield"/></svg>Allergies</a></li>
+        <li><a href="#feeding"><svg aria-hidden="true"><use href="#i-bottle"/></svg>Breastfeeding &amp; bottles</a></li>
+      </ul>
+    </div>
+
+    <!--@include mast-bg-->
+
+  </section>
+
+  <!-- ════════════════════ FROM OUR OWN KITCHEN ════════════════════
+       The homepage meals layout: the words and Ayna's four points, a
+       photograph of lunch in a classroom. -->
+  <section class="sx-sec ca-meals" id="kitchen" aria-labelledby="kitchen-title">
+    <div class="c2-shell">
+      <div class="ca-meals__top">
+        <div class="ca-meals__copy">
+          <p class="c2-eyebrow">From our own kitchen</p>
+          <h2 class="c2-h2" id="kitchen-title">What every plate <br class="c2-lb">has in common</h2>
+          <p class="ca-meals__lead">One kitchen and one menu for every classroom, balanced and right for each age.</p>
+          <ul class="ca-meals__tiles pg-tiles4">
+            <li class="ca-meals__tile">
+              <span class="ca-meals__tile-ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+              <span class="ca-meals__tile-name">Fresh</span>
+              <span class="ca-meals__tile-desc">Cooked on site each morning.</span>
+            </li>
+            <li class="ca-meals__tile">
+              <span class="ca-meals__tile-ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-cup"/></svg></span>
+              <span class="ca-meals__tile-name">Homemade</span>
+              <span class="ca-meals__tile-desc">Made by our own kitchen team.</span>
+            </li>
+            <li class="ca-meals__tile">
+              <span class="ca-meals__tile-ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+              <span class="ca-meals__tile-name">Organic</span>
+              <span class="ca-meals__tile-desc">Healthy, balanced and age-appropriate.</span>
+            </li>
+            <li class="ca-meals__tile">
+              <span class="ca-meals__tile-ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="ca-meals__tile-name">Nut-free</span>
+              <span class="ca-meals__tile-desc">No nuts or nut products on site.</span>
+            </li>
+          </ul>
+        </div>
+        <figure class="ca-meals__photo">
+          <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/gallery-mealtime-600.webp 600w, {{ROOT}}assets/img/gallery-mealtime-1200.webp 1200w, {{ROOT}}assets/img/gallery-mealtime.webp 1536w" sizes="(max-width: 900px) 92vw, 46vw">
+              <img src="{{ROOT}}assets/img/gallery-mealtime.jpg" srcset="{{ROOT}}assets/img/gallery-mealtime-600.jpg 600w, {{ROOT}}assets/img/gallery-mealtime-1200.jpg 1200w, {{ROOT}}assets/img/gallery-mealtime.jpg 1536w" sizes="(max-width: 900px) 92vw, 46vw" width="1536" height="1024" loading="lazy" decoding="async"
+                   alt="Children eating lunch together at a table in a Cuddle Avenue classroom.">
+            </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ 3 · THE WEEK · THE MENU CARDS ════════════════════
+       The same fifteen menu cards the homepage carries, from the same
+       partial, one source, so a menu change happens in one place. -->
+  <section class="sx-sec sx-sec--flush" id="menu" aria-labelledby="menu-title">
+    <div class="c2-shell">
+      <div class="sx-head">
+        <p class="sx-eyebrow">Sample menu</p>
+        <h2 id="menu-title">A week of meals, in full</h2>
+        <p class="sx-lead">Our own menu cards, photographed from the actual trays, with every item written out underneath.</p>
+      </div>
+
+      <!--@include weekly-menu-->
+    </div>
+  </section>
+
+  <!-- ════════════════════ ALLERGIES & INDIVIDUAL DIETS ════════════════════
+       The homepage health & safety panel. Ayna: "simplify", "remove overly
+       defensive wording"; on a phone the points open and close.
+       ⚠️ Ayna will review the EpiPen / medication wording. -->
+  <section class="sx-sec ca-safety" id="allergies" aria-labelledby="all-title">
+    <div class="c2-shell">
+      <div class="ca-safety__panel">
+
+        <figure class="ca-safety__media">
+          <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/meals-toddler-600.webp 600w, {{ROOT}}assets/img/meals-toddler-1100.webp 1100w, {{ROOT}}assets/img/meals-toddler.webp 1536w" sizes="(max-width: 900px) 92vw, 33vw">
+              <img src="{{ROOT}}assets/img/meals-toddler.jpg" srcset="{{ROOT}}assets/img/meals-toddler-600.jpg 600w, {{ROOT}}assets/img/meals-toddler-1100.jpg 1100w, {{ROOT}}assets/img/meals-toddler.jpg 1536w" sizes="(max-width: 900px) 92vw, 33vw" width="1536" height="1024" loading="lazy" decoding="async"
+                   alt="A smiling toddler holding a piece of broccoli, with a plate of broccoli, strawberries, egg and blueberries.">
+            </picture>
+        </figure>
+
+        <div class="ca-safety__body">
+          <p class="c2-eyebrow">Allergies &amp; individual diets</p>
+          <h2 class="c2-h2" id="all-title">Agreed before <br class="c2-lb">the first day</h2>
+          <p class="ca-safety__lead">Allergies, cultural and religious needs and medical diets are written down with your child&rsquo;s teacher and known to everyone who serves your child.</p>
+
+          <details class="pg-fold pg-fold--phone" open data-c2-fold>
+            <summary><span class="pg-fold__head"><h3>How we handle allergies</h3></span><svg class="pg-fold__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></summary>
+            <div class="pg-fold__body">
+            <ul class="ca-safety__list ca-safety__list--four">
+              <li>
+                <span class="ca-safety__ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+                <span><strong>No nuts on site</strong>From anyone, including food brought from home.</span>
+              </li>
+              <li>
+                <span class="ca-safety__ico"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
+                <span><strong>Written down</strong>Agreed with you before your child starts.</span>
+              </li>
+              <li>
+                <span class="ca-safety__ico"><svg aria-hidden="true"><use href="#i-language"/></svg></span>
+                <span><strong>Updated the same day</strong>If something changes, tell us and it changes here.</span>
+              </li>
+              <li>
+                <span class="ca-safety__ico"><svg aria-hidden="true"><use href="#i-aid"/></svg></span>
+                <span><strong>EpiPen trained</strong>Staff trained in EpiPen and emergency medication.</span>
+              </li>
+            </ul>
+            </div>
+          </details>
+          <p class="pg-note pg-allergy-note"><strong>Severe allergy?</strong> We are not a certified nut-free facility, so please talk to us first.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ BREASTFEEDING & BOTTLES ════════════════════
+       The About page's educators layout: two photographs overlapping, the
+       four topics beside them with icons; on a phone they open and close. -->
+  <section class="sx-sec" id="feeding" aria-labelledby="bf-title">
+    <div class="c2-shell pg-split">
+      <div class="ab-stack">
+        <figure class="ab-stack__a">
+          <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/card-infant-600.webp 600w, {{ROOT}}assets/img/card-infant.webp 1200w" sizes="(max-width: 900px) 80vw, 36vw">
+              <img src="{{ROOT}}assets/img/card-infant.jpg" srcset="{{ROOT}}assets/img/card-infant-600.jpg 600w, {{ROOT}}assets/img/card-infant.jpg 1200w" sizes="(max-width: 900px) 80vw, 36vw" width="600" height="600" loading="lazy" decoding="async"
+                   alt="A smiling baby in a Cuddle Avenue infant room.">
+            </picture>
+        </figure>
+        <figure class="ab-stack__b">
+          <picture>
+              <source type="image/webp" srcset="{{ROOT}}assets/img/menu-mon-breakfast-800.webp 800w" sizes="(max-width: 900px) 45vw, 18vw">
+              <img src="{{ROOT}}assets/img/menu-mon-breakfast-800.jpg" srcset="{{ROOT}}assets/img/menu-mon-breakfast-800.jpg 800w" sizes="(max-width: 900px) 45vw, 18vw" width="800" height="640" loading="lazy" decoding="async"
+                   alt="A Cuddle Avenue breakfast tray with oatmeal, berries and a cup of milk.">
+            </picture>
+        </figure>
+      </div>
+      <div class="pg-prose">
+        <p class="c2-eyebrow">Breastfeeding &amp; bottles</p>
+        <h2 class="c2-h2" id="bf-title">Support for however you feed your baby</h2>
+        <p>Nursing parents are welcome to feed here at drop-off, lunch or pickup, in a quiet space, with no need to arrange it ahead.</p>
+        <details class="pg-fold pg-fold--phone" open data-c2-fold>
+            <summary><span class="pg-fold__head"><h3>Bottles, formula and schedules</h3></span><svg class="pg-fold__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></summary>
+            <div class="pg-fold__body">
+            <ul class="pg-feats">
+              <li>
+                <span class="pg-tl__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-bottle"/></svg></span>
+                <div><h3>Breast milk</h3><p>Bring it labelled with your baby&rsquo;s name and the date. We refrigerate it, use the oldest first and warm it gently.</p></div>
+              </li>
+              <li>
+                <span class="pg-tl__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-cup"/></svg></span>
+                <div><h3>Formula</h3><p>Bring your own, labelled, and tell us how you prepare it. We make it up the same way.</p></div>
+              </li>
+              <li>
+                <span class="pg-tl__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+                <div><h3>Feeding schedule</h3><p>Your baby&rsquo;s own schedule, agreed with you on the first day and adjusted as they grow.</p></div>
+              </li>
+              <li>
+                <span class="pg-tl__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <div><h3>Tracked in Brightwheel</h3><p>Every bottle and feed is logged as it happens, so you can see what your baby took and when.</p></div>
+              </li>
+            </ul>
+            </div>
+          </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ STARTING SOLIDS ════════════════════
+       The meals strip from the program pages: short, with a picture. -->
+  <section class="sx-sec pg-mealstrip" id="solids" aria-labelledby="sol-title">
+    <div class="c2-shell">
+      <div class="pg-mealstrip__card">
+        <figure class="pg-mealstrip__photo">
+          <picture>
+            <source type="image/webp" srcset="{{ROOT}}assets/img/enrich-chefs-400.webp 400w, {{ROOT}}assets/img/enrich-chefs-800.webp 800w" sizes="(max-width: 700px) 92vw, 300px">
+            <img src="{{ROOT}}assets/img/enrich-chefs-800.jpg" srcset="{{ROOT}}assets/img/enrich-chefs-400.jpg 400w, {{ROOT}}assets/img/enrich-chefs-800.jpg 800w" sizes="(max-width: 700px) 92vw, 300px" width="800" height="800" loading="lazy" decoding="async"
+                 alt="Children in aprons mixing ingredients together in a Cuddle Avenue cooking activity.">
+          </picture>
+        </figure>
+        <div class="pg-mealstrip__body">
+          <p class="sx-eyebrow">Starting solids</p>
+          <h2 id="sol-title">Solids come from home</h2>
+          <p>Parents provide all solid foods for infants, so every new food is tried at home first. Tell us how to serve it and we will follow it exactly.</p>
+          <ul class="pg-mealstrip__tags">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tried at home first</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Served as you ask</li>
+          </ul>
+        </div>
+        <a class="c2-btn c2-btn--green pg-mealstrip__cta" href="{{ROOT}}programs/infant-care.html#feeding">Explore infant care</a>
+      </div>
+    </div>
+  </section>
+
+  <!--@include locations-->
+
+  <!--@include reviews-->
+
+  <!--@include cta-join-->
+
+</main>
+
+<!--@include footer-->
+<!--@include scripts-->
+
+</body>
+</html>

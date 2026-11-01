@@ -1,5 +1,5 @@
 /* ============================================================
-   Cuddle Avenue — homepage sections added by the client brief
+   Cuddle Avenue, homepage sections added by the client brief
 
    Loaded AFTER concept-2.css and concept-2-v2.css. It adds the sections
    the brief asks for and does not exist in the concept sheets:
@@ -9,8 +9,6 @@
      .ca-safety    Health & safety (11 practices, slate band)
      .ca-meals     Meals & nutrition (warm panel)
      .ca-locs      what the brief adds to each location tab panel
-     .ca-social    footer social links
-     .ca-legal     footer legal row
      .ca-tbc       anything still awaiting client confirmation
 
    Every colour, radius, easing and space value below is an existing
@@ -29,19 +27,18 @@
 /* ═══════════════════════ welcome ═══════════════════════ */
 .ca-welcome__grid {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: 1fr 1.22fr;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
 }
 
-.ca-welcome__body .c2-eyebrow { margin-bottom: clamp(.9rem, 1.6vw, 1.25rem); }
-.ca-welcome__body .c2-h2      { margin-bottom: clamp(1.25rem, 2.4vw, 1.9rem); }
+/* the space under the heading belongs to the shared rule */
 
 .ca-welcome__lead {
   max-width: 54ch;
   font-size: clamp(1.02rem, 1.25vw, 1.1875rem);
 }
-.ca-welcome__lead + .ca-welcome__lead { margin-top: 1rem; }
+.ca-welcome__lead + .ca-welcome__lead { margin-top: var(--c2-flow); }
 
 .ca-welcome__actions { margin-top: clamp(1.6rem, 3vw, 2.25rem); }
 
@@ -57,137 +54,52 @@
 
 @media (max-width: 860px) {
   .ca-welcome__grid { grid-template-columns: 1fr; }
-  .ca-welcome__media { aspect-ratio: 16 / 10; order: -1; }
+  /* Stacked, the words come before the picture. A photograph at the top
+     of a stacked block is a lid: you scroll past something you cannot
+     read yet to reach the sentence that says what it is. Reversed, the
+     heading names the thing and the photograph answers it. */
+  .ca-welcome__media { aspect-ratio: 16 / 10; }
 }
 
-/* ═══════════════════════ programs: five cards ═══════════════════════
-   The concept grid is a hard 3-up. Five cards ride a 6-track grid at
-   two tracks each, so the last row of two sits centred under the three
-   above it rather than orphaned to the left. */
-.c2-progs__grid--5 { grid-template-columns: repeat(6, 1fr); }
-.c2-progs__grid--5 > .c2-prog     { grid-column: span 2; }
-.c2-progs__grid--5 > :nth-child(4) { grid-column: 2 / span 2; }
-.c2-progs__grid--5 > :nth-child(5) { grid-column: 4 / span 2; }
-
-@media (max-width: 900px) {
-  .c2-progs__grid--5 { grid-template-columns: repeat(4, 1fr); }
-  .c2-progs__grid--5 > .c2-prog      { grid-column: span 2; }
-  .c2-progs__grid--5 > :nth-child(4) { grid-column: span 2; }
-  .c2-progs__grid--5 > :nth-child(5) { grid-column: 2 / span 2; }
-}
-@media (max-width: 620px) {
-  .c2-progs__grid--5,
-  .c2-progs__grid--5 > .c2-prog,
-  .c2-progs__grid--5 > :nth-child(4),
-  .c2-progs__grid--5 > :nth-child(5) { grid-column: auto; grid-template-columns: 1fr; }
-}
-
-/* hours line under a program card */
-.c2-prog__meta {
-  margin-top: .55rem;
-  font-size: var(--c2-fs-sm);
-  font-weight: 700;
-  color: var(--c2-forest);
-}
-
-/* the brief's specific per-program CTA, in place of a vague "learn more" */
-.ca-prog__cta {
-  display: inline-flex; align-items: center; gap: .45rem;
-  margin-top: .9rem;
-  font-weight: 800; font-size: var(--c2-fs-ui);
-  color: var(--c2-green-ink);
-  border-bottom: 2px solid transparent;
-  transition: border-color .18s var(--c2-ease), gap .18s var(--c2-ease);
-}
-.ca-prog__cta svg { width: 1em; height: 1em; flex: none; }
-.ca-prog__cta:hover { border-bottom-color: currentColor; gap: .75rem; }
-
-/* Program cards sit in a stretched grid row, so the per-program CTA is
-   pinned to the bottom of each card and the row of links reads as a row
-   rather than stepping with the length of each blurb. */
-.c2-progs__grid--5 > .c2-prog {
-  display: flex;
-  flex-direction: column;
-}
-.c2-progs__grid--5 > .c2-prog .ca-prog__cta {
-  margin-top: auto;
-  padding-top: .9rem;
-  align-self: start;
-}
-
-/* NYC 3-K card: the brief wants free, the school day and the paid
-   extension all legible without a click. The "Free" pill rides the
-   photograph with the other program pills — no second badge on the title,
-   which read as a duplicate. */
-.c2-pill--free {
-  background: var(--c2-green); color: var(--c2-white);
-  letter-spacing: .06em; text-transform: uppercase;
-}
-
-.ca-prog__hours {
-  margin: .9rem 0 0;
-  display: grid; grid-template-columns: auto 1fr;
-  gap: .25rem .9rem;
-  font-size: var(--c2-fs-sm);
-  padding: .85rem 1rem;
-  background: var(--c2-well);
-  border-radius: 14px;
-}
-.ca-prog__hours dt { color: var(--c2-muted); }
-.ca-prog__hours dd { margin: 0; color: var(--c2-forest); }
-
-.ca-prog__note {
-  margin-top: .6rem;
-  font-size: var(--c2-fs-sm);
-}
+/* The five programme cards were .c2-progs__grid--5 / .c2-prog. They are
+   .sx-pcards now, in sections.css, and this sheet had been left holding
+   a selector list with no declarations and no closing brace, invalid
+   CSS the browser had to recover from, plus four comments describing
+   rules that no longer exist. */
 
 /* ═══════════════════════ why families choose us ═══════════════════════ */
-.ca-why__grid {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.25rem, 2.4vw, 2.25rem);
-}
-
-.ca-why__item {
-  display: grid;
-  gap: .55rem;
-  align-content: start;
-}
-
-.ca-why__icon {
-  display: grid; place-items: center;
-  width: 3.15rem; height: 3.15rem;
-  margin-bottom: .35rem;
-  border-radius: 16px;
-  background: var(--c2-lime-pale);
-  color: var(--c2-green-ink);
-}
-.ca-why__icon svg { width: 1.6rem; height: 1.6rem; }
-
-.ca-why__title {
-  font-size: 1.0625rem;
-  line-height: 1.25;
-}
-
-@media (max-width: 1080px) { .ca-why__grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 780px)  { .ca-why__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px)  { .ca-why__grid { grid-template-columns: 1fr; } }
+/* .ca-why__grid / __item / __icon / __title: the eight benefits are
+   the shared ribbon card now, see .sx-cardgrid in sections.css. */
 
 /* ═══════════════════════ health & safety ═══════════════════════
    A slate band, not another white section. Two reasons: the page ran four
    pale sections in a row before this one, and safety is the section a
-   worried parent scans hardest — it earns the strongest surface on the
+   worried parent scans hardest, it earns the strongest surface on the
    page. The slate is the logo's own ground (--c2-bar), so the band reads
    as brand rather than as an inversion for its own sake. */
 .ca-safety__panel {
+  /* The copy and the call to action are separate cells rather than one
+     block, because stacked they belong on opposite sides of the
+     photograph: the heading opens the band, the photograph answers it,
+     and the button closes it. Wide, the photograph spans both rows and
+     nothing about the layout has changed.
+
+     --ca-safety-inset is the inset the two text cells share, so they
+     still line up as one column of copy. */
+  --ca-safety-inset-start: clamp(.5rem, 1vw, .75rem);
+  --ca-safety-inset-end:   clamp(.75rem, 1.8vw, 1.5rem);
   display: grid;
   grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-  gap: clamp(1.5rem, 3vw, 3rem);
+  column-gap: clamp(1.5rem, 3vw, 3rem);
   padding: clamp(1rem, 1.5vw, 1.4rem);
   background: var(--c2-bar);
   border-radius: clamp(20px, 2.4vw, 34px);
   box-shadow: 0 30px 80px rgb(var(--c2-shadow-rgb) / .18);
 }
+
+.ca-safety__media  { grid-column: 1; grid-row: 1 / span 2; }
+.ca-safety__body   { grid-column: 2; grid-row: 1; }
+.ca-safety__actions{ grid-column: 2; grid-row: 2; }
 
 .ca-safety__media {
   margin: 0;
@@ -202,15 +114,15 @@
 }
 
 .ca-safety__body {
-  padding: clamp(1.25rem, 2.6vw, 2.5rem) clamp(.75rem, 1.8vw, 1.5rem)
-           clamp(1.25rem, 2.6vw, 2rem) clamp(.5rem, 1vw, .75rem);
+  padding: clamp(1.25rem, 2.6vw, 2.5rem) var(--ca-safety-inset-end)
+           0 var(--ca-safety-inset-start);
 }
 
 /* the panel is dark, so the section's type inverts inside it */
-.ca-safety__body .c2-eyebrow { color: rgba(255, 255, 255, .78); margin-bottom: clamp(.9rem, 1.6vw, 1.25rem); }
+.ca-safety__body .c2-eyebrow { color: rgba(255, 255, 255, .78); }   /* the gap belongs to the tagline rule */
 .ca-safety__body .c2-h2      { color: var(--c2-white); margin-bottom: clamp(.9rem, 1.8vw, 1.35rem); }
 .ca-safety__lead {
-  max-width: 46ch;
+  /* max-width removed: the introduction runs the full column */
   color: rgba(255, 255, 255, .72);
 }
 
@@ -224,7 +136,7 @@
   padding: .62rem 0;
   border-top: 1px solid rgba(255, 255, 255, .13);
   color: var(--c2-white);
-  font-size: var(--c2-fs-ui); font-weight: 600; line-height: 1.25;
+  font-size: var(--c2-fs-sm); font-weight: 600; line-height: 1.25;
 }
 .ca-safety__ico {
   display: grid; place-items: center; flex: none;
@@ -237,8 +149,10 @@
 
 .ca-safety__actions {
   margin-top: clamp(1.5rem, 2.8vw, 2.1rem);
+  padding: 0 var(--ca-safety-inset-end)
+           clamp(1.25rem, 2.6vw, 2rem) var(--ca-safety-inset-start);
   display: flex; flex-wrap: wrap; align-items: center;
-  gap: .9rem 1.4rem;
+  gap: 1.15rem 1.4rem;
 }
 .ca-safety__note {
   color: rgba(255, 255, 255, .52);
@@ -246,15 +160,43 @@
 }
 
 @media (max-width: 980px) {
+  /* Stacked, the words come before the picture. A photograph at the top
+     of a stacked block is a lid: you scroll past something you cannot
+     read yet to reach the sentence that says what it is. Reversed, the
+     heading names the thing, the photograph answers it, and the button
+     closes the band rather than being buried above the picture. */
   .ca-safety__panel { grid-template-columns: 1fr; }
-  .ca-safety__media { aspect-ratio: 16 / 9; }
+  .ca-safety__body,
+  .ca-safety__media,
+  .ca-safety__actions { grid-column: 1; grid-row: auto; }
+  .ca-safety__body    { order: 1; }
+  /* the row gap is a column gap now, so the photograph asks for its
+     own space between the last practice and itself */
+  .ca-safety__media   { order: 2; aspect-ratio: 16 / 9; margin-top: clamp(1.5rem, 5vw, 2.1rem); }
+  .ca-safety__actions { order: 3; }
+
+  /* The copy's inset was 0 at the top, which was right when a
+     photograph sat above it and wrong the moment the heading did: the
+     eyebrow was 16px from the edge of the slate, the panel's own
+     padding and nothing else. The inset is the same on all four sides
+     now and the copy has room. */
+  .ca-safety__panel {
+    --ca-safety-inset-start: clamp(1.25rem, 4.5vw, 1.75rem);
+    --ca-safety-inset-end:   clamp(1.25rem, 4.5vw, 1.75rem);
+  }
   .ca-safety__body {
-    padding: 0 clamp(.5rem, 2vw, 1.25rem) clamp(.75rem, 2vw, 1.25rem);
+    padding: clamp(2rem, 7vw, 2.75rem) var(--ca-safety-inset-end)
+             0 var(--ca-safety-inset-start);
+  }
+  .ca-safety__actions {
+    padding: 0 var(--ca-safety-inset-end)
+             clamp(1.75rem, 6vw, 2.25rem) var(--ca-safety-inset-start);
   }
 }
 @media (max-width: 620px) {
   .ca-safety__list { grid-template-columns: 1fr; }
 }
+
 
 /* ═══════════════════════ meals & nutrition ═══════════════════════
    A warm panel rather than the photo-and-column layout this section used
@@ -281,12 +223,11 @@
   gap: clamp(1.5rem, 3.4vw, 3.5rem);
   align-items: end;
 }
-.ca-meals__headline .c2-eyebrow { margin-bottom: clamp(.9rem, 1.6vw, 1.25rem); }
 
 .ca-meals__intro { display: grid; justify-items: start; gap: clamp(1.1rem, 2vw, 1.6rem); }
 .ca-meals__lead  { max-width: 46ch; }
 
-/* Fresh · Homemade · Organic · Nut-free — the brief's own four words */
+/* Fresh · Homemade · Organic · Nut-free, the brief's own four words */
 .ca-meals__words {
   list-style: none; margin: clamp(1.75rem, 3.4vw, 3rem) 0 0; padding: 0;
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -321,12 +262,22 @@
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0 clamp(1.5rem, 2.6vw, 2.5rem);
 }
+.ca-meals__list {
+  --ca-rule: rgb(var(--c2-shadow-rgb) / .14);
+}
 .ca-meals__list li {
   display: flex; align-items: center; gap: .7rem;
   padding: .7rem 0;
-  border-top: 1px solid rgb(var(--c2-shadow-rgb) / .14);
-  color: var(--c2-forest); font-weight: 600; font-size: var(--c2-fs-ui);
+  border-top: 1px solid var(--ca-rule);
+  color: var(--c2-forest); font-weight: 600; font-size: var(--c2-fs-sm);
 }
+/* The rule divides one row from the row above it, so the first row has
+   nothing to be divided from. Which items are the first row changes
+   with the column count, so each breakpoint puts the rule back on the
+   items that have gained a row above them. The colour goes transparent
+   rather than the border going away, so every row keeps the same
+   height. */
+.ca-meals__list li:nth-child(-n+3) { border-top-color: transparent; }
 .ca-meals__list li::before {
   content: "";
   flex: none;
@@ -338,6 +289,7 @@
 @media (max-width: 900px) {
   .ca-meals__head  { grid-template-columns: 1fr; align-items: start; }
   .ca-meals__list  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ca-meals__list li:nth-child(3) { border-top-color: var(--ca-rule); }
 }
 @media (max-width: 720px) {
   .ca-meals__words { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -346,14 +298,15 @@
    tiles do, so the list drops to one column first */
 @media (max-width: 620px) {
   .ca-meals__list  { grid-template-columns: 1fr; }
+  .ca-meals__list li:nth-child(2) { border-top-color: var(--ca-rule); }
 }
 @media (max-width: 460px) {
   .ca-meals__words { grid-template-columns: 1fr; }
 }
 
 /* ═══════════════════════ locations ═══════════════════════
-   The tabbed panel from the earlier review build — one photograph per
-   location with the detail card resting on it — kept as it was, and
+   The tabbed panel from the earlier review build, one photograph per
+   location with the detail card resting on it, kept as it was, and
    widened just enough to carry the four things the brief adds to each
    card: address, programs, hours and three named CTAs. Everything the
    .c2-loc rules already do (tab well, panel, media, overlap, the mobile
@@ -368,7 +321,7 @@
 
 .ca-locs .c2-loc__blurb {
   margin-bottom: clamp(.9rem, 1.6vw, 1.2rem);
-  font-size: var(--c2-fs-ui);
+  font-size: var(--c2-fs-sm);
 }
 
 .ca-loc__facts {
@@ -390,16 +343,6 @@
   margin-top: clamp(1.2rem, 2.2vw, 1.7rem);
   display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem;
 }
-
-.ca-loc__link {
-  display: inline-flex; align-items: center; gap: .4rem;
-  font-weight: 800; font-size: var(--c2-fs-sm);
-  color: var(--c2-green-ink);
-  border-bottom: 2px solid transparent;
-  transition: border-color .18s var(--c2-ease), gap .18s var(--c2-ease);
-}
-.ca-loc__link svg { width: 1em; height: 1em; flex: none; }
-.ca-loc__link:hover { border-bottom-color: currentColor; gap: .7rem; }
 
 /* third location: a photograph-shaped hole, deliberately obvious */
 .c2-loc__media--empty {
@@ -432,63 +375,25 @@
 
 /* ═══════════════════════ final CTA actions ═══════════════════════ */
 .ca-join__actions {
-  display: flex; flex-wrap: wrap; gap: .8rem;
+  display: flex; flex-wrap: wrap; gap: 1rem;
 }
 
 /* ═══════════════════════ footer additions ═══════════════════════ */
 /* the brief's four link columns plus the brand block */
-.ca-footer__grid { grid-template-columns: 1.5fr repeat(4, 1fr); }
-
 @media (max-width: 1080px) { .ca-footer__grid { grid-template-columns: 1fr 1fr 1fr; } }
 @media (max-width: 720px)  { .ca-footer__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px)  { .ca-footer__grid { grid-template-columns: 1fr; } }
 
-.ca-social {
-  list-style: none; margin: 1.25rem 0 0; padding: 0;
-  display: flex; gap: .6rem;
-}
-.ca-social a {
-  display: grid; place-items: center;
-  width: 2.4rem; height: 2.4rem;
-  border-radius: 50%;
-  border: 1px solid var(--c2-hair);
-  color: var(--c2-forest);
-  transition: background .18s var(--c2-ease), color .18s var(--c2-ease), border-color .18s var(--c2-ease);
-}
-.ca-social a:hover {
-  background: var(--c2-green); border-color: var(--c2-green); color: var(--c2-white);
-}
-.ca-social svg { width: 1.15rem; height: 1.15rem; }
-
-.ca-legal {
-  list-style: none; margin: 0; padding: 0;
-  display: flex; flex-wrap: wrap; gap: .4rem 1.25rem;
-}
-.ca-legal a {
-  font-size: var(--c2-fs-sm);
-  border-bottom: 1px solid transparent;
-}
-.ca-legal a:hover { border-bottom-color: currentColor; }
-
 /* ═══════════════════════ hover, for the ca-* components ═══════════════════════
-   The vocabulary and timings come from the hover layer in concept-2.css —
+   The vocabulary and timings come from the hover layer in concept-2.css, 
    lift on --c2-lift, colour and shadow always transitioned, everything
    inside @media (hover: hover) so a tap never leaves a state stuck on. */
 @media (hover: hover) {
 
   /* the per-program link already slides its arrow; give it the colour too */
-  .ca-prog__cta:hover { color: var(--c2-forest); }
-
   /* footer social discs lift with the fill they already had */
-  .ca-social a { transition: background-color .2s var(--c2-ease), color .2s var(--c2-ease),
-                             border-color .2s var(--c2-ease), transform .22s var(--c2-ease); }
-  .ca-social a:hover { transform: translateY(var(--c2-lift)); }
-
-  .ca-legal a { transition: color .2s var(--c2-ease), border-color .2s var(--c2-ease); }
-  .ca-legal a:hover { color: var(--c2-forest); }
-
   /* the safety band's CTA sits on slate, where the standard shadow reads as
-     mud — it gets a ring of the panel's own light instead */
+     mud, it gets a ring of the panel's own light instead */
   .ca-safety__actions .c2-btn--green:hover {
     box-shadow: 0 0 0 4px rgba(255, 255, 255, .10);
   }
@@ -496,7 +401,7 @@
 
 /* ═══════════════════════ this week on the tray ═══════════════════════
    The school's fifteen menu cards, one per meal per weekday, on the day
-   tabs the locations band already uses — same .c2-tabs component, same
+   tabs the locations band already uses, same .c2-tabs component, same
    keyboard behaviour, so nothing new has to be learned or maintained.
 
    The cards are photographs of real trays with the items already labelled
@@ -504,7 +409,7 @@
    to the image: crawlable, translatable, and legible on a phone. */
 .ca-menu {
   margin-top: clamp(2rem, 4vw, 3.5rem);
-  padding-top: clamp(1.75rem, 3.4vw, 2.75rem);
+  padding-top: var(--sx-y-tight);
   border-top: 1px solid rgb(var(--c2-shadow-rgb) / .14);
 }
 
@@ -517,12 +422,15 @@
 .ca-menu__title {
   font-size: clamp(1.25rem, 1.9vw, 1.65rem);
   color: var(--c2-forest);
-  margin-bottom: .45rem;
+  margin-bottom: var(--c2-card-gap);
 }
-.ca-menu__lead { max-width: 42ch; font-size: var(--c2-fs-ui); }
+.ca-menu__lead { max-width: 42ch; font-size: var(--c2-fs-sm); }
 
 /* the tab well is white-on-warm here rather than white-on-white */
-.ca-menu .c2-tabs { background: rgba(255, 255, 255, .6); }
+/* No well behind the days here. The tabs sit on the warm panel and each
+   pill is already white, so the tinted trough behind them was a second
+   surface doing nothing, and now that the meals are cards, a third. */
+.ca-menu .c2-tabs { background: none; padding: 0; }
 
 .ca-menu__day {
   list-style: none; margin: 0; padding: 0;
@@ -531,41 +439,99 @@
 }
 .ca-menu__day[hidden] { display: none; }
 
-.ca-meal { display: flex; flex-direction: column; }
-
-.ca-meal__media {
-  margin: 0 0 .9rem;
-  aspect-ratio: 5 / 4;
+/* A card, like the programme cards: the photograph flush to the top
+   edge, the label and the food padded beneath it. It sits on the warm
+   panel, so it carries the same white and the same shadow the four
+   word tiles above it use. */
+.ca-meal {
+  display: flex; flex-direction: column;
+  background: var(--c2-white);
   border-radius: clamp(14px, 1.6vw, 22px);
   overflow: hidden;
-  background: var(--c2-white);
-  box-shadow: 0 10px 30px rgb(var(--c2-shadow-rgb) / .09);
+  box-shadow: 0 8px 26px rgb(var(--c2-shadow-rgb) / .07);
 }
-.ca-meal__media img { width: 100%; height: 100%; object-fit: cover; }
+.ca-meal__body { padding: clamp(1rem, 1.8vw, 1.35rem); }
+.ca-meal__what { margin-top: .5rem; }
+
+/* The tray photographs are cream, the card is white and the panel is
+   warm cream, three near-identical grounds, so the picture had no
+   edge. It sits on the ice tint instead, inset far enough for that
+   tint to read as a frame, and contained rather than cropped so the
+   whole tray shows. */
+.ca-meal__media {
+  margin: 0;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  background: var(--c2-lime-pale);
+  padding: clamp(.65rem, 1.3vw, 1rem);
+}
+.ca-meal__media img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: clamp(8px, 1vw, 12px);
+}
 
 .ca-meal__when {
   font-size: .75rem; font-weight: 800;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--c2-green-ink);
-  margin-bottom: .3rem;
+  margin-bottom: .55rem;
 }
 .ca-meal__what {
   color: var(--c2-forest); font-weight: 600;
-  font-size: var(--c2-fs-ui); line-height: 1.45;
+  font-size: var(--c2-fs-sm); line-height: 1.45;
 }
 .ca-meal__what em { font-style: normal; color: var(--c2-muted); }
 
-.ca-menu__note {
-  margin-top: clamp(1.25rem, 2.4vw, 1.75rem);
-  font-size: var(--c2-fs-sm);
-  max-width: 68ch;
-}
+/* the menu note is a .pg-note like every other aside on the site */
 
 @media (max-width: 820px) {
   .ca-menu__head { grid-template-columns: 1fr; align-items: start; }
 }
 @media (max-width: 640px) {
   .ca-menu__day { grid-template-columns: 1fr; }
-  .ca-menu .c2-tabs { width: 100%; }
-  .ca-menu .c2-tab  { flex: 1 1 auto; text-align: center; }
+
+  /* The five days were a wrapping flex row where every pill stretched to
+     fill whatever row it landed in, so the week broke 2-2-1 with Friday
+     alone across the full width. A parent scanning the week wants all
+     five at once, and at the short form of the day they fit on one
+     line, so it is a five-column grid, not a wrap. */
+  .ca-menu .c2-tabs {
+    width: 100%;
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: .3rem; padding: .35rem;
+  }
+  .ca-menu .c2-tab {
+    padding: .7rem .25rem; text-align: center;
+    font-size: var(--c2-fs-label);
+  }
+  .ca-menu .c2-tab__full { display: none; }
+  .ca-menu .c2-tab__abbr { display: inline; }
+}
+
+/* ── ONE INSET FOR THE THREE PANELS ──────────────────────────
+   Safety, meals and enrichment each sit on their own colour, and each
+   had arrived at its own idea of how far in its words should start. On
+   a 430px phone they measured 36, 26 and 20 at the sides, and 68, 46
+   and 100 at the top. One number now, for all three. */
+@media (max-width: 860px) {
+  :root {
+    --ca-panel-i: clamp(2rem, 4.5vw, 3rem);
+    --ca-panel-b: clamp(2.5rem, 5.5vw, 3.5rem);
+  }
+
+  /* the panel's own padding frames the photograph; the copy's inset
+     makes up the rest of the shared number */
+  .ca-safety__panel {
+    --ca-safety-inset-start: calc(var(--ca-panel-i) - clamp(1rem, 1.5vw, 1.4rem));
+    --ca-safety-inset-end:   calc(var(--ca-panel-i) - clamp(1rem, 1.5vw, 1.4rem));
+  }
+  .ca-safety__body {
+    padding-top: calc(var(--ca-panel-b) - clamp(1rem, 1.5vw, 1.4rem));
+  }
+  .ca-safety__actions {
+    padding-bottom: calc(var(--ca-panel-b) - clamp(1rem, 1.5vw, 1.4rem));
+  }
+
+  .ca-meals__panel { padding: var(--ca-panel-b) var(--ca-panel-i); }
 }

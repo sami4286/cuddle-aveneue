@@ -1,0 +1,25 @@
+<!-- ════════════════════ HERO BACKGROUND ════════════════════
+     A photograph under a flat scrim, filling the masthead behind the
+     type. The same treatment as the mission band on the about page,
+     so a hero and a band read as the same surface.
+
+     The section keeps its slate background underneath, so the type is
+     readable in the moment before the picture arrives, and stays
+     readable if it never does.
+
+     Decoration: the alt is empty and the wrapper is aria-hidden. Every
+     hero states its subject in the h1 directly above.
+
+     Each page names its own photograph:
+
+       <!--@var MAST_IMG: program-toddler-->
+
+     which is the basename in assets/img/, and both a .jpg and a .webp of
+     that name have to exist.
+     ============================================================== -->
+<div class="sx-mast__bg" aria-hidden="true">
+  <picture>
+    <source type="image/webp" srcset="{{ROOT}}assets/img/{{MAST_IMG}}.webp">
+    <img src="{{ROOT}}assets/img/{{MAST_IMG}}.jpg" width="1600" height="1000" fetchpriority="high" decoding="async" alt="">
+  </picture>
+</div>

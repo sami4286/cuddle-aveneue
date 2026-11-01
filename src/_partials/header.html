@@ -1,44 +1,134 @@
 <!-- ════════════════════ HEADER ════════════════════
-     Brief: every page carries HOME · ABOUT US · PROGRAMS · ADMISSIONS ·
-     FOR FAMILIES · CONTACT US, plus a prominent SCHEDULE A TOUR button.
+     HOME · PROGRAMS · ADMISSIONS · FOR FAMILIES · CONTACT US (About us and
+     the all-programs page are hidden, client request 2026-10-18;
+     "Programs" goes to the homepage's programs section),
+     plus the prominent SCHEDULE A TOUR button, which books on Ayna's
+     Calendly (2026-10-29). The Admissions dropdown's "Schedule a tour"
+     still goes to the tour page, which carries the same booking and
+     the virtual tours.
 
-     aria-current is not written here — one header serves every page, so
-     js/concept-2.js marks the current section from the URL instead.
+     For families is one page since 2026-10-29 (Ayna folded Parent
+     resources, Health & safety, Meals & nutrition and FAQ into it), so it
+     is a plain link. The three old pages are retired to backup/pages/.
+
+     Home is gone from the bar, the logo is the home link, which is
+     where everyone reaches for it, and the slot was buying nothing.
+
+     A section carries a dropdown only where it owns more than one
+     page. About us does not, its subject lives in sections of one
+     page, so it is a plain link.
+
+     Where a dropdown does exist the top-level item is still a real link to the section's own
+     page, so the menu never becomes the only way in: it opens on
+     hover, on keyboard focus anywhere inside it, and is exposed to
+     assistive technology as a labelled group rather than a menu
+     widget, because it is a list of links and nothing more.
+
+     aria-current is not written here, one header serves every page,
+     so js/concept-2.js marks the current section from the URL.
      ============================================================ -->
 <header class="c2-header">
   <div class="c2-shell c2-header__inner">
 
-    <a class="c2-brand" href="{{ROOT}}index.html" aria-label="Cuddle Avenue Academy &mdash; home">
+    <a class="c2-brand" href="{{ROOT}}index.html" aria-label="Cuddle Avenue Academy, home">
       <img class="c2-brand__mark" src="{{ROOT}}assets/logo/ca-bears.png" width="382" height="320" alt="" decoding="async">
       <span class="c2-brand__word">Cuddle Avenue</span>
     </a>
 
     <nav class="c2-nav" aria-label="Primary">
-      <a href="{{ROOT}}index.html">Home</a>
-      <a href="{{ROOT}}about.html">About us</a>
-      <a href="{{ROOT}}programs.html">Programs</a>
-      <a href="{{ROOT}}admissions.html">Admissions</a>
-      <a href="{{ROOT}}for-families.html">For families</a>
-      <a href="{{ROOT}}contact.html">Contact us</a>
+
+      <div class="c2-nav__item">
+        <a href="{{ROOT}}index.html">Home</a>
+      </div>
+
+
+      <div class="c2-nav__item">
+        <a href="{{ROOT}}index.html#programs" aria-describedby="nd-programs">Programs
+          <svg class="c2-nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="c2-nav__drop" id="nd-programs" role="group" aria-label="Programs">
+          <a href="{{ROOT}}programs/infant-care.html">Infant care</a>
+          <a href="{{ROOT}}programs/toddler-care.html">Toddler care</a>
+          <a href="{{ROOT}}programs/2k.html">2K</a>
+          <a href="{{ROOT}}programs/nyc-3k.html">Free NYC 3-K</a>
+          <a href="{{ROOT}}programs/summer-camp.html">Summer camp</a>
+        </div>
+      </div>
+      <div class="c2-nav__item">
+        <a href="{{ROOT}}admissions.html" aria-describedby="nd-admissions">Admissions
+          <svg class="c2-nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="c2-nav__drop" id="nd-admissions" role="group" aria-label="Admissions">
+          <a href="{{ROOT}}admissions.html">Admissions &amp; Enrollment</a>
+          <a href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+          <a href="{{ROOT}}admissions/tuition-financial-assistance.html">Tuition &amp; assistance</a>
+        </div>
+      </div>
+
+      <div class="c2-nav__item">
+        <a href="{{ROOT}}for-families.html">For families</a>
+      </div>
+
+      <div class="c2-nav__item">
+        <a href="{{ROOT}}contact.html">Contact us</a>
+      </div>
+
     </nav>
 
     <div class="c2-header__cta">
-      <a class="c2-btn c2-btn--green" href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+      <a class="c2-btn c2-btn--outline c2-header__call" href="tel:+18006204221">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.6h3l1.5 4-2 1.4a12 12 0 0 0 6.1 6.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.8a2 2 0 0 1 2-2.2z"/></svg>
+        <span class="c2-header__num">(800)&nbsp;620&#8209;4221</span>
+        <span class="sx-vh">Call Cuddle Avenue Academy</span>
+      </a>
+      <a class="c2-btn c2-btn--green c2-header__tour" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
     </div>
 
     <details class="c2-menu">
-      <summary aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        Menu
+      <summary aria-label="Menu">
+        <span class="c2-menu__bars" aria-hidden="true"><i></i><i></i><i></i></span>
       </summary>
       <div class="c2-menu__panel">
-        <a href="{{ROOT}}index.html">Home</a>
-        <a href="{{ROOT}}about.html">About us</a>
-        <a href="{{ROOT}}programs.html">Programs</a>
-        <a href="{{ROOT}}admissions.html">Admissions</a>
-        <a href="{{ROOT}}for-families.html">For families</a>
-        <a href="{{ROOT}}contact.html">Contact us</a>
-        <a href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+        <div class="c2-menu__inner">
+
+          <a class="c2-brand c2-menu__brand" href="{{ROOT}}index.html" aria-label="Cuddle Avenue Academy, home">
+            <img class="c2-brand__mark" src="{{ROOT}}assets/logo/ca-bears.png" width="382" height="320" alt="" decoding="async">
+            <span class="c2-brand__word">Cuddle Avenue</span>
+          </a>
+
+          <a class="c2-menu__top" href="{{ROOT}}index.html">Home
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+
+
+          <p class="c2-menu__ct">Programs</p>
+          <a href="{{ROOT}}programs/infant-care.html">Infant care</a>
+          <a href="{{ROOT}}programs/toddler-care.html">Toddler care</a>
+          <a href="{{ROOT}}programs/2k.html">2K</a>
+          <a href="{{ROOT}}programs/nyc-3k.html">Free NYC 3-K</a>
+          <a href="{{ROOT}}programs/summer-camp.html">Summer camp</a>
+          <p class="c2-menu__ct">Admissions</p>
+          <a href="{{ROOT}}admissions.html">Admissions &amp; Enrollment</a>
+          <a href="{{ROOT}}admissions/schedule-a-tour.html">Schedule a tour</a>
+          <a href="{{ROOT}}admissions/tuition-financial-assistance.html">Tuition &amp; assistance</a>
+
+          <a class="c2-menu__top" href="{{ROOT}}for-families.html">For families
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+
+          <a class="c2-menu__top" href="{{ROOT}}contact.html">Contact us
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+
+          <div class="c2-menu__foot">
+            <a class="c2-btn c2-btn--green" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour</a>
+            <a class="c2-btn c2-btn--outline" href="tel:+18006204221">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.6h3l1.5 4-2 1.4a12 12 0 0 0 6.1 6.1l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.8a2 2 0 0 1 2-2.2z"/></svg>
+              (800)&nbsp;620&#8209;4221
+            </a>
+          </div>
+
+        </div>
       </div>
     </details>
 
