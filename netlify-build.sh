@@ -25,12 +25,13 @@ bash tools/assemble.sh src dist
 # Retired pages, kept in backup/pages/ and never published: About us and
 # the all-programs overview (hidden 2026-10-18), and the For Families FAQ,
 # Health & safety and Meals pages, whose content now lives on the one For
-# Families page (2026-10-29). The site is thirteen pages, nothing else.
+# Families page (2026-10-29), and the Schedule a tour page (2026-11-01;
+# every tour button books on Calendly). The site is twelve pages, nothing else.
 # Nothing may link to them, or the placeholder step below would quietly
 # generate a page for the link. To bring one back, see backup/pages/README.md.
-if grep -rlE 'href="[^"]*(about|programs|for-families/(faq|health-and-safety|meals-nutrition-breastfeeding))[.]html' dist --include='*.html' | grep -q .; then
+if grep -rlE 'href="[^"]*(about|programs|programs/2k|admissions/schedule-a-tour|for-families/(faq|health-and-safety|meals-nutrition-breastfeeding))[.]html' dist --include='*.html' | grep -q .; then
   echo "ERROR: a published page links to a retired page:" >&2
-  grep -rnoE 'href="[^"]*(about|programs|for-families/(faq|health-and-safety|meals-nutrition-breastfeeding))[.]html[^"]*"' dist --include='*.html' >&2
+  grep -rnoE 'href="[^"]*(about|programs|programs/2k|admissions/schedule-a-tour|for-families/(faq|health-and-safety|meals-nutrition-breastfeeding))[.]html[^"]*"' dist --include='*.html' >&2
   exit 1
 fi
 
@@ -154,7 +155,7 @@ for route in $missing; do
          awk '{ print toupper(substr($0,1,1)) substr($0,2) }')
   # the handful of names a filename cannot spell correctly
   case "$route" in
-    programs/2k.html)         name="2K program" ;;
+    programs/2-k.html)        name="2-K Program" ;;
     programs/nyc-3k.html)     name="NYC 3-K for All" ;;
     admissions/tuition-financial-assistance.html) name="Tuition &amp; financial assistance" ;;
   esac

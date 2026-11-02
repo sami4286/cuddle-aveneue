@@ -5575,3 +5575,9 @@ main.sx > section#locations.pg-locs3-sec:has(+ #reviews) { padding-bottom: var(-
 /* "Read more" on a review card had no hover at all */
 .pg-rv__more { transition: color .2s var(--c2-ease), text-decoration-color .2s var(--c2-ease); }
 .pg-rv__more:hover { color: var(--c2-green-ink); text-decoration-color: var(--c2-lime); }
+
+/* 71 16th Street: a street map stands in for the building photo. The map's
+   licence credit sits on the image, clear of the info card, and the
+   parallax zoom is left off so the marker stays where it was drawn. */
+.c2-loc__media--map { position: relative; }
+.c2-loc__credit { position: absolute; left: .75rem; bottom: .75rem; z-index: 1; margin: 0; padding: .2rem .55rem; border-radius: 6px; background: rgb(255 255 255 / .85); font-size: 12px; line-height: 1.4; color: var(--c2-forest); }

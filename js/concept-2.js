@@ -819,6 +819,32 @@
 
 
 
+/* ── analytics events ────────────────────────────────────────────────
+   Named events for Google Tag Manager to pick up, so the container
+   needs one GA4 event tag and no click-matching rules of its own:
+
+     generate_lead     a form was sent        (form_name)
+     book_tour_click   a Calendly link        (link_text)
+     phone_click       a tel: link
+     email_click       a mailto: link
+
+   Without the GTM snippet this only fills an array nobody reads. */
+function track(event, params) {
+  window.dataLayer = window.dataLayer || [];
+  var o = { event: event };
+  for (var k in params) o[k] = params[k];
+  window.dataLayer.push(o);
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  var href = a.getAttribute('href');
+  var text = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+  if (/^https:\/\/calendly\.com\//.test(href)) track('book_tour_click', { link_text: text });
+  else if (/^tel:/.test(href)) track('phone_click', { link_text: text });
+  else if (/^mailto:/.test(href)) track('email_click', { link_text: text });
+});
+
 /* ── forms ───────────────────────────────────────────────────────────
    The forms post to /api/inquiry on their own, and that works with
    scripting off: the endpoint redirects back with ?sent=1 and the
@@ -851,6 +877,7 @@
     if (!m) return;
     var form = document.querySelector('.pg-form[action]');
     if (form) show(form, m[1] === '1' ? 'ok' : 'send', m[1] === '1');
+    if (form && m[1] === '1') track('generate_lead', { form_name: form.getAttribute('name') || 'website' });
     history.replaceState(null, '', location.pathname + location.hash);
   })();
 
@@ -974,6 +1001,7 @@
         .then(function (d) {
           /* our endpoint answers {ok}, Web3Forms answers {success} */
           if (d && (d.ok || d.success)) {
+            track('generate_lead', { form_name: form.getAttribute('name') || 'website' });
             show(form, 'ok', true);
             form.reset();
           } else {
