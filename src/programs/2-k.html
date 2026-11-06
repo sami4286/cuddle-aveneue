@@ -38,6 +38,7 @@
       </ul>
       <div class="sx-mast__actions pg-ihero__actions">
         <a class="c2-btn c2-btn--green" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a tour <span aria-hidden="true">&rarr;</span></a>
+        <a class="c2-btn c2-btn--outline" href="{{ROOT}}assets/video/center-tour.mp4" data-c2-video="{{ROOT}}assets/video/center-tour.mp4">Watch room video</a>
       </div>
     </div>
   </section>
@@ -351,7 +352,40 @@
     </div>
   </section>
 
+  <!-- ════════════════════ THE FILM ════════════════════
+       Ayna's brief asks for the 2-K classroom video here. Until it is
+       filmed, the center tour stands in (her note, 2026-11-06). -->
+  <section class="c2-sec c2-cta sx-sec--flush" id="tour" aria-labelledby="tour-title"
+           data-c2-tour-video="{{ROOT}}assets/video/center-tour.mp4">
+    <div class="c2-shell">
+      <div class="c2-cta__card">
 
+        <div class="c2-cta__media">
+          <picture>
+            <source type="image/webp" srcset="{{ROOT}}assets/img/cta-classroom-800.webp 800w, {{ROOT}}assets/img/cta-classroom-1600.webp 1600w, {{ROOT}}assets/img/cta-classroom.webp 2400w" sizes="(max-width: 860px) 100vw, 100vw">
+            <img src="{{ROOT}}assets/img/cta-classroom.jpg" srcset="{{ROOT}}assets/img/cta-classroom-800.jpg 800w, {{ROOT}}assets/img/cta-classroom-1600.jpg 1600w, {{ROOT}}assets/img/cta-classroom.jpg 2400w" sizes="(max-width: 860px) 100vw, 100vw" width="1600" height="842" loading="lazy" decoding="async"
+                 alt="The main Cuddle Avenue classroom: a round table beneath an indoor tree, low shelves and tall windows.">
+          </picture>
+        </div>
+
+        <a class="c2-cta__video" href="{{ROOT}}assets/video/center-tour.mp4"
+           data-c2-video="{{ROOT}}assets/video/center-tour.mp4">
+          <span class="c2-cta__play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          </span>
+          <span class="c2-cta__vt">
+            <b>Watch in full screen</b>
+            <span>Center tour &middot; 0:47 min</span>
+          </span>
+        </a>
+
+        <h2 class="c2-cta__title" id="tour-title">Take a Look Inside <br class="c2-lb">Our 2&#8209;K Classroom</h2>
+
+        <a class="c2-btn c2-btn--green c2-cta__btn" href="https://calendly.com/cuddleavenue/in-person-tour">Schedule a 2&#8209;K tour</a>
+
+      </div>
+    </div>
+  </section>
 
   <!--@include locations-->
 
