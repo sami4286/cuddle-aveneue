@@ -24,8 +24,8 @@
   <section class="pg-ihero pg-ihero--match" aria-labelledby="pg-title">
     <div class="pg-ihero__photo" aria-hidden="true">
       <picture>
-        <source type="image/webp" srcset="{{ROOT}}assets/img/card-infant-600.webp 600w, {{ROOT}}assets/img/card-infant.webp 1145w" sizes="(max-width: 900px) 100vw, 50vw">
-        <img src="{{ROOT}}assets/img/card-infant.jpg" srcset="{{ROOT}}assets/img/card-infant-600.jpg 600w, {{ROOT}}assets/img/card-infant.jpg 1145w" sizes="(max-width: 900px) 100vw, 50vw" width="1145" height="1145" fetchpriority="high" decoding="async" alt="">
+        <source type="image/webp" srcset="{{ROOT}}assets/img/ff-hero-600.webp 600w, {{ROOT}}assets/img/ff-hero.webp 1024w" sizes="(max-width: 900px) 100vw, 50vw">
+        <img src="{{ROOT}}assets/img/ff-hero.jpg" srcset="{{ROOT}}assets/img/ff-hero-600.jpg 600w, {{ROOT}}assets/img/ff-hero.jpg 1024w" sizes="(max-width: 900px) 100vw, 50vw" width="1024" height="688" fetchpriority="high" decoding="async" alt="">
       </picture>
     </div>
     <div class="c2-shell pg-ihero__inner">
@@ -172,20 +172,14 @@
           <li class="pg-tone--sand"><span class="pg-ih__ico" aria-hidden="true"><svg aria-hidden="true"><use href="#i-star"/></svg></span>Learning updates</li>
         </ul>
       </div>
-      <div class="pg-phone" aria-hidden="true">
-        <div class="pg-phone__screen">
-          <p class="pg-phone__app">Today</p>
-          <picture>
-            <source type="image/webp" srcset="{{ROOT}}assets/img/card-toddler-600.webp">
-            <img src="{{ROOT}}assets/img/card-toddler-600.jpg" width="600" height="600" loading="lazy" decoding="async" alt="">
-          </picture>
-          <ul class="pg-phone__feed">
-            <li><svg aria-hidden="true"><use href="#i-camera"/></svg><span>New photo<small>10:42am</small></span></li>
-            <li><svg aria-hidden="true"><use href="#i-cup"/></svg><span>Lunch<small>12:00pm</small></span></li>
-            <li><svg aria-hidden="true"><use href="#i-moon"/></svg><span>Nap<small>12:45 &ndash; 2:45pm</small></span></li>
-          </ul>
-        </div>
-      </div>
+      <!-- Ayna's Brightwheel mockup (2026-11-06), in place of the phone we drew -->
+      <figure class="pg-bwshot">
+        <picture>
+          <source type="image/webp" srcset="{{ROOT}}assets/img/brightwheel-phone.webp">
+          <img src="{{ROOT}}assets/img/brightwheel-phone.jpg" width="598" height="1108" loading="lazy" decoding="async"
+               alt="The Brightwheel app on a phone, showing a daily update with a photo, meals and nap times.">
+        </picture>
+      </figure>
     </div>
   </section>
 

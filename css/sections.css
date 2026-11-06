@@ -5324,17 +5324,10 @@ main.sx > section#resources { padding-bottom: 0; }   /* white into white: one 7r
   .pg-ffbw__feats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.25rem; }
   .pg-ffbw__feats li:nth-child(3) { border-left: 0; }
 }
-/* the phone, drawn around one of our photographs */
-.pg-phone { justify-self: center; width: min(20rem, 100%); padding: .8rem; border-radius: 2.8rem; background: var(--c2-forest); box-shadow: 0 30px 60px -30px rgb(var(--c2-shadow-rgb) / .6); transform: rotate(3deg); }
-.pg-phone__screen { overflow: hidden; border-radius: 2.1rem; background: var(--c2-white); padding: 1.8rem 1rem 1.1rem; }
-.pg-phone__app { margin: 0 0 .8rem; text-align: center; font-weight: 800; font-size: 1rem; color: var(--c2-forest); }
-.pg-phone picture, .pg-phone img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 1rem; }
-.pg-phone__feed { list-style: none; margin: .9rem 0 0; padding: 0; display: grid; gap: .5rem; }
-.pg-phone__feed li { display: flex; align-items: center; gap: .6rem; padding: .55rem .7rem; border-radius: .8rem; background: var(--c2-sage-pale); font-size: 14px; font-weight: 700; color: var(--c2-forest); }
-.pg-phone__feed svg { width: 1.1rem; height: 1.1rem; flex: none; color: var(--c2-green); }
-.pg-phone__feed span { display: flex; justify-content: space-between; gap: .5rem; width: 100%; }
-.pg-phone__feed small { font-size: 14px; font-weight: 400; color: var(--c2-muted); }
-@media (max-width: 900px) { .pg-ffbw__grid { grid-template-columns: minmax(0, 1fr); } .pg-phone { transform: none; } }
+/* Ayna's Brightwheel phone mockup, white like the band it sits on */
+.pg-bwshot { justify-self: center; width: min(17rem, 100%); margin: 0; }
+.pg-bwshot img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) { .pg-ffbw__grid { grid-template-columns: minmax(0, 1fr); } }
 
 /* Getting ready: two packing-list cards and the label band, on sand */
 .pg-ffready { background: var(--c2-sand-pale); }
@@ -5576,8 +5569,5 @@ main.sx > section#locations.pg-locs3-sec:has(+ #reviews) { padding-bottom: var(-
 .pg-rv__more { transition: color .2s var(--c2-ease), text-decoration-color .2s var(--c2-ease); }
 .pg-rv__more:hover { color: var(--c2-green-ink); text-decoration-color: var(--c2-lime); }
 
-/* 71 16th Street: a street map stands in for the building photo. The map's
-   licence credit sits on the image, clear of the info card, and the
-   parallax zoom is left off so the marker stays where it was drawn. */
-.c2-loc__media--map { position: relative; }
-.c2-loc__credit { position: absolute; left: .75rem; bottom: .75rem; z-index: 1; margin: 0; padding: .2rem .55rem; border-radius: 6px; background: rgb(255 255 255 / .85); font-size: 12px; line-height: 1.4; color: var(--c2-forest); }
+/* Ayna, 2026-11-06: the homepage headline smaller, as in her example */
+.c2-hero .c2-hero__title { font-size: clamp(2rem, 1.2rem + 2.6vw, 3rem); }
