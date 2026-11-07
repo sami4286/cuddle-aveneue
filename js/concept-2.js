@@ -102,18 +102,25 @@
 
   var announce = document.querySelector('.c2-announce');
 
+  /* All the reading first, then the writing, and no writing when nothing
+     changed. A custom property set on <html> restyles the whole page, so
+     the old read-write-read-write order made a phone lay the page out
+     three times before first paint (Lighthouse, 2026-11-07). */
+  var last = { h: -1, c: -1 };
   function publishHeight() {
-    root.style.setProperty('--c2-header-h', Math.round(header.offsetHeight) + 'px');
-
+    var h = header.offsetHeight;
     /* what is actually on screen when the page opens: the announcement
        bar, which scrolls away, plus the header, which does not. The hero
        sizes itself against this so it ends exactly at the fold. */
-    var chrome = header.offsetHeight + (announce ? announce.offsetHeight : 0);
-    root.style.setProperty('--c2-chrome-h', Math.round(chrome) + 'px');
+    var c = h + (announce ? announce.offsetHeight : 0);
+    if (h !== last.h) root.style.setProperty('--c2-header-h', h + 'px');
+    if (c !== last.c) root.style.setProperty('--c2-chrome-h', c + 'px');
+    last = { h: h, c: c };
   }
 
   /* the trigger is the header's own distance from the top of the document,
-     which is exactly the height of whatever sits above it */
+     which is exactly the height of whatever sits above it. Read before
+     publishHeight writes anything, so it costs no extra layout. */
   var trigger = header.getBoundingClientRect().top + window.pageYOffset;
 
   var stuck = false;
@@ -175,10 +182,18 @@
   video.defaultMuted = true;
   video.loop = true;
   video.playsInline = true;
-  video.preload = 'metadata';
+  /* nothing is fetched until the band is in view and play() asks for it */
+  video.preload = 'none';
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
-  if (still) video.poster = still.currentSrc || still.src;
+  /* The still is lazy, so at this point it has usually not chosen a file
+     yet and .src is the 2400px JPEG fallback. Borrow the poster only once
+     the browser has picked the right size and format for this screen. */
+  if (still) {
+    var borrow = function () { video.poster = still.currentSrc || still.src; };
+    if (still.complete && still.currentSrc) borrow();
+    else still.addEventListener('load', borrow, { once: true });
+  }
   /* decorative here: the same tour is offered as a real link beside it */
   video.setAttribute('aria-hidden', 'true');
   video.tabIndex = -1;

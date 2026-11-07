@@ -177,3 +177,9 @@ if [ -n "$made" ]; then
   echo "--- placeholders generated for pages not written yet: ---"
   for route in $missing; do echo "  $route"; done
 fi
+
+# ── speed and search data ────────────────────────────────────────
+# Last, on the finished pages: one hashed, minified stylesheet instead of
+# five, a hashed script name, and FAQ structured data. See the header of
+# tools/optimize.js.
+node tools/optimize.js dist

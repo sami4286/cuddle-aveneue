@@ -5570,4 +5570,8 @@ main.sx > section#locations.pg-locs3-sec:has(+ #reviews) { padding-bottom: var(-
 .pg-rv__more:hover { color: var(--c2-green-ink); text-decoration-color: var(--c2-lime); }
 
 /* Ayna, 2026-11-06: the homepage headline smaller, as in her example */
-.c2-hero .c2-hero__title { font-size: clamp(2rem, 1.2rem + 2.6vw, 3rem); }
+.c2-hero .c2-hero__title { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.25rem); }
+/* contrast (Lighthouse, 2026-11-07): both were just under 4.5:1 */
+.ca-safety__note { color: rgb(255 255 255 / .72); }
+.ca-meal__when { color: var(--c2-green-ink); }
+.pg-reach3 .pg-tone--pink { --tone-ink: #9A4A63; }

@@ -245,3 +245,17 @@ Also live today: placeholder copy on the About page reading *"These dummy texts 
 ## Notes on assets
 
 Photography and copy are Cuddle Avenue Academy's own, sourced from `cuddleavenue.org` for this concept. The ~140 theme images on the old site are stock licensed to that theme and are **not** reused here. Several photos carry the school's own white-heart face redactions — get written photo releases before publishing anything un-redacted.
+
+## Speed and caching
+
+`tools/optimize.js` runs last in the build. It merges the five stylesheets
+into one minified `css/site.<hash>.css`, renames the script to
+`js/concept-2.<hash>.js`, strips developer comments from the published
+HTML and adds FAQ structured data to every page with a question list.
+Edit the files in `css/` and `js/` as before; the build does the rest.
+
+`vercel.json` (now in this repo, the deploy copies it) tells browsers to
+keep images, logos, fonts, CSS and JS for a year. So **a changed picture
+always gets a new file name**; overwriting `loc-71.jpg` in place would
+leave returning visitors on the old one for up to a year. Videos and the
+handbook PDF are kept for a week, so give a new video a new name too.

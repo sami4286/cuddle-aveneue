@@ -5,11 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Google Tag Manager. GA4 and the site's events (js/concept-2.js,
-     "analytics events") are configured in the container, not here. -->
+     "analytics events") are configured in the container, not here.
+     Google's snippet, except that the container is fetched after the page
+     has loaded, so it does not compete with the hero on a phone. The
+     gtm.start time is still taken now, and anything pushed meanwhile waits
+     in dataLayer. -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+new Date().getTime(),event:'gtm.js'});function go(){var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}
+if(d.readyState==='complete')go();else w.addEventListener('load',go);
 })(window,document,'script','dataLayer','GTM-W3FM3X83');</script>
 
 <title>{{TITLE}}</title>
