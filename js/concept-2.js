@@ -39,12 +39,13 @@
 /* ── current page in the nav ─────────────────────────────────────────
    One header partial serves every page, so aria-current cannot be written
    into the markup. Each nav link is matched on its top-level section:
-   programs/infant-care.html and the rest of programs/ light "Programs". */
+   programs/infant-care and the rest of programs/ light "Programs". */
 (function () {
   'use strict';
 
   function section(path) {
-    var parts = path.split('/').filter(Boolean);
+    /* the live site has clean addresses (no .html, the homepage is "./") */
+    var parts = path.split('/').filter(function (p) { return p && p !== '.' && p !== '..'; });
     var last = (parts.pop() || 'index').replace(/\.html$/, '');
     /* a page one level down belongs to the folder above it */
     return parts.length ? parts[parts.length - 1] : last;
@@ -54,7 +55,7 @@
 
   /* the file name alone, for the exact match inside a dropdown */
   function page(path) {
-    return (path.split('/').pop() || 'index.html').replace(/[?#].*$/, '') || 'index.html';
+    return (path.split('/').pop() || 'index').replace(/[?#].*$/, '').replace(/\.html$/, '') || 'index';
   }
   var herePage = page(window.location.pathname);
 

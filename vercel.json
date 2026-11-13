@@ -6,20 +6,20 @@
   "framework": null,
 
   "trailingSlash": false,
-  "cleanUrls": false,
+  "cleanUrls": true,
 
   "redirects": [
     { "source": "/child-care-about-us",             "destination": "/",                                         "permanent": true },
     { "source": "/child-care-academy",              "destination": "/",                                         "permanent": true },
     { "source": "/child-care-classes",              "destination": "/",                                         "permanent": true },
-    { "source": "/child-care-contact-us",           "destination": "/contact.html",                             "permanent": true },
-    { "source": "/child-care-early-learning",       "destination": "/programs/infant-care.html",                "permanent": true },
-    { "source": "/child-care-preschool",            "destination": "/programs/nyc-3k.html",                     "permanent": true },
-    { "source": "/child-care-prices",               "destination": "/admissions/tuition-financial-assistance.html", "permanent": true },
+    { "source": "/child-care-contact-us",           "destination": "/contact",                             "permanent": true },
+    { "source": "/child-care-early-learning",       "destination": "/programs/infant-care",                "permanent": true },
+    { "source": "/child-care-preschool",            "destination": "/programs/nyc-3k",                     "permanent": true },
+    { "source": "/child-care-prices",               "destination": "/admissions/tuition-financial-assistance", "permanent": true },
     { "source": "/child-care-parties",              "destination": "/",                                         "permanent": true },
     { "source": "/child-care-play-space",           "destination": "/",                                         "permanent": true },
     { "source": "/child-care-playroom",             "destination": "/",                                         "permanent": true },
-    { "source": "/child-care-terms-and-conditions", "destination": "/terms.html",                               "permanent": true }
+    { "source": "/child-care-terms-and-conditions", "destination": "/terms",                               "permanent": true }
   ],
 
   "headers": [

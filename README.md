@@ -205,7 +205,9 @@ says otherwise.
 
 The site is live at **https://www.cuddleavenue.org** and open to search engines. The build
 (`tools/optimize.js`) gives every page its canonical link, `og:url` and a full `og:image`
-address, and writes `sitemap.xml`. The old WordPress addresses (`/child-care-…`) redirect
+address, and writes `sitemap.xml`. Addresses are clean (`/contact`, not `/contact.html`):
+`cleanUrls` in `vercel.json` serves them and redirects the `.html` form, and the build
+drops `.html` from the links between pages. The old WordPress addresses (`/child-care-…`) redirect
 to their nearest new page in `vercel.json`.
 
 ---

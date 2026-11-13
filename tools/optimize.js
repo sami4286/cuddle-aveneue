@@ -32,6 +32,11 @@
       live domain, og:image becomes a full address (link previews ignore a
       relative one), and sitemap.xml lists every page.
 
+   7. Clean addresses. Vercel serves contact.html as /contact (cleanUrls in
+      vercel.json) and redirects the .html form there, so links between
+      pages drop the .html here and never go through that redirect. The
+      homepage becomes "./" or "../".
+
    No dependencies, Node's own crypto and fs only.
    ========================================================= */
 const fs = require('fs');
@@ -123,7 +128,13 @@ for (const p of pages) {
   const pre = rel ? rel + '/' : '';
 
   const own = path.relative(DIST, p).replace(/\\/g, '/');
-  const url = SITE + '/' + (own === 'index.html' ? '' : own);
+  const url = SITE + '/' + (own === 'index.html' ? '' : own.replace(/\.html$/, ''));
+
+  // 7. clean addresses: only relative links, never http(s):// ones
+  s = s.replace(/href="((?:\.\.\/)*)([\w\/-]*?)\.html(#[^"]*)?"/g, (m, up, name, hash) => {
+    if (name === 'index') return `href="${up || './'}${hash || ''}"`;
+    return `href="${up}${name}${hash || ''}"`;
+  });
   urls.push(url);
   s = s.replace(/(<meta name="description" content="[^"]*">\n)/,
     `$1<link rel="canonical" href="${url}">\n<meta property="og:url" content="${url}">\n`);
