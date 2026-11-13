@@ -1,3 +1,4 @@
-# Client review deploy — not for indexing.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://www.cuddleavenue.org/sitemap.xml

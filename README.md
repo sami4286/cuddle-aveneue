@@ -203,8 +203,10 @@ Visual effects → Animation effects*, when off, is a reduced-motion signal to e
 that machine — the site will sit still on it, correctly, until that switch or `?motion=on`
 says otherwise.
 
-The page is `noindex, nofollow` in both the meta tag and `_headers` while it is a review
-deploy — **remove both to go live.**
+The site is live at **https://www.cuddleavenue.org** and open to search engines. The build
+(`tools/optimize.js`) gives every page its canonical link, `og:url` and a full `og:image`
+address, and writes `sitemap.xml`. The old WordPress addresses (`/child-care-…`) redirect
+to their nearest new page in `vercel.json`.
 
 ---
 

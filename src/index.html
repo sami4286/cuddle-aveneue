@@ -64,6 +64,10 @@
 
       <figure class="c2-hero__figure">
         <picture>
+          <!-- phones: the photo is the hero's background, tall and narrow, so
+               only a centre strip of it ever shows. This is that strip. -->
+          <source media="(max-width: 600px)" type="image/webp" srcset="{{ROOT}}assets/img/home-hero-m.webp" width="413" height="688">
+          <source media="(max-width: 600px)" srcset="{{ROOT}}assets/img/home-hero-m.jpg" width="413" height="688">
           <source type="image/webp" srcset="{{ROOT}}assets/img/home-hero-600.webp 600w, {{ROOT}}assets/img/home-hero.webp 1024w" sizes="(max-width: 900px) 200vw, 117vw">
           <img src="{{ROOT}}assets/img/home-hero.jpg" srcset="{{ROOT}}assets/img/home-hero-600.jpg 600w, {{ROOT}}assets/img/home-hero.jpg 1024w" sizes="(max-width: 900px) 200vw, 117vw" width="1024" height="688" fetchpriority="high" decoding="async"
                alt="A teacher reading a picture book with a toddler on the classroom rug, while another child stacks rings and a second teacher plays at a table by the windows.">

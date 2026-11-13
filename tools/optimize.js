@@ -19,6 +19,19 @@
       FAQPage block built from the questions and answers on that page, so
       search engines and AI answers read exactly what a parent reads.
 
+   5. Lower photos wait for the hero. On a slow phone the browser starts
+      every lazy image within a screen or two of the top (the whole gallery,
+      the welcome photo, the programme cards) while the hero is still
+      arriving, and they share its bandwidth. Their src/srcset are parked in
+      data- attributes here, and a small script at the end of the page puts
+      them back once the hero (the fetchpriority="high" image) has painted.
+      They are still loading="lazy", so the browser fetches them as before,
+      just after the hero rather than alongside it.
+
+   6. Search basics. Each page gets its canonical link and og:url on the
+      live domain, og:image becomes a full address (link previews ignore a
+      relative one), and sitemap.xml lists every page.
+
    No dependencies, Node's own crypto and fs only.
    ========================================================= */
 const fs = require('fs');
@@ -87,11 +100,34 @@ function faq(html) {
   return out;
 }
 
-let faqs = 0;
+/* ── 5. lower photos ── */
+const hold = t => t.replace(/ (srcset|src)="/g, ' data-$1="');
+// a safety net too: if the hero never reports back, the photos come anyway
+const RELEASE = `<script>(function(d){var done=0;function go(){if(done)return;done=1;
+var n=d.querySelectorAll('[data-srcset],[data-src]');for(var i=0;i<n.length;i++){var e=n[i];
+if(e.hasAttribute('data-srcset')){e.setAttribute('srcset',e.getAttribute('data-srcset'));e.removeAttribute('data-srcset');}
+if(e.hasAttribute('data-src')){e.setAttribute('src',e.getAttribute('data-src'));e.removeAttribute('data-src');}}}
+function after(){requestAnimationFrame(function(){setTimeout(go,0);});}
+var h=d.querySelector('img[fetchpriority="high"]');
+if(!h||h.complete)after();else{h.addEventListener('load',after);h.addEventListener('error',after);}
+setTimeout(go,4000);})(document);</script>\n`;
+
+/* ── 6. search basics ── */
+const SITE = 'https://www.cuddleavenue.org';
+const urls = [];
+
+let faqs = 0, held = 0;
 for (const p of pages) {
   let s = fs.readFileSync(p, 'utf8');
   const rel = path.relative(path.dirname(p), DIST).replace(/\\/g, '/');
   const pre = rel ? rel + '/' : '';
+
+  const own = path.relative(DIST, p).replace(/\\/g, '/');
+  const url = SITE + '/' + (own === 'index.html' ? '' : own);
+  urls.push(url);
+  s = s.replace(/(<meta name="description" content="[^"]*">\n)/,
+    `$1<link rel="canonical" href="${url}">\n<meta property="og:url" content="${url}">\n`);
+  s = s.replace(/(<meta property="og:image" content=")(?:\.\.\/)*(assets\/)/, `$1${SITE}/$2`);
 
   let first = true;
   s = s.replace(/<link rel="stylesheet" href="((?:\.\.\/)*)css\/([\w.-]+\.css)">\n?/g, (m, up, f) => {
@@ -111,6 +147,13 @@ for (const p of pages) {
   }
   s = s.replace(/<!--[\s\S]*?-->/g, '').replace(/\n[ \t]*(?=\n)/g, '').replace(/\n{2,}/g, '\n');
 
+  if (s.includes('fetchpriority="high"')) {
+    let n = 0;
+    s = s.replace(/<picture\b[^>]*>[\s\S]*?<\/picture>|<img\b[^>]*>/g, m =>
+      /<img\b[^>]*loading="lazy"/.test(m) ? (n++, hold(m)) : m);
+    if (n) { s = s.replace('</body>', RELEASE + '</body>'); held++; }
+  }
+
   const items = faq(s);
   if (items.length) {
     const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items }, null, 1)
@@ -121,4 +164,10 @@ for (const p of pages) {
   fs.writeFileSync(p, s);
 }
 
-console.log(`optimize: ${order.length} stylesheets -> css/${cssName} (${Math.round(bundle.length / 1024)} KB), js/${jsName}, FAQ data on ${faqs} pages`);
+const today = new Date().toISOString().slice(0, 10);
+fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  urls.sort().map(u => `  <url><loc>${u}</loc><lastmod>${today}</lastmod></url>`).join('\n') +
+  '\n</urlset>\n');
+
+console.log(`optimize: ${order.length} stylesheets -> css/${cssName} (${Math.round(bundle.length / 1024)} KB), js/${jsName}, FAQ data on ${faqs} pages, lower photos held on ${held}, sitemap of ${urls.length}`);
